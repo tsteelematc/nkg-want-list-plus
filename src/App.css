@@ -161,6 +161,57 @@ textarea {
   font-size: 0.8rem;
 }
 
+/* --- Add items panel (GroupDetailPage) --- */
+
+.add-items-toggle {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  min-height: 44px;
+}
+
+.add-items-panel {
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add-items-panel input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.add-items-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+}
+
+.add-items-row .item-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* --- Buttons --- */
 
 button.danger {

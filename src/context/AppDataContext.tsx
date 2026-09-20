@@ -26,6 +26,11 @@ interface AppDataContextValue {
   removeGroup: (id: string) => void;
 
   toggleItemGroup: (itemId: string, groupId: string) => void;
+  moveItemInGroup: (
+    groupId: string,
+    itemId: string,
+    direction: "up" | "down",
+  ) => void;
   removeItem: (itemId: string) => void;
 
   setCorsProxyUrl: (url: string) => void;
@@ -58,16 +63,24 @@ export function AppDataProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const removeSource = useCallback((id: string) => {
-    setDataState((prev) => ({
-      ...prev,
-      sources: prev.sources.filter((s) => s.id !== id),
-      items: prev.items
+    setDataState((prev) => {
+      const remainingItems = prev.items
         .map((item) => ({
           ...item,
           sourceIds: item.sourceIds.filter((sid) => sid !== id),
         }))
-        .filter((item) => item.sourceIds.length > 0),
-    }));
+        .filter((item) => item.sourceIds.length > 0);
+      const remainingItemIds = new Set(remainingItems.map((i) => i.id));
+      return {
+        ...prev,
+        sources: prev.sources.filter((s) => s.id !== id),
+        items: remainingItems,
+        groups: prev.groups.map((g) => ({
+          ...g,
+          itemOrder: g.itemOrder.filter((itemId) => remainingItemIds.has(itemId)),
+        })),
+      };
+    });
   }, []);
 
   const mergeScrapedItems = useCallback((sourceId: string, scraped: Item[]) => {
@@ -119,6 +132,7 @@ export function AppDataProvider({ children }: { children: ReactNode }) {
       name,
       color,
       createdAt: new Date().toISOString(),
+      itemOrder: [],
     };
     setDataState((prev) => ({ ...prev, groups: [...prev.groups, group] }));
     return group;
@@ -143,25 +157,65 @@ export function AppDataProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const toggleItemGroup = useCallback((itemId: string, groupId: string) => {
-    setDataState((prev) => ({
-      ...prev,
-      items: prev.items.map((item) => {
-        if (item.id !== itemId) return item;
-        const has = item.groupIds.includes(groupId);
-        return {
-          ...item,
-          groupIds: has
-            ? item.groupIds.filter((gid) => gid !== groupId)
-            : [...item.groupIds, groupId],
-        };
-      }),
-    }));
+    setDataState((prev) => {
+      const item = prev.items.find((i) => i.id === itemId);
+      if (!item) return prev;
+      const has = item.groupIds.includes(groupId);
+      return {
+        ...prev,
+        items: prev.items.map((i) =>
+          i.id === itemId
+            ? {
+                ...i,
+                groupIds: has
+                  ? i.groupIds.filter((gid) => gid !== groupId)
+                  : [...i.groupIds, groupId],
+              }
+            : i,
+        ),
+        groups: prev.groups.map((g) => {
+          if (g.id !== groupId) return g;
+          return {
+            ...g,
+            itemOrder: has
+              ? g.itemOrder.filter((id) => id !== itemId)
+              : [...g.itemOrder, itemId],
+          };
+        }),
+      };
+    });
   }, []);
+
+  const moveItemInGroup = useCallback(
+    (groupId: string, itemId: string, direction: "up" | "down") => {
+      setDataState((prev) => ({
+        ...prev,
+        groups: prev.groups.map((g) => {
+          if (g.id !== groupId) return g;
+          const index = g.itemOrder.indexOf(itemId);
+          if (index === -1) return g;
+          const swapWith = direction === "up" ? index - 1 : index + 1;
+          if (swapWith < 0 || swapWith >= g.itemOrder.length) return g;
+          const itemOrder = [...g.itemOrder];
+          [itemOrder[index], itemOrder[swapWith]] = [
+            itemOrder[swapWith],
+            itemOrder[index],
+          ];
+          return { ...g, itemOrder };
+        }),
+      }));
+    },
+    [],
+  );
 
   const removeItem = useCallback((itemId: string) => {
     setDataState((prev) => ({
       ...prev,
       items: prev.items.filter((item) => item.id !== itemId),
+      groups: prev.groups.map((g) => ({
+        ...g,
+        itemOrder: g.itemOrder.filter((id) => id !== itemId),
+      })),
     }));
   }, []);
 
@@ -184,6 +238,7 @@ export function AppDataProvider({ children }: { children: ReactNode }) {
       renameGroup,
       removeGroup,
       toggleItemGroup,
+      moveItemInGroup,
       removeItem,
       setCorsProxyUrl,
     }),
@@ -198,6 +253,7 @@ export function AppDataProvider({ children }: { children: ReactNode }) {
       renameGroup,
       removeGroup,
       toggleItemGroup,
+      moveItemInGroup,
       removeItem,
       setCorsProxyUrl,
     ],

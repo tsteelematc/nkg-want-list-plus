@@ -19,16 +19,46 @@ export function saveAppData(data: AppData): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
-/** Placeholder for future schema migrations; currently a no-op passthrough. */
+/**
+ * Migrates raw persisted/imported data forward to CURRENT_DATA_VERSION.
+ * Each step only knows how to go from its own version to the next, so
+ * migrations compose safely regardless of how old the stored data is.
+ */
 function migrate(data: AppData): AppData {
-  if (!data.version || data.version < CURRENT_DATA_VERSION) {
-    return {
-      ...createEmptyAppData(),
-      ...data,
-      version: CURRENT_DATA_VERSION,
-    };
+  let result = data;
+  const version = result.version ?? 0;
+
+  if (version < 1) {
+    result = { ...createEmptyAppData(), ...result, version: 1 };
   }
-  return data;
+
+  if (result.version < 2) {
+    result = migrateV1ToV2(result);
+  }
+
+  // Safety net: ensure we always land on the current version even if a
+  // future migration step forgets to bump it.
+  return { ...result, version: CURRENT_DATA_VERSION };
+}
+
+/**
+ * v1 -> v2: adds Group.itemOrder (authoritative per-group item ordering).
+ * Backfills each group's order from the existing items' groupIds membership,
+ * preserving the items array's existing order as a stable starting point.
+ */
+function migrateV1ToV2(data: AppData): AppData {
+  const groups = (data.groups ?? []).map((group) => {
+    const legacyGroup = group as typeof group & { itemOrder?: string[] };
+    if (Array.isArray(legacyGroup.itemOrder)) {
+      return legacyGroup as AppData["groups"][number];
+    }
+    const itemOrder = (data.items ?? [])
+      .filter((item) => item.groupIds?.includes(group.id))
+      .map((item) => item.id);
+    return { ...group, itemOrder };
+  });
+
+  return { ...data, groups, version: 2 };
 }
 
 export function exportAppDataToFile(data: AppData): void {

@@ -42,6 +42,8 @@ export interface Group {
   name: string;
   color?: string;
   createdAt: string;
+  /** Ordered list of Item ids belonging to this group; authoritative render order. */
+  itemOrder: string[];
 }
 
 export interface AppData {
@@ -54,7 +56,7 @@ export interface AppData {
   };
 }
 
-export const CURRENT_DATA_VERSION = 1;
+export const CURRENT_DATA_VERSION = 2;
 
 export const DEFAULT_CORS_PROXY = "https://api.allorigins.win/raw?url=";
 

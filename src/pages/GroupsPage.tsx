@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useAppData } from "../context/AppDataContext";
 
 export function GroupsPage() {
@@ -14,25 +15,21 @@ export function GroupsPage() {
     setName("");
   };
 
-  const itemCountFor = (groupId: string) =>
-    data.items.filter((i) => i.groupIds.includes(groupId)).length;
-
   return (
     <div className="page">
-      <h1>Groups</h1>
+      <h1>My Lists</h1>
       <p className="hint">
-        Groups act like tags — e.g. "My CWBBS Want List" or "Grail List" — and
-        a single item can belong to as many groups as you like. Assign items
-        to groups from the Items page.
+        Each list has its own order — e.g. "My CWBBS Want List" or "Grail
+        List". Tap a list to view and reorder its items.
       </p>
 
       <form className="row-form" onSubmit={handleAdd}>
         <input
-          placeholder="New group name"
+          placeholder="New list name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <button type="submit">Add Group</button>
+        <button type="submit">Add List</button>
       </form>
 
       <ul className="group-list">
@@ -61,12 +58,12 @@ export function GroupsPage() {
               </form>
             ) : (
               <>
-                <span>
+                <Link to={`/groups/${group.id}`} className="group-link">
                   <strong>{group.name}</strong>{" "}
                   <span className="muted small">
-                    ({itemCountFor(group.id)} items)
+                    ({group.itemOrder.length} items)
                   </span>
-                </span>
+                </Link>
                 <div className="source-actions">
                   <button
                     onClick={() => {
@@ -85,7 +82,7 @@ export function GroupsPage() {
           </li>
         ))}
         {data.groups.length === 0 && (
-          <li className="empty">No groups yet. Add one above.</li>
+          <li className="empty">No lists yet. Add one above.</li>
         )}
       </ul>
     </div>

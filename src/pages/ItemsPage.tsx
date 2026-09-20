@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { useAppData } from "../context/AppDataContext";
+import { ItemRow } from "../components/ItemRow";
 
 export function ItemsPage() {
   const { data, toggleItemGroup, removeItem } = useAppData();
@@ -24,14 +25,17 @@ export function ItemsPage() {
     });
   }, [data.items, search, sourceFilter, groupFilter]);
 
-  const sourceName = (id: string) =>
-    data.sources.find((s) => s.id === id)?.name ?? "Unknown source";
+  const sourceNamesFor = (sourceIds: string[]) =>
+    sourceIds
+      .map((id) => data.sources.find((s) => s.id === id)?.name)
+      .filter((n): n is string => Boolean(n));
 
   return (
     <div className="page">
-      <h1>Items</h1>
+      <h1>All Items</h1>
       <p className="hint">
-        Browse all scraped items and assign each one to any number of groups.
+        Browse everything scraped from your sources. Tap an item to assign it
+        to one or more lists.
       </p>
 
       <div className="filters">
@@ -55,8 +59,8 @@ export function ItemsPage() {
           value={groupFilter}
           onChange={(e) => setGroupFilter(e.target.value)}
         >
-          <option value="all">All groups</option>
-          <option value="ungrouped">Ungrouped</option>
+          <option value="all">All lists</option>
+          <option value="ungrouped">Not on a list</option>
           {data.groups.map((g) => (
             <option key={g.id} value={g.id}>
               {g.name}
@@ -65,69 +69,26 @@ export function ItemsPage() {
         </select>
       </div>
 
-      <div className="item-grid">
+      <ul className="item-list">
         {filteredItems.map((item) => (
-          <div className="item-card" key={item.id}>
-            {item.imageUrl && (
-              <img src={item.imageUrl} alt={item.title} loading="lazy" />
-            )}
-            <div className="item-body">
-              <a href={item.productUrl} target="_blank" rel="noreferrer">
-                <strong>{item.title}</strong>
-              </a>
-              {item.publisher && <div className="muted">By: {item.publisher}</div>}
-              {item.productLine && (
-                <div className="muted">{item.productLine}</div>
-              )}
-              {item.stockNumber && (
-                <div className="muted">Stock #: {item.stockNumber}</div>
-              )}
-              {item.conditions.length > 0 && (
-                <ul className="conditions">
-                  {item.conditions.map((c, idx) => (
-                    <li key={idx}>
-                      {c.condition} — ${c.price.toFixed(2)}
-                      {c.note && ` (${c.note})`}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <div className="muted small">
-                From: {item.sourceIds.map(sourceName).join(", ")}
-              </div>
-
-              <div className="group-chips">
-                {data.groups.map((g) => {
-                  const active = item.groupIds.includes(g.id);
-                  return (
-                    <button
-                      key={g.id}
-                      className={`chip ${active ? "chip-active" : ""}`}
-                      onClick={() => toggleItemGroup(item.id, g.id)}
-                    >
-                      {g.name}
-                    </button>
-                  );
-                })}
-                {data.groups.length === 0 && (
-                  <span className="muted small">
-                    Create a group on the Groups page to start organizing.
-                  </span>
-                )}
-              </div>
-
-              <button className="danger small" onClick={() => removeItem(item.id)}>
-                Remove item
-              </button>
-            </div>
-          </div>
+          <ItemRow
+            key={item.id}
+            item={item}
+            sourceNames={sourceNamesFor(item.sourceIds)}
+            groupChips={{
+              groups: data.groups,
+              activeGroupIds: item.groupIds,
+              onToggleGroup: (groupId) => toggleItemGroup(item.id, groupId),
+            }}
+            onRemoveItemEntirely={() => removeItem(item.id)}
+          />
         ))}
         {filteredItems.length === 0 && (
-          <div className="empty">
+          <li className="empty">
             No items match your filters yet. Add and refresh a source first.
-          </div>
+          </li>
         )}
-      </div>
+      </ul>
     </div>
   );
 }

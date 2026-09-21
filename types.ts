@@ -1,5 +1,6 @@
 // Core data model for NKG Want List Plus.
-// Everything is persisted as a single AppData JSON blob (see lib/storage.ts).
+// Persisted as a single AppData JSON blob in chrome.storage.local
+// (see lib/storage.ts).
 
 export interface ConditionOption {
   /** e.g. "MINT", "VG+", "NM" */
@@ -10,13 +11,13 @@ export interface ConditionOption {
 
 export interface Source {
   id: string;
-  /** User-facing label, e.g. "Tom's Want List" */
+  /** User-facing label; defaults to the page title captured on first visit. */
   name: string;
-  /** Noble Knight Games MyWantList URL */
+  /** The Noble Knight Games MyWantList URL this source was auto-detected from. */
   url: string;
-  lastScrapedAt?: string;
+  firstSeenAt: string;
+  lastSyncedAt: string;
   lastItemCount?: number;
-  lastError?: string;
 }
 
 export interface Item {
@@ -51,14 +52,9 @@ export interface AppData {
   sources: Source[];
   items: Item[];
   groups: Group[];
-  settings: {
-    corsProxyUrl: string;
-  };
 }
 
-export const CURRENT_DATA_VERSION = 2;
-
-export const DEFAULT_CORS_PROXY = "https://api.allorigins.win/raw?url=";
+export const CURRENT_DATA_VERSION = 3;
 
 export function createEmptyAppData(): AppData {
   return {
@@ -66,8 +62,5 @@ export function createEmptyAppData(): AppData {
     sources: [],
     items: [],
     groups: [],
-    settings: {
-      corsProxyUrl: DEFAULT_CORS_PROXY,
-    },
   };
 }

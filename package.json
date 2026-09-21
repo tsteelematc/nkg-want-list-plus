@@ -4,26 +4,27 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "zip": "wxt zip",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "compile": "tsc --noEmit",
+    "postinstall": "wxt prepare"
   },
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.4",
     "uuid": "^14.0.2"
   },
   "devDependencies": {
-    "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@types/uuid": "^10.0.0",
-    "@vitejs/plugin-react": "^6.1.1",
-    "gh-pages": "^6.3.0",
+    "@wxt-dev/module-react": "^1.1.5",
     "oxlint": "^1.81.0",
     "typescript": "~6.0.2",
-    "vite": "^8.3.0"
+    "web-ext": "^10.5.0",
+    "wxt": "^0.21.4"
   }
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Group, Item } from "../types";
+import type { Group, Item } from "../../../types";
 
 export interface OrderControls {
   canMoveUp: boolean;

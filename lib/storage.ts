@@ -1,28 +1,38 @@
+import { storage } from "#imports";
 import type { AppData } from "../types";
 import { CURRENT_DATA_VERSION, createEmptyAppData } from "../types";
 
-const STORAGE_KEY = "nkg-want-list-plus:data";
+const appDataItem = storage.defineItem<AppData>("local:appData", {
+  fallback: createEmptyAppData(),
+});
 
-export function loadAppData(): AppData {
-  const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return createEmptyAppData();
+export async function loadAppData(): Promise<AppData> {
   try {
-    const parsed = JSON.parse(raw) as AppData;
-    return migrate(parsed);
+    const raw = await appDataItem.getValue();
+    return migrate(raw);
   } catch (err) {
-    console.error("Failed to parse stored app data, starting fresh.", err);
+    console.error("Failed to load stored app data, starting fresh.", err);
     return createEmptyAppData();
   }
 }
 
-export function saveAppData(data: AppData): void {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+export async function saveAppData(data: AppData): Promise<void> {
+  await appDataItem.setValue(data);
+}
+
+export function watchAppData(
+  callback: (data: AppData) => void,
+): () => void {
+  return appDataItem.watch((newValue) => {
+    callback(migrate(newValue ?? createEmptyAppData()));
+  });
 }
 
 /**
  * Migrates raw persisted/imported data forward to CURRENT_DATA_VERSION.
  * Each step only knows how to go from its own version to the next, so
- * migrations compose safely regardless of how old the stored data is.
+ * migrations compose safely regardless of how old the stored/imported data
+ * is (e.g. a JSON backup exported from the earlier standalone web app).
  */
 function migrate(data: AppData): AppData {
   let result = data;
@@ -34,6 +44,10 @@ function migrate(data: AppData): AppData {
 
   if (result.version < 2) {
     result = migrateV1ToV2(result);
+  }
+
+  if (result.version < 3) {
+    result = migrateV2ToV3(result);
   }
 
   // Safety net: ensure we always land on the current version even if a
@@ -59,6 +73,36 @@ function migrateV1ToV2(data: AppData): AppData {
   });
 
   return { ...data, groups, version: 2 };
+}
+
+/**
+ * v2 -> v3: drops the standalone web app's `settings.corsProxyUrl` (no
+ * longer needed now that item data comes from the live DOM via a content
+ * script) and updates `Source` semantics — imported v2 sources become
+ * read-only historical records; new sources are auto-registered by the
+ * content script when it runs on a want-list page.
+ */
+function migrateV2ToV3(data: AppData): AppData {
+  const legacyData = data as AppData & {
+    settings?: { corsProxyUrl?: string };
+  };
+  const { settings: _settings, ...rest } = legacyData;
+  const sources = (rest.sources ?? []).map((source) => {
+    const legacySource = source as typeof source & {
+      lastScrapedAt?: string;
+      lastError?: string;
+    };
+    return {
+      id: legacySource.id,
+      name: legacySource.name,
+      url: legacySource.url,
+      firstSeenAt: legacySource.firstSeenAt ?? legacySource.lastScrapedAt ?? new Date().toISOString(),
+      lastSyncedAt: legacySource.lastSyncedAt ?? legacySource.lastScrapedAt ?? new Date().toISOString(),
+      lastItemCount: legacySource.lastItemCount,
+    };
+  });
+
+  return { ...rest, sources, version: 3 };
 }
 
 export function exportAppDataToFile(data: AppData): void {

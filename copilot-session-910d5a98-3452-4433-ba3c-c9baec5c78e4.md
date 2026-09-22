@@ -3,8 +3,8 @@
 > [!NOTE]
 > - **Session ID:** `910d5a98-3452-4433-ba3c-c9baec5c78e4`  
 > - **Started:** 9/20/2026, 5:08:38 PM  
-> - **Duration:** 1530m 33s  
-> - **Exported:** 9/21/2026, 6:39:11 PM  
+> - **Duration:** 1561m 55s  
+> - **Exported:** 9/21/2026, 7:10:33 PM  
 
 ---
 
@@ -3447,19 +3447,19 @@ Built and verified the NKG Want List Plus app end-to-end per the approved plan:
 
 ---
 
-<sub>30m 23s</sub>
-
-### Info
-
-MCP Servers reloaded: 1 server connected
-
----
-
 <sub>31m 55s</sub>
 
 ### User
 
 i think i'd target mobile for ui, so less text, focus on lists, and need to adjust order of items within groups, maybe drag drop, or move up move down, even wondering if image needed, but maybe some smaller, artistically enhanced product image, but less other information about items, this is a list manager, essentially
+
+---
+
+<sub>31m 59s</sub>
+
+### Reasoning
+
+*The user is back in plan mode, asking for a mobile-first, list-focused redesign with less text, drag/drop or move up/down ordering within groups, smaller stylized images, and reduced item info. I should look at the current repo state first, ask clarifying questions, and then update plan.md accordingly.*
 
 ---
 
@@ -3573,15 +3573,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && find . -pat
 
 ---
 
-<sub>31m 59s</sub>
-
-### Reasoning
-
-*The user is back in plan mode, asking for a mobile-first, list-focused redesign with less text, drag/drop or move up/down ordering within groups, smaller stylized images, and reduced item info. I should look at the current repo state first, ask clarifying questions, and then update plan.md accordingly.*
-
----
-
-<sub>32m 0s</sub>
+<sub>32m 2s</sub>
 
 ### Copilot
 
@@ -3607,7 +3599,7 @@ origin	https://github.com/tsteelematc/nkg-want-list-plus.git (push)
 
 ---
 
-<sub>32m 3s</sub>
+<sub>32m 16s</sub>
 
 ### Copilot
 
@@ -3640,7 +3632,7 @@ Good, that's set up now. Let me ask clarifying questions on the mobile-first red
 
 ---
 
-<sub>32m 18s</sub>
+<sub>32m 24s</sub>
 
 ### Reasoning
 
@@ -3776,7 +3768,7 @@ Good, that's set up now. Let me ask clarifying questions on the mobile-first red
 
 ---
 
-<sub>32m 27s</sub>
+<sub>32m 32s</sub>
 
 ### Reasoning
 
@@ -3913,7 +3905,7 @@ User responded: image_treatment=small thumbnail on right, info_shown_per_item=ti
 
 ---
 
-<sub>33m 36s</sub>
+<sub>33m 43s</sub>
 
 ### Reasoning
 
@@ -3964,7 +3956,7 @@ interface Source {
 
 ---
 
-<sub>33m 44s</sub>
+<sub>34m 13s</sub>
 
 ### Copilot
 
@@ -4018,7 +4010,7 @@ Created file /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9bae
 
 ---
 
-<sub>34m 36s</sub>
+<sub>34m 46s</sub>
 
 ### Copilot
 
@@ -4228,7 +4220,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/types.ts u
 
 ---
 
-<sub>35m 34s</sub>
+<sub>35m 35s</sub>
 
 ### Copilot
 
@@ -4318,7 +4310,7 @@ export function importAppDataFromFile(file: File): Promise<AppData> {
 
 ---
 
-<sub>35m 39s</sub>
+<sub>35m 43s</sub>
 
 ### Reasoning
 
@@ -4341,7 +4333,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/lib/storag
 
 ---
 
-<sub>35m 44s</sub>
+<sub>35m 45s</sub>
 
 ### Copilot
 
@@ -4587,7 +4579,7 @@ export function useAppData(): AppDataContextValue {
 
 ---
 
-<sub>35m 46s</sub>
+<sub>35m 49s</sub>
 
 ### Copilot
 
@@ -4610,7 +4602,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/context/Ap
 
 ---
 
-<sub>35m 51s</sub>
+<sub>35m 52s</sub>
 
 ### Copilot
 
@@ -4668,7 +4660,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/context/Ap
 
 ---
 
-<sub>35m 57s</sub>
+<sub>35m 58s</sub>
 
 ### Copilot
 
@@ -4768,7 +4760,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/context/Ap
 
 ---
 
-<sub>36m 10s</sub>
+<sub>36m 11s</sub>
 
 ### Copilot
 
@@ -4831,7 +4823,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/context/Ap
 
 ---
 
-<sub>36m 15s</sub>
+<sub>36m 16s</sub>
 
 ### Copilot
 
@@ -4916,7 +4908,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/context/Ap
 
 ---
 
-<sub>36m 21s</sub>
+<sub>36m 23s</sub>
 
 ### Copilot
 
@@ -5058,7 +5050,7 @@ export function importAppDataFromFile(file: File): Promise<AppData> {
 
 ---
 
-<sub>36m 27s</sub>
+<sub>36m 31s</sub>
 
 ### Copilot
 
@@ -5097,7 +5089,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npx tsc --n
 
 ---
 
-<sub>36m 35s</sub>
+<sub>36m 37s</sub>
 
 ### Copilot
 
@@ -5141,7 +5133,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>36m 40s</sub>
+<sub>36m 53s</sub>
 
 ### Reasoning
 
@@ -5202,7 +5194,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>36m 56s</sub>
+<sub>37m 3s</sub>
 
 ### Copilot
 
@@ -5261,7 +5253,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>37m 6s</sub>
+<sub>37m 7s</sub>
 
 ### Copilot
 
@@ -5381,7 +5373,7 @@ export function GroupsPage() {
 
 ---
 
-<sub>37m 10s</sub>
+<sub>37m 15s</sub>
 
 ### Reasoning
 
@@ -5435,7 +5427,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/pa
 
 ---
 
-<sub>37m 25s</sub>
+<sub>37m 26s</sub>
 
 ### Copilot
 
@@ -5609,7 +5601,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/Ap
 
 ---
 
-<sub>37m 50s</sub>
+<sub>37m 52s</sub>
 
 ### Reasoning
 
@@ -5738,7 +5730,7 @@ export default App;
 
 ---
 
-<sub>37m 59s</sub>
+<sub>38m 3s</sub>
 
 ### Copilot
 
@@ -5828,7 +5820,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>38m 12s</sub>
+<sub>38m 13s</sub>
 
 ### Copilot
 
@@ -5852,7 +5844,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npx tsc --n
 
 ---
 
-<sub>38m 15s</sub>
+<sub>38m 16s</sub>
 
 ### Copilot
 
@@ -6080,7 +6072,7 @@ section {
 
 ---
 
-<sub>38m 17s</sub>
+<sub>38m 18s</sub>
 
 ### Copilot
 
@@ -6104,7 +6096,7 @@ $ rm /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/App.css
 
 ---
 
-<sub>38m 22s</sub>
+<sub>38m 49s</sub>
 
 ### Reasoning
 
@@ -6131,7 +6123,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/Ap
 
 ---
 
-<sub>38m 50s</sub>
+<sub>38m 51s</sub>
 
 ### Copilot
 
@@ -6186,7 +6178,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/index.html upd
 
 ---
 
-<sub>38m 54s</sub>
+<sub>38m 56s</sub>
 
 ### Copilot
 
@@ -6246,7 +6238,7 @@ src/context/AppDataContext.tsx:269:17: warning react(only-export-components): Fa
 
 ---
 
-<sub>39m 0s</sub>
+<sub>39m 2s</sub>
 
 ### Copilot
 
@@ -6295,7 +6287,7 @@ ok
 
 ---
 
-<sub>39m 13s</sub>
+<sub>39m 23s</sub>
 
 ### Reasoning
 
@@ -6398,7 +6390,7 @@ Console/page errors: []
 
 ---
 
-<sub>39m 37s</sub>
+<sub>39m 40s</sub>
 
 ### Reasoning
 
@@ -6443,7 +6435,7 @@ Sources state: Tom Want Listhttps://www.nobleknight.com/MyWantList/df86ea3e01794
 
 ---
 
-<sub>39m 58s</sub>
+<sub>39m 59s</sub>
 
 ### Copilot
 
@@ -6481,7 +6473,7 @@ Console/page errors: [
 
 ---
 
-<sub>40m 20s</sub>
+<sub>40m 21s</sub>
 
 ### Reasoning
 
@@ -6489,7 +6481,7 @@ Console/page errors: [
 
 ---
 
-<sub>40m 20s</sub>
+<sub>40m 21s</sub>
 
 ### Copilot
 
@@ -6516,7 +6508,7 @@ Sources state: Tom Want Listhttps://www.nobleknight.com/MyWantList/df86ea3e01794
 
 ---
 
-<sub>40m 41s</sub>
+<sub>40m 42s</sub>
 
 ### Reasoning
 
@@ -6623,7 +6615,7 @@ dont worry about tests, ill run manually
 
 ---
 
-<sub>40m 54s</sub>
+<sub>40m 55s</sub>
 
 ### Copilot
 
@@ -6685,7 +6677,7 @@ done
 
 ---
 
-<sub>41m 0s</sub>
+<sub>41m 2s</sub>
 
 ### Copilot
 
@@ -6824,7 +6816,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/README.md upda
 
 ---
 
-<sub>41m 20s</sub>
+<sub>41m 21s</sub>
 
 ### Copilot
 
@@ -6952,7 +6944,7 @@ To https://github.com/tsteelematc/nkg-want-list-plus.git
 
 ---
 
-<sub>41m 34s</sub>
+<sub>41m 35s</sub>
 
 ### Copilot
 
@@ -7044,15 +7036,6 @@ Implemented the mobile-first list-manager redesign per the approved v2 plan and 
 
 ---
 
-<sub>42m 7s</sub>
-
-### Info
-
-Session shared successfully to:
-/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/copilot-session-910d5a98-3452-4433-ba3c-c9baec5c78e4.md
-
----
-
 <sub>43m 58s</sub>
 
 ### User
@@ -7061,7 +7044,7 @@ doesnt look like i can move items up down on lists, within groups
 
 ---
 
-<sub>44m 3s</sub>
+<sub>44m 4s</sub>
 
 ### Reasoning
 
@@ -7345,7 +7328,7 @@ export function GroupDetailPage() {
 
 ---
 
-<sub>44m 10s</sub>
+<sub>44m 11s</sub>
 
 ### Reasoning
 
@@ -7571,7 +7554,7 @@ Order after clicking down on item 1: [ 'Item Two', 'Item One', 'Item Three' ]
 
 ---
 
-<sub>44m 35s</sub>
+<sub>44m 48s</sub>
 
 ### Reasoning
 
@@ -7677,7 +7660,7 @@ Order after move down click: [ 'Item Two', 'Item One', 'Item Three' ]
 
 ---
 
-<sub>44m 55s</sub>
+<sub>45m 5s</sub>
 
 ### Reasoning
 
@@ -7749,7 +7732,7 @@ down enabled: true
 
 ---
 
-<sub>45m 10s</sub>
+<sub>45m 19s</sub>
 
 ### Reasoning
 
@@ -7849,7 +7832,7 @@ $ curl -s -o /dev/null -w "%{http_code}\n" https://tsteelematc.github.io/nkg-wan
 
 ---
 
-<sub>45m 27s</sub>
+<sub>45m 39s</sub>
 
 ### Reasoning
 
@@ -7904,7 +7887,7 @@ deploy failure
 
 ---
 
-<sub>45m 43s</sub>
+<sub>45m 52s</sub>
 
 ### Reasoning
 
@@ -7948,7 +7931,7 @@ for j in d['jobs']:
 
 ---
 
-<sub>45m 56s</sub>
+<sub>46m 2s</sub>
 
 ### Reasoning
 
@@ -8040,7 +8023,7 @@ ima just running local, maybe just look and don't run, no buttons visible
 
 ---
 
-<sub>46m 6s</sub>
+<sub>46m 21s</sub>
 
 ### Reasoning
 
@@ -8144,7 +8127,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && grep -n "or
 
 ---
 
-<sub>46m 26s</sub>
+<sub>46m 32s</sub>
 
 ### Reasoning
 
@@ -8242,15 +8225,7 @@ export function GroupDetailPage() {
 
 ---
 
-<sub>46m 32s</sub>
-
-### Info
-
-Compacting conversation history...
-
----
-
-<sub>46m 35s</sub>
+<sub>46m 40s</sub>
 
 ### Reasoning
 
@@ -8293,7 +8268,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && find src -n
 
 ---
 
-<sub>46m 44s</sub>
+<sub>47m 13s</sub>
 
 ### Reasoning
 
@@ -8317,7 +8292,7 @@ I'm also going to add a collapsible "Add items" section directly in GroupDetailP
 
 ---
 
-<sub>47m 12s</sub>
+<sub>47m 13s</sub>
 
 ### Copilot
 
@@ -8380,7 +8355,7 @@ interface AppDataContextValue {
 
 ---
 
-<sub>47m 14s</sub>
+<sub>47m 30s</sub>
 
 ### Copilot
 
@@ -8403,7 +8378,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/src/pages/Grou
 
 ---
 
-<sub>47m 31s</sub>
+<sub>47m 32s</sub>
 
 ### Copilot
 
@@ -8513,7 +8488,7 @@ nvm found buttons
 
 ---
 
-<sub>47m 43s</sub>
+<sub>47m 45s</sub>
 
 ### Reasoning
 
@@ -8521,7 +8496,7 @@ nvm found buttons
 
 ---
 
-<sub>47m 44s</sub>
+<sub>47m 45s</sub>
 
 ### Copilot
 
@@ -8583,7 +8558,7 @@ src/context/AppDataContext.tsx:269:17: warning react(only-export-components): Fa
 
 ---
 
-<sub>47m 51s</sub>
+<sub>47m 54s</sub>
 
 ### Copilot
 
@@ -8620,6 +8595,14 @@ EOF
 
 <sub>47m 57s</sub>
 
+### Reasoning
+
+*I thought the single-quoted heredoc should have protected the apostrophe, so the breakage must be from a stray quote elsewhere. I'll just retry with simpler wording that avoids contractions altogether.*
+
+---
+
+<sub>47m 57s</sub>
+
 ### `bash`
 
 **Check git status after failed commit attempt**
@@ -8636,15 +8619,7 @@ M copilot-session-910d5a98-3452-4433-ba3c-c9baec5c78e4.md
 
 ---
 
-<sub>47m 57s</sub>
-
-### Reasoning
-
-*I thought the single-quoted heredoc should have protected the apostrophe, so the breakage must be from a stray quote elsewhere. I'll just retry with simpler wording that avoids contractions altogether.*
-
----
-
-<sub>47m 58s</sub>
+<sub>48m 0s</sub>
 
 ### Copilot
 
@@ -8703,7 +8678,7 @@ To https://github.com/tsteelematc/nkg-want-list-plus.git
 
 ---
 
-<sub>48m 5s</sub>
+<sub>48m 9s</sub>
 
 ### Copilot
 
@@ -8757,7 +8732,7 @@ this was good, i got a good feel for what an app like this should be, now i am c
 
 ---
 
-<sub>283m 40s</sub>
+<sub>284m 23s</sub>
 
 ### Reasoning
 
@@ -8875,7 +8850,7 @@ User responded: browsers=Chrome only (simplest, Manifest V3), build_tooling=wxt,
 
 ---
 
-<sub>285m 54s</sub>
+<sub>286m 16s</sub>
 
 ### Reasoning
 
@@ -8961,7 +8936,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && grep -n "pr
 
 ---
 
-<sub>286m 20s</sub>
+<sub>287m 6s</sub>
 
 ### Copilot
 
@@ -9023,7 +8998,7 @@ Created file /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9bae
 
 ---
 
-<sub>287m 39s</sub>
+<sub>287m 47s</sub>
 
 ### Copilot
 
@@ -9096,7 +9071,7 @@ Please update the plan based on this feedback and try again.
 
 ---
 
-<sub>288m 44s</sub>
+<sub>288m 47s</sub>
 
 ### Reasoning
 
@@ -9178,6 +9153,14 @@ Contents of https://www.nobleknight.com/:
 
 ---
 
+<sub>288m 51s</sub>
+
+### Reasoning
+
+*Getting exact colors from raw HTML without CSS is tricky, so I'll use a reasonable "NK blue" placeholder for now and plan to sample the precise hex from computed styles later. Rather than over-investing in this, I'll quickly try fetching one CSS file to check for brand color hints.*
+
+---
+
 <sub>288m 52s</sub>
 
 ### `bash`
@@ -9203,15 +9186,7 @@ href="/Content/font-awesome/css/solid.min.css"
 
 ---
 
-<sub>288m 51s</sub>
-
-### Reasoning
-
-*Getting exact colors from raw HTML without CSS is tricky, so I'll use a reasonable "NK blue" placeholder for now and plan to sample the precise hex from computed styles later. Rather than over-investing in this, I'll quickly try fetching one CSS file to check for brand color hints.*
-
----
-
-<sub>288m 54s</sub>
+<sub>288m 55s</sub>
 
 ### Reasoning
 
@@ -9283,7 +9258,7 @@ This shell command would modify files outside the session folder and was blocked
 
 ---
 
-<sub>289m 2s</sub>
+<sub>289m 8s</sub>
 
 ### Reasoning
 
@@ -9321,7 +9296,7 @@ File /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/
 
 ---
 
-<sub>289m 24s</sub>
+<sub>289m 30s</sub>
 
 ### Copilot
 
@@ -9471,7 +9446,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>290m 13s</sub>
+<sub>290m 19s</sub>
 
 ### Reasoning
 
@@ -9512,6 +9487,14 @@ Options:
 
 ---
 
+<sub>290m 37s</sub>
+
+### Reasoning
+
+*Since the scaffolding tool needs a directory argument and our repo isn't empty, I'll likely need to scaffold into a temp directory or subfolder first, then move the files in. Let me check what templates are available.*
+
+---
+
 <sub>290m 40s</sub>
 
 ### `bash`
@@ -9538,14 +9521,6 @@ Next steps:
 
 </details>
 
-
----
-
-<sub>290m 37s</sub>
-
-### Reasoning
-
-*Since the scaffolding tool needs a directory argument and our repo isn't empty, I'll likely need to scaffold into a temp directory or subfolder first, then move the files in. Let me check what templates are available.*
 
 ---
 
@@ -9663,7 +9638,7 @@ export default defineBackground(() => {
 
 ---
 
-<sub>290m 48s</sub>
+<sub>290m 54s</sub>
 
 ### Reasoning
 
@@ -9741,7 +9716,7 @@ drwxr-xr-x  11 tsteele  staff     352 Sep 20 17:47 src
 
 ---
 
-<sub>290m 58s</sub>
+<sub>291m 6s</sub>
 
 ### Reasoning
 
@@ -9779,7 +9754,7 @@ types.ts
 
 ---
 
-<sub>291m 7s</sub>
+<sub>291m 8s</sub>
 
 ### Copilot
 
@@ -9820,7 +9795,7 @@ drwxr-xr-x  82 tsteele  staff    2624 Sep 20 17:19 node_modules
 
 ---
 
-<sub>291m 10s</sub>
+<sub>291m 11s</sub>
 
 ### Reasoning
 
@@ -9855,7 +9830,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && find .githu
 
 ---
 
-<sub>291m 12s</sub>
+<sub>291m 14s</sub>
 
 ### Copilot
 
@@ -9912,6 +9887,14 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && cp -r /tmp/
 
 <sub>291m 18s</sub>
 
+### Reasoning
+
+*Since the plan only calls for a panel and options page, I don't need a popup entrypoint—I'll remove it along with the placeholder react.svg and wxt.svg assets, while keeping the icon pngs since the manifest still needs them.*
+
+---
+
+<sub>291m 18s</sub>
+
 ### `bash`
 
 **Remove unused popup entrypoint and placeholder assets**
@@ -9945,14 +9928,6 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && rm -rf entr
 
 </details>
 
-
----
-
-<sub>291m 18s</sub>
-
-### Reasoning
-
-*Since the plan only calls for a panel and options page, I don't need a popup entrypoint—I'll remove it along with the placeholder react.svg and wxt.svg assets, while keeping the icon pngs since the manifest still needs them.*
 
 ---
 
@@ -10027,7 +10002,7 @@ Path already exists
 
 ---
 
-<sub>291m 25s</sub>
+<sub>291m 28s</sub>
 
 ### Reasoning
 
@@ -10117,7 +10092,7 @@ cat /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/package.json
 
 ---
 
-<sub>291m 29s</sub>
+<sub>291m 30s</sub>
 
 ### Copilot
 
@@ -10180,7 +10155,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/wxt.config.ts 
 
 ---
 
-<sub>291m 36s</sub>
+<sub>291m 38s</sub>
 
 ### Copilot
 
@@ -10230,7 +10205,7 @@ Run `npm audit` for details.
 
 ---
 
-<sub>291m 56s</sub>
+<sub>291m 59s</sub>
 
 ### Copilot
 
@@ -10289,7 +10264,7 @@ WXT 0.21.4
 
 ---
 
-<sub>292m 3s</sub>
+<sub>292m 4s</sub>
 
 ### Copilot
 
@@ -10313,7 +10288,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && cat .output
 
 ---
 
-<sub>292m 5s</sub>
+<sub>292m 6s</sub>
 
 ### Copilot
 
@@ -10449,7 +10424,7 @@ export function createEmptyAppData(): AppData {
 
 ---
 
-<sub>292m 10s</sub>
+<sub>292m 21s</sub>
 
 ### Reasoning
 
@@ -10476,7 +10451,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/types.
 
 ---
 
-<sub>292m 22s</sub>
+<sub>292m 23s</sub>
 
 ### Copilot
 
@@ -10740,7 +10715,7 @@ function findNextPageUrl(
 
 ---
 
-<sub>292m 28s</sub>
+<sub>292m 41s</sub>
 
 ### Reasoning
 
@@ -10796,7 +10771,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/do
 
 ---
 
-<sub>292m 54s</sub>
+<sub>292m 55s</sub>
 
 ### Copilot
 
@@ -11020,7 +10995,7 @@ $ grep -n "defineItem\|version\|migrations\|interface WxtStorageItem\|fallback" 
 
 ---
 
-<sub>293m 9s</sub>
+<sub>293m 19s</sub>
 
 ### Reasoning
 
@@ -11050,7 +11025,7 @@ cat /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/.wxt/types/impo
 
 ---
 
-<sub>293m 20s</sub>
+<sub>293m 32s</sub>
 
 ### Copilot
 
@@ -11190,7 +11165,7 @@ lib/domExtractor.ts(83,7): error TS2322: Type 'string | undefined' is not assign
 
 ---
 
-<sub>293m 44s</sub>
+<sub>293m 48s</sub>
 
 ### Reasoning
 
@@ -11260,7 +11235,7 @@ $ cat /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/.wxt/tsconfig
 
 ---
 
-<sub>293m 51s</sub>
+<sub>293m 52s</sub>
 
 ### Reasoning
 
@@ -11284,7 +11259,7 @@ $ grep -n "exactOptionalPropertyTypes" /Users/tsteele/Documents/GitHub/2026-fall
 
 ---
 
-<sub>293m 56s</sub>
+<sub>293m 57s</sub>
 
 ### Reasoning
 
@@ -11327,7 +11302,7 @@ $ grep -n "exactOptionalPropertyTypes" /Users/tsteele/Documents/GitHub/2026-fall
 
 ---
 
-<sub>294m 0s</sub>
+<sub>294m 7s</sub>
 
 ### Reasoning
 
@@ -11375,6 +11350,14 @@ Found 2 errors in the same file, starting at: lib/domExtractor.ts:44
 
 <sub>294m 12s</sub>
 
+### Reasoning
+
+*Actually, the real issue is that `idMatch[1]` gets typed as string|undefined under noUncheckedIndexedAccess. Since the regex guarantees the group exists whenever the match succeeds, I can safely add non-null assertions at both spots to fix the type error.*
+
+---
+
+<sub>294m 12s</sub>
+
 ### `view`
 
 **view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/domExtractor.ts.**
@@ -11394,14 +11377,6 @@ Found 2 errors in the same file, starting at: lib/domExtractor.ts:44
 
 </details>
 
-
----
-
-<sub>294m 12s</sub>
-
-### Reasoning
-
-*Actually, the real issue is that `idMatch[1]` gets typed as string|undefined under noUncheckedIndexedAccess. Since the regex guarantees the group exists whenever the match succeeds, I can safely add non-null assertions at both spots to fix the type error.*
 
 ---
 
@@ -11452,7 +11427,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run com
 
 ---
 
-<sub>294m 21s</sub>
+<sub>294m 23s</sub>
 
 ### Copilot
 
@@ -11790,7 +11765,7 @@ export function useAppData(): AppDataContextValue {
 
 ---
 
-<sub>294m 29s</sub>
+<sub>294m 48s</sub>
 
 ### Reasoning
 
@@ -11815,7 +11790,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/it
 
 ---
 
-<sub>294m 49s</sub>
+<sub>294m 59s</sub>
 
 ### Copilot
 
@@ -11855,7 +11830,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run com
 
 ---
 
-<sub>295m 2s</sub>
+<sub>295m 4s</sub>
 
 ### Copilot
 
@@ -11899,7 +11874,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>295m 7s</sub>
+<sub>295m 10s</sub>
 
 ### Reasoning
 
@@ -12178,7 +12153,7 @@ export { AutoMount, AutoMountOptions, BaseMountFunctions, ContentScriptAnchoredO
 
 ---
 
-<sub>295m 19s</sub>
+<sub>295m 23s</sub>
 
 ### Reasoning
 
@@ -12201,6 +12176,14 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && rm entrypoi
 <shellId: 79 completed with exit code 0>
 ```
 
+
+---
+
+<sub>295m 26s</sub>
+
+### Reasoning
+
+*Now I want to build BottomPanel.tsx and related components, so I'm checking the legacy ItemRow.tsx and App.css first to understand the existing design before creating the new light-theme versions.*
 
 ---
 
@@ -12384,15 +12367,7 @@ export function ItemRow({
 
 ---
 
-<sub>295m 26s</sub>
-
-### Reasoning
-
-*Now I want to build BottomPanel.tsx and related components, so I'm checking the legacy ItemRow.tsx and App.css first to understand the existing design before creating the new light-theme versions.*
-
----
-
-<sub>295m 27s</sub>
+<sub>295m 29s</sub>
 
 ### Copilot
 
@@ -12464,7 +12439,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/co
 
 ---
 
-<sub>295m 37s</sub>
+<sub>295m 42s</sub>
 
 ### Reasoning
 
@@ -12519,7 +12494,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
-<sub>295m 58s</sub>
+<sub>296m 7s</sub>
 
 ### Copilot
 
@@ -12995,7 +12970,7 @@ section {
 
 ---
 
-<sub>296m 15s</sub>
+<sub>296m 39s</sub>
 
 ### Reasoning
 
@@ -13020,7 +12995,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
-<sub>296m 40s</sub>
+<sub>296m 47s</sub>
 
 ### Copilot
 
@@ -13043,7 +13018,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
-<sub>296m 50s</sub>
+<sub>297m 4s</sub>
 
 ### Reasoning
 
@@ -13099,7 +13074,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
-<sub>297m 18s</sub>
+<sub>297m 22s</sub>
 
 ### Copilot
 
@@ -13153,6 +13128,14 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
+<sub>297m 32s</sub>
+
+### Reasoning
+
+*I should check that WXT correctly handles JSX in this .tsx entrypoint file, but since tsconfig already has jsx set to react-jsx and the React module should configure the vite plugin, this should be fine. Time to build.*
+
+---
+
 <sub>297m 33s</sub>
 
 ### `bash`
@@ -13170,15 +13153,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run com
 
 ---
 
-<sub>297m 32s</sub>
-
-### Reasoning
-
-*I should check that WXT correctly handles JSX in this .tsx entrypoint file, but since tsconfig already has jsx set to react-jsx and the React module should configure the vite plugin, this should be fine. Time to build.*
-
----
-
-<sub>297m 34s</sub>
+<sub>297m 35s</sub>
 
 ### Copilot
 
@@ -13223,7 +13198,7 @@ WXT 0.21.4
 
 ---
 
-<sub>297m 37s</sub>
+<sub>297m 38s</sub>
 
 ### Copilot
 
@@ -13291,7 +13266,7 @@ $ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run lin
 
 ---
 
-<sub>297m 40s</sub>
+<sub>297m 42s</sub>
 
 ### Copilot
 
@@ -13352,7 +13327,7 @@ dist-ssr
 
 ---
 
-<sub>297m 43s</sub>
+<sub>297m 45s</sub>
 
 ### Copilot
 
@@ -13461,7 +13436,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>297m 59s</sub>
+<sub>298m 1s</sub>
 
 ### Reasoning
 
@@ -13517,7 +13492,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
-<sub>298m 9s</sub>
+<sub>298m 11s</sub>
 
 ### Reasoning
 
@@ -13601,7 +13576,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/useAppData
 
 ---
 
-<sub>298m 18s</sub>
+<sub>298m 32s</sub>
 
 ### Copilot
 
@@ -13624,7 +13599,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
-<sub>298m 33s</sub>
+<sub>298m 42s</sub>
 
 ### Copilot
 
@@ -13647,7 +13622,7 @@ Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entryp
 
 ---
 
-<sub>298m 43s</sub>
+<sub>298m 46s</sub>
 
 ### Copilot
 
@@ -13722,7 +13697,7 @@ WXT 0.21.4
 
 ---
 
-<sub>298m 53s</sub>
+<sub>298m 55s</sub>
 
 ### Copilot
 
@@ -13756,7 +13731,7 @@ entrypoints/content/index.tsx:4:1: warning react(only-export-components): Fast r
 
 ---
 
-<sub>298m 59s</sub>
+<sub>299m 1s</sub>
 
 ### Reasoning
 
@@ -13820,7 +13795,7 @@ WXT 0.21.4
 
 ---
 
-<sub>299m 5s</sub>
+<sub>299m 6s</sub>
 
 ### Copilot
 
@@ -13864,7 +13839,7 @@ Executed 2 statement(s):
 
 ---
 
-<sub>299m 11s</sub>
+<sub>299m 13s</sub>
 
 ### Reasoning
 
@@ -13890,7 +13865,7 @@ $ curl -s -o /tmp/wantlist.html -w "%{http_code}\n" "https://www.nobleknight.com
 
 ---
 
-<sub>299m 15s</sub>
+<sub>299m 17s</sub>
 
 ### Copilot
 
@@ -13982,7 +13957,7 @@ $ cd /tmp/ext-test && node -e "const {chromium} = require('playwright'); console
 
 ---
 
-<sub>299m 30s</sub>
+<sub>299m 32s</sub>
 
 ### Reasoning
 
@@ -14061,7 +14036,7 @@ Call log:
 
 ---
 
-<sub>300m 23s</sub>
+<sub>300m 30s</sub>
 
 ### Reasoning
 
@@ -14114,7 +14089,7 @@ Call log:
 
 ---
 
-<sub>301m 56s</sub>
+<sub>302m 2s</sub>
 
 ### Reasoning
 
@@ -14269,7 +14244,7 @@ Failed to load resource: net::ERR_FAILED
 
 ---
 
-<sub>307m 12s</sub>
+<sub>307m 15s</sub>
 
 ### Copilot
 
@@ -14308,19 +14283,6 @@ drwxr-xr-x  7 tsteele  staff  224 Sep 20 22:07 icon
 
 ---
 
-<sub>307m 16s</sub>
-
-### Copilot
-
-Good, the build is already there and my automated test in a real Chromium confirmed it works (all 11 items extracted, panel renders). To load it in your own Chrome:
-
-1. Build it (already done, but to rebuild): `npm run build`
-2. Open Chrome → go to `chrome://extensions`
-3. Toggle **Developer mode** on (top-right switch)
-4. Click **Load unpacked
-
----
-
 <sub>310m 26s</sub>
 
 ### User
@@ -14329,15 +14291,7 @@ where is build output
 
 ---
 
-<sub>310m 59s</sub>
-
-### Copilot
-
-The build output is right here, already built from ear
-
----
-
-<sub>315m 27s</sub>
+<sub>315m 47s</sub>
 
 ### Copilot
 
@@ -14366,7 +14320,7 @@ extension doesn't seem to work in edge, thought chrome extensions would, also in
 
 ---
 
-<sub>1522m 3s</sub>
+<sub>1522m 10s</sub>
 
 ### Reasoning
 
@@ -14438,7 +14392,7 @@ User responded: edge_extensions_page=loaded_no_errors, console_errors=some track
 
 ---
 
-<sub>1524m 8s</sub>
+<sub>1524m 21s</sub>
 
 ### Reasoning
 
@@ -14512,7 +14466,7 @@ User responded: exact_url=https://www.nobleknight.com/Wantlist, fresh_reload=tru
 
 ---
 
-<sub>1524m 54s</sub>
+<sub>1525m 2s</sub>
 
 ### Reasoning
 
@@ -14620,7 +14574,7 @@ Contents of https://www.nobleknight.com/Account/Login?ReturnUrl=%2FWantlist (red
 
 ---
 
-<sub>1525m 7s</sub>
+<sub>1525m 26s</sub>
 
 ### Reasoning
 
@@ -14653,7 +14607,7 @@ href="/WantList"
 
 ---
 
-<sub>1525m 30s</sub>
+<sub>1525m 32s</sub>
 
 ### Reasoning
 
@@ -14681,7 +14635,7 @@ curl -s "https://www.nobleknight.com/Search?SearchTerm=warhammer" -A "Mozilla/5.
 
 ---
 
-<sub>1525m 35s</sub>
+<sub>1525m 36s</sub>
 
 ### Reasoning
 
@@ -14708,7 +14662,7 @@ curl -sL "https://www.nobleknight.com/Search?SearchTerm=warhammer" -A "Mozilla/5
 
 ---
 
-<sub>1525m 40s</sub>
+<sub>1525m 48s</sub>
 
 ### Reasoning
 
@@ -14718,7 +14672,7 @@ Actually, since host_permissions already covers the whole nobleknight.com domain
 
 ---
 
-<sub>1525m 47s</sub>
+<sub>1525m 48s</sub>
 
 ### Copilot
 
@@ -14773,7 +14727,7 @@ export default defineContentScript({
 
 ---
 
-<sub>1525m 52s</sub>
+<sub>1525m 57s</sub>
 
 ### Reasoning
 
@@ -14796,7 +14750,7 @@ File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/co
 
 ---
 
-<sub>1525m 59s</sub>
+<sub>1526m 1s</sub>
 
 ### Copilot
 
@@ -14849,7 +14803,7 @@ WXT 0.21.4
 
 ---
 
-<sub>1526m 4s</sub>
+<sub>1526m 6s</sub>
 
 ### Copilot
 
@@ -14887,7 +14841,7 @@ Failed to load resource: net::ERR_FAILED
 
 ---
 
-<sub>1526m 12s</sub>
+<sub>1526m 18s</sub>
 
 ### Copilot
 
@@ -14955,7 +14909,7 @@ Panel host element found on /Wantlist: true
 
 ---
 
-<sub>1526m 22s</sub>
+<sub>1526m 23s</sub>
 
 ### Copilot
 
@@ -14982,7 +14936,7 @@ entrypoints/content/index.tsx:13:1: warning react(only-export-components): Fast 
 
 ---
 
-<sub>1526m 25s</sub>
+<sub>1526m 26s</sub>
 
 ### Copilot
 
@@ -15030,7 +14984,7 @@ D  src/pages/SettingsPage.tsx
 
 ---
 
-<sub>1526m 27s</sub>
+<sub>1526m 28s</sub>
 
 ### Copilot
 
@@ -15107,7 +15061,7 @@ git log --oneline -5
 
 ---
 
-<sub>1526m 39s</sub>
+<sub>1526m 41s</sub>
 
 ### Copilot
 
@@ -15155,13 +15109,3026 @@ WXT 0.21.4
 
 ---
 
-<sub>1526m 43s</sub>
+<sub>1526m 46s</sub>
 
 ### Copilot
 
 **Root cause found and fixed** — not an Edge bug. Noble Knight's own site links to your want list with inconsistent casing (`/Wantlist`, `/WantList`), separate from the `/MyWantList/<token>` shareable-link format we originally targeted. Chrome/Edge extension match patterns compare paths case-sensitively, so the content script silently never ran on that URL.
 
 Fix: now matches the whole `nobleknight.com` origin and does a case-insensitive check at runtime for any "want list"-shaped path. Verified against both URL shapes with the real live page (11/11 items). Rebuilt at `.output/chrome-mv3` — reload it in `edge://extensions` (and `chrome://extensions`) via the refresh icon, then revisit your want list. Todo `ext-manual-test` still open for you to confirm in your actual browsers; let me know how it goes.
+
+---
+
+<sub>1534m 17s</sub>
+
+### Info
+
+MCP Servers reloaded: 1 server connected
+
+---
+
+<sub>1535m 33s</sub>
+
+### Info
+
+Model changed from Auto to mai-code-1.1-flash (medium) for this session
+
+---
+
+<sub>1537m 30s</sub>
+
+### User
+
+this looks promising, now, maybe instead clicking item in list to expand and show details, it could just scroll the item on the actual page into view, then there would not be a need for the product image in the extension, either, so bascially just show name, publisher, and whether in stock or not, then when clicking scroll the original page if possible
+
+---
+
+<sub>1537m 30s</sub>
+
+### Info
+
+Compacting conversation history...
+
+---
+
+<sub>1537m 44s</sub>
+
+### Reasoning
+
+***Updating plan details**
+
+I’m going to update the plan.md with the new details. I want to include a note about clicking the item to scroll to the real page, emphasizing that there’s no product image, just the essential info. I’ll also consider updating SQL to mark the external manual tests in progress. Since the user prefers planning over implementation, I need to focus on revising the plan and dealing with the current task statuses. Let's ensure everything is clear!
+
+**Checking plan and SQL state**
+
+I'm going to read the plan and also check the SQL state. For that, I'll run a SQL query like SELECT * FROM todos. It might be efficient to do both tasks together in a multi-tool or parallel approach. This way, I can streamline the process and ensure I'm gathering all the necessary information without unnecessary steps. Let's move forward with that plan!*
+
+---
+
+<sub>1537m 48s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md.**
+
+/Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md (lines 1-220)
+
+<details>
+<summary>169 lines</summary>
+
+````
+# NKG Want List Plus — Implementation Plan (v3: Browser Extension Pivot)
+
+## Status
+v1 (data model/scraper/pages) and v2 (mobile-first redesign, per-group
+ordering) were built as a standalone Vite+React SPA hosted on GH Pages,
+scraping NKG want-list pages via a CORS proxy. That is committed and working
+locally (GH Pages deploy is separately broken — needs a manual Settings
+change, tracked but not blocking this pivot).
+
+**This revision replaces the delivery shell.** Instead of a hosted web app
+that fetches a remote want-list URL through a CORS proxy, this becomes a
+**Chrome browser extension** with a **content script** injected directly on
+Noble Knight Games' own want-list page. The content script has direct DOM
+access — no CORS, no proxy, no HTML fetch/parse round-trip, no paste-HTML
+fallback. The "list manager" UI (grouping, per-group ordering, move up/down)
+appears as a **bottom panel overlaid on the live page**.
+
+## Why keep the existing repo/session (not starting over)
+Most of the hard design/product decisions and a meaningful chunk of code
+carry over almost unchanged:
+- **Data model** (`Item`, `Group` with `itemOrder`, `Source`) — reusable
+  as-is; `Source` now represents an auto-detected want-list page (by URL)
+  instead of a manually-entered one.
+- **Group ordering logic** (`moveItemInGroup`, `toggleItemGroup` invariants,
+  storage migration pattern) — pure data functions, framework/storage
+  agnostic already; just swap the persistence backend.
+- **Item extraction selectors** (`.product-card-wrapper`, `.name`,
+  `.publisher`, `.product-line`, `.condition`, stock #, image bg-url) — these
+  were built and verified against real NKG HTML; the content script queries
+  the **live DOM** with the same selectors instead of a parsed HTML string.
+- **UI/UX decisions** from v2 (compact row: thumbnail right + title +
+  publisher, tap-to-expand detail, move up/down buttons, bottom-panel mobile
+  pattern) — directly applicable to the extension's bottom panel.
+
+What's being retired: React Router pages/routes, top-level `App.tsx` shell,
+GH Pages deploy workflow, the CORS-proxy fetch logic, and paste-HTML
+fallback (no longer needed — the real page is always right there when the
+panel is open).
+
+## Key Decisions (confirmed with user)
+- **Browser target:** Chrome only, Manifest V3.
+- **Build tooling:** [WXT](https://wxt.dev) — modern extension framework,
+  handles MV3 manifest generation, content script + Shadow DOM UI mounting,
+  React support, dev HMR.
+- **Storage:** `chrome.storage.local` (per-device, no size-quota worries)
+  via WXT's storage helper. Keep JSON export/import as a manual
+  backup/portability feature (same format as v2, adapted).
+- **Injection scope:** Only on Noble Knight want-list pages — content script
+  `matches` pattern `*://www.nobleknight.com/MyWantList/*` (confirmed from
+  `url.txt`: `https://www.nobleknight.com/MyWantList/<token>`). Not injected
+  site-wide.
+- **UI surface:** a single bottom panel (collapsed to a small tab/handle by
+  default, expands to a sheet) — no more separate routed pages. Panel has
+  two views: **"On this page"** (items detected on the currently loaded
+  want-list page, with quick add/remove-from-list chips) and **"My Lists"**
+  (browse all groups, open one to see its ordered items with move up/down
+  controls) — conceptually replaces `ItemsPage`/`GroupsPage`/
+  `GroupDetailPage` as panel tabs instead of routes.
+- **Not keeping the old SPA in parallel** — this replaces it; the SPA-specific
+  scaffolding (router, GH Pages workflow) will be removed as the extension
+  is built out, once the extension covers the same functionality.
+- **Development branch:** all v3 work happens on a new branch (e.g.
+  `extension-v3`), not directly on `main`. `main` stays at the current
+  working SPA snapshot until the extension is ready to replace it (merge via
+  PR once the manual test pass succeeds).
+- **Theme:** switch from the SPA's dark theme to a **light theme with an
+  "NK blue" accent**, to feel visually at home on Noble Knight's own site
+  rather than clashing with it. A quick look at nobleknight.com's markup
+  turned up `#005996` as a likely brand-blue candidate; exact accent hex(es)
+  should be confirmed against the live site's computed styles during
+  implementation (easy to do from the content script itself — read
+  computed styles / CSS custom properties directly off the host page) rather
+  than guessed. Panel background: white/near-white, text: dark gray/near-
+  black, accent: NK blue for buttons/active states/links, keeping ≥44px tap
+  targets and the same compact-row/move-up-down UX from v2.
+
+## Architecture
+```
+entrypoints/
+  content/
+    index.ts        — content script entry: matches MyWantList/*,
+                       extracts items from live DOM on load + on DOM
+                       mutation (NKG list is likely paginated/lazy-loaded),
+                       mounts bottom panel via Shadow DOM root
+    ui/              — React components mounted inside the shadow root
+      BottomPanel.tsx
+      PageItemsTab.tsx     (was ItemsPage — items on current page + add-to-group chips)
+      ListsTab.tsx         (was GroupsPage — list of groups)
+      ListDetailView.tsx   (was GroupDetailPage — ordered items, move up/down)
+      ItemRow.tsx          (reused/ported from v2 almost as-is)
+  options/           — small options page: manage lists (rename/delete),
+                       export/import JSON, clear all data
+lib/
+  domExtractor.ts    — port of scraper.ts's card-parsing logic, operating
+                       on `document` instead of a parsed HTML string;
+                       returns Item[] for "this page"
+  storage.ts         — chrome.storage.local read/write + versioned
+                       migration (same pattern as v2's localStorage version)
+  itemOps.ts         — moveItemInGroup, toggleItemGroup, etc. (ported
+                       from AppDataContext, as plain functions + a small
+                       store hook, since there's no route-based React app
+                       shell anymore)
+types.ts             — Item/Group/Source types, mostly unchanged from v2
+wxt.config.ts        — manifest config: name, permissions: ["storage"],
+                       host_permissions for nobleknight.com, content script
+                       matches
+```
+
+## Data Model Changes
+- `Source` becomes "a want-list page the user has visited," auto-registered
+  by URL + page title the first time the content script runs there — no
+  manual add-source flow, no periodic manual re-scrape trigger (it
+  naturally re-syncs whenever the user visits/reloads that page).
+- `Item` gains a `lastSeenAt` (or reuse existing scrape timestamp) so stale
+  items (e.g. removed from the want list on NKG's side) could later be
+  flagged, though pruning logic is a nice-to-have, not required for v3.
+- `Group.itemOrder` and all move/toggle invariants: unchanged from v2.
+- Storage keys/versioning: new `chrome.storage.local` key (e.g.
+  `nkg-want-list-plus:data`), with a **v2 (localStorage) → v3
+  (chrome.storage) manual migration path** deferred — since this is a fresh
+  extension install, existing local-only test data does not need to
+  migrate automatically; a manual "import your old export.json" via the
+  options page covers that if needed.
+
+## Todos (new, this revision)
+1. Create and check out a new git branch (e.g. `extension-v3`) for all
+   extension work; keep `main` untouched until ready to merge.
+2. Scaffold a new WXT project (Chrome, MV3, React) in this repo, replacing/
+   retiring the Vite SPA scaffolding; wire up TypeScript config and linting.
+3. Port `types.ts` (Item/Group/Source) with `Source` semantics updated for
+   auto-detected want-list pages.
+4. Build `lib/domExtractor.ts`: port scraper.ts's card-parsing logic to
+   operate on live `document`/DOM nodes instead of a parsed HTML string;
+   verify field-for-field parity with the original scraper's output shape.
+5. Build `lib/storage.ts` for `chrome.storage.local` with versioned load/save
+   (mirroring v2's migration pattern) + JSON export/import.
+6. Port group/item mutation logic (`moveItemInGroup`, `toggleItemGroup`,
+   `mergeScrapedItems`-equivalent "sync current page items") from
+   `AppDataContext` into framework-light functions usable from the content
+   script's React tree.
+7. Build content script entry: match `*://www.nobleknight.com/MyWantList/*`,
+   extract items on load (and observe DOM mutations for lazy-loaded/paginated
+   content), mount bottom panel via Shadow DOM.
+8. Build a light-theme, NK-blue-accented `BottomPanel` + `PageItemsTab` +
+   `ListsTab` + `ListDetailView` + ported `ItemRow` — collapsed handle by
+   default, expands to sheet; confirm exact brand blue hex against the live
+   site's computed styles; preserve v2's compact-row/move-up-down/
+   tap-to-expand UX.
+9. Build a minimal options page: rename/delete lists, JSON export/import,
+   clear-all-data (same light/NK-blue theme).
+10. Manual test pass on the real NKG want-list URL: verify item extraction
+    matches what's actually on the page, grouping/ordering persists across
+    page reloads and across different want-list URLs (multiple `Source`s),
+    panel doesn't visually clash with the host page (Shadow DOM isolation
+    check), theme reads correctly as "light, NK blue accent" next to the
+    real site.
+11. Remove retired SPA scaffolding (React Router, top nav `App.tsx`, GH
+    Pages deploy workflow, CORS proxy/paste-HTML code) once the extension
+    covers equivalent functionality; update README to describe the
+    extension install/usage flow (load unpacked in Chrome, etc.) and branch/
+    merge plan back to `main`.
+
+## Risks / Notes
+- NKG's want-list page may lazy-load or paginate items client-side (v2's
+  scraper handled pagination via a "next page" link fetch — need to check
+  whether the live page reveals more items via infinite scroll, a "load
+  more" button, or actual pagination; a `MutationObserver` on the item
+  container is the likely fix if it's dynamic).
+- Shadow DOM is important to avoid NKG's page CSS leaking into the panel
+  (and vice versa) — must mount the React root inside a shadow root, not
+  directly into the page's `document.body`.
+- Since the content script only runs on `MyWantList/*`, a user with multiple
+  distinct want-list URLs (e.g. "CWBBS want list" vs. "grail list" as
+  separate NKG-hosted lists) will have the panel/data shared across all of
+  them (same extension storage), which matches the original multi-source
+  design intent.
+- No CORS proxy, no proxy flakiness, no paste-HTML fallback needed anymore —
+  removes an entire class of bugs from v1/v2.
+````
+
+</details>
+
+
+---
+
+<sub>1537m 47s</sub>
+
+### `sql`
+
+**Inspect current todo status for plan update**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "description": "Inspect current todo status for plan update",
+  "query": "SELECT id, title, status FROM todos ORDER BY id;"
+}
+```
+
+</details>
+
+<details>
+<summary>33 lines</summary>
+
+```
+30 row(s) returned:
+
+| id | title | status |
+| --- | --- | --- |
+| app-shell-routing | Wiring app shell and routing | done |
+| bottom-tab-nav | Replacing top nav with mobile bottom tab bar | done |
+| context-move-item | Adding moveItemInGroup and itemOrder invariants | done |
+| data-model-storage | Implementing data model and localStorage persistence | done |
+| data-model-v2 | Adding Group.itemOrder and v1-v2 migration | done |
+| deploy-finalize | Finalizing GH Pages deployment and README | done |
+| e2e-manual-test | Manually testing end-to-end against real want list | done |
+| ext-bottom-panel-ui | Building light-theme NK-blue bottom panel UI | done |
+| ext-branch | Creating extension-v3 git branch | done |
+| ext-cleanup-spa | Removing retired SPA scaffolding | pending |
+| ext-content-script | Building content script entry point | done |
+| ext-dom-extractor | Building lib/domExtractor.ts | done |
+| ext-item-ops | Porting group/item mutation logic | done |
+| ext-manual-test | Manual test pass on real NKG want-list page | in_progress |
+| ext-options-page | Building extension options page | done |
+| ext-port-types | Porting types.ts for extension | done |
+| ext-scaffold-wxt | Scaffolding WXT extension project | done |
+| ext-storage | Building chrome.storage.local storage layer | done |
+| group-detail-page | Building GroupDetailPage list manager screen | done |
+| groups-home-items-simplify | Repurposing GroupsPage as home tab and simplifying ItemsPage | done |
+| groups-ui | Building Groups management UI | done |
+| item-row-component | Building shared ItemRow compact list component | done |
+| items-ui | Building Items browsing UI | done |
+| mobile-css-rewrite | Rewriting CSS mobile-first with responsive breakpoints | done |
+| scaffold-project | Scaffolding Vite + React + TS project | done |
+| scraper-module | Building scraper and HTML parser | done |
+| settings-ui | Building Settings UI | done |
+| sources-ui | Building Sources management UI | done |
+| v2-manual-test | Manually testing v2 redesign | done |
+| v2-readme-update | Updating README for list-manager UX | done |
+```
+
+</details>
+
+
+---
+
+<sub>1537m 52s</sub>
+
+### Reasoning
+
+***Updating the plan**
+
+I need to revise the plan to say, “clicking a row scrolls the actual page item into view.” The UI should have fewer details, focusing more on the open page and minimal row details. I’m thinking I might use “click row to scroll product on page into view” instead of adding more details. I’ll patch the `plan.md` and refine the sections like “ItemRow and ListDetailView.” It seems we should keep the SQL updates minimal for now, just mark the ext-manual-test as in progress.
+
+**Refining the updates**
+
+I need to update "Todos" number 8 to state: “minimal row with title, publisher, and in-stock status; clicking the row scrolls to the original item card; no expanded detail UI.” I see that I’ve mentioned this twice, so I’ll make sure to patch the relevant text and note that this is a refinement. It sounds like a small patch will suffice for this update. Let’s get that finalized!*
+
+---
+
+<sub>1537m 54s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md.**
+
+/Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md
+
+```
+File /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md updated with changes.
+```
+
+
+---
+
+<sub>1538m 1s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md.**
+
+/Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md
+
+```
+File /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md updated with changes.
+```
+
+
+---
+
+<sub>1538m 4s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md.**
+
+/Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md
+
+```
+File /Users/tsteele/.copilot/session-state/910d5a98-3452-4433-ba3c-c9baec5c78e4/plan.md updated with changes.
+```
+
+
+---
+
+<sub>1538m 7s</sub>
+
+### Reasoning
+
+***Updating architecture notes**
+
+I think I should update the "Architecture" item to note that no product images are needed. I’m considering updating the SQL to-do names but I’m not sure if that’s necessary. Next, I’ll call exit_plan_mode with a summary. Since the user asked for design refinement, I want to focus on updating the plan rather than implementation. I’ll provide summary bullets along with a recommended action, likely setting that to "interactive" since it fits the user's request.*
+
+---
+
+<sub>1538m 13s</sub>
+
+### `exit_plan_mode`
+
+**Updated plan to match the lighter-weight browse...**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "summary": "Updated plan to match the lighter-weight browser-extension behavior you want:\n\n- Keep the extension as the delivery shell, but simplify the panel rows to the essentials: title, publisher, and in-stock status\n- Remove the in-panel product detail accordion and product image from the extension UI\n- Add row-click behavior to scroll the matching product card on the actual Noble Knight page into view\n- Keep the list manager logic and per-group ordering intact; only the UX is being tightened around the page scroll behavior\n\nKey files to change next if we implement: `entrypoints/content/ui/ItemRow.tsx`, `entrypoints/content/ui/ListDetailView.tsx`, `entrypoints/content/ui/PageItemsTab.tsx`, and the content-script mount logic that matches the real want-list URL variants (`/MyWantList/*`, `/Wantlist`, `/WantList`).\n\nThis keeps the app anchored on the real page, with the panel acting as a focused list manager instead of a duplicate product viewer.",
+  "recommendedAction": "interactive"
+}
+```
+
+</details>
+
+```
+Plan approved! Exited plan mode.
+
+You are now in autopilot mode (edits may be auto-approved). Proceed with implementing the plan now — begin doing the actual implementation work (editing files, running commands) immediately. Do NOT call task_complete or report the task as finished until you have genuinely implemented the plan and verified it. Creating or approving the plan does not count as completing the task.
+```
+
+
+---
+
+<sub>1538m 13s</sub>
+
+### ◌ Conversation Compacted
+
+---
+
+<sub>1538m 27s</sub>
+
+### `glob`
+
+****/*.{ts,tsx,css}**
+
+"**/*.{ts,tsx,css}"
+
+<details>
+<summary>16 matches</summary>
+
+```
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/wxt.config.ts
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/types.ts
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/useAppData.ts
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/itemOps.ts
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/storage.ts
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/domExtractor.ts
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/index.tsx
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/options/App.css
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/options/main.tsx
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/options/App.tsx
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ListDetailView.tsx
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/PageItemsTab.tsx
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ListsTab.tsx
+```
+
+</details>
+
+
+---
+
+<sub>1538m 27s</sub>
+
+### `grep`
+
+**ItemRow|BottomPanel|ListDetailView|domExtractor|scrollIntoView|toggleItemGroup|moveItemInGroup**
+
+"ItemRow|BottomPanel|ListDetailView|domExtractor|scrollIntoView|toggleItemGroup|moveItemInGroup"
+
+<details>
+<summary>65 matches</summary>
+
+```
+[grep content: 166 matches across 8 file(s) under /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus]
+
+lib/useAppData.ts (8 match(es)):
+     const toggleItemGroup = useCallback(
+         apply((prev) => ops.toggleItemGroup(prev, itemId, groupId)),
+     const moveItemInGroup = useCallback(
+         apply((prev) => ops.moveItemInGroup(prev, groupId, itemId, direction)),
+         toggleItemGroup,
+         moveItemInGroup,
+         toggleItemGroup,
+         moveItemInGroup,
+
+entrypoints/content/ui/ItemRow.tsx (3 match(es)):
+   interface ItemRowProps {
+   export function ItemRow({
+   }: ItemRowProps) {
+
+lib/itemOps.ts (2 match(es)):
+   export function toggleItemGroup(
+   export function moveItemInGroup(
+
+copilot-session-910d5a98 (135 match(es)):
+  3452- 4433-ba3c-c9baec5c78e4.md:  "query": "\nINSERT INTO todos (id, title, description) VALUES\n('data-model-v2', 'Adding Group.itemOrder and v1-v2 migration', 'Add itemOrder: string[] to Group type, bump CURRENT_DATA_VERSION to 2, write storage.ts migration backfilling itemOrder from existing item groupIds membership'),\n('context-move-item', 'Adding moveItemInGroup and itemOrder invariants', 'Add moveItemInGroup(groupId, itemId, direction) to AppDataContext; update toggleItemGroup/removeItem/removeGroup/mergeScrapedItems to keep Group.itemOrder in sync with Item.groupIds'),\n('item-row-component', 'Building shared ItemRow compact list component', 'Create src/components/ItemRow.tsx: right-aligned small thumbnail, title + publisher only, tap-to-expand accordion detail (price/condition, stock #, product line, source)'),\n('group-detail-page', 'Building GroupDetailPage list manager screen', 'Ordered list rendering Group.itemOrder, move up/down buttons per row, remove-from-group action, uses ItemRow'),\n('groups-home-items-simplify', 'Repurposing GroupsPage as home tab and simplifying ItemsPage', 'GroupsPage becomes home/landing listing groups with counts linking to GroupDetailPage; ItemsPage simplified to browse/search + group-membership chips using ItemRow'),\n('bottom-tab-nav', 'Replacing top nav with mobile bottom tab bar', 'Rework App.tsx routing/layout: bottom tab bar (Groups/Items/Sources/Settings), add /groups/:id route for GroupDetailPage'),\n('mobile-css-rewrite', 'Rewriting CSS mobile-first with responsive breakpoints', 'Base styles for narrow viewports (single column, ge44px tap targets, safe-area-aware fixed bottom tab bar), progressive min-width media queries for tablet/desktop'),\n('v2-manual-test', 'Manually testing v2 redesign', 'Verify per-group ordering persists/independent across groups, v1 to v2 migration works on existing localStorage data, responsive layout at phone/tablet/desktop widths'),\n('v2-readme-update', 'Updating README for list-manager UX', 'Document new mobile-first navigation, per-group ordering model, and expand/collapse item detail in README.md');\n\nINSERT INTO todo_deps (todo_id, depends_on) VALUES\n('context-move-item', 'data-model-v2'),\n('item-row-component', 'context-move-item'),\n('group-detail-page', 'item-row-component'),\n('groups-home-items-simplify', 'group-detail-page'),\n('bottom-tab-nav', 'groups-home-items-simplify'),\n('mobile-css-rewrite', 'bottom-tab-nav'),\n('v2-manual-test', 'mobile-css-rewrite'),\n('v2-readme-update', 'v2-manual-test');\n"
+  3452- 4433-ba3c-c9baec5c78e4.md:  "summary": "**Mobile-first list-manager redesign — plan updated (v2)**\n\n- **Nav:** bottom tab bar (Groups home / Items / Sources / Settings), replacing top nav.\n- **Ordering:** move up/down buttons, **per-group** independent ordering — add `Group.itemOrder: string[]`, bump data version to 2 with a migration.\n- **Rows:** compact — title + publisher only, small thumbnail right-aligned, tap to expand for price/condition/stock/product line/source.\n- **New `GroupDetailPage`** becomes the core list-manager screen; `GroupsPage` becomes the home tab; `ItemsPage` simplified to browse/search + group chips (no ordering there).\n- **New shared `ItemRow` component** used by both list views.\n- **CSS:** mobile-first rewrite with responsive breakpoints (works on desktop too, not a separate desktop UI).\n- 9 new todos tracked in SQL, in dependency order from data model → context logic → UI components → pages → nav → CSS → manual test → README update."
+  3452- 4433-ba3c-c9baec5c78e4.md:Now update AppDataContext for itemOrder invariants and moveItemInGroup.
+  3452- 4433-ba3c-c9baec5c78e4.md:  toggleItemGroup: (itemId: string, groupId: string) => void;
+  3452- 4433-ba3c-c9baec5c78e4.md:  const toggleItemGroup = useCallback((itemId: string, groupId: string) => {
+  3452- 4433-ba3c-c9baec5c78e4.md:      toggleItemGroup,
+  3452- 4433-ba3c-c9baec5c78e4.md:      toggleItemGroup,
+  3452- 4433-ba3c-c9baec5c78e4.md:Now rewrite with itemOrder invariants and moveItemInGroup.
+  3452- 4433-ba3c-c9baec5c78e4.md:Now update addGroup to include itemOrder: [], removeGroup already fine (doesn't need itemOrder cleanup since group is deleted), toggleItemGroup to sync itemOrder, add moveItemInGroup, and removeItem to clean up itemOrder across groups.
+  3452- 4433-ba3c-c9baec5c78e4.md:  const toggleItemGroup = useCallback((itemId: string, groupId: string) => {
+  3452- 4433-ba3c-c9baec5c78e4.md:Now update the value memo to expose moveItemInGroup:
+  3452- 4433-ba3c-c9baec5c78e4.md:      toggleItemGroup,
+  ... 111 more match(es) omitted in this file
+  3452- 4433-ba3c-c9baec5c78e4.md:**Remove old BottomPanel before recreating with improved reactivity**
+  3452- 4433-ba3c-c9baec5c78e4.md:$ rm /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+  3452- 4433-ba3c-c9baec5c78e4.md:**create a new file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+  3452- 4433-ba3c-c9baec5c78e4.md:/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+  3452- 4433-ba3c-c9baec5c78e4.md:Created file /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx with 4008 characters
+  3452- 4433-ba3c-c9baec5c78e4.md:Now simplify `content/index.tsx` since BottomPanel handles its own sync.
+  3452- 4433-ba3c-c9baec5c78e4.md:import { BottomPanel } from "./ui/BottomPanel";
+  3452- 4433-ba3c-c9baec5c78e4.md:    // happens inside <BottomPanel>, which re-runs whenever the page's item
+  3452- 4433-ba3c-c9baec5c78e4.md:        root.render(<BottomPanel />);
+  3452- 4433-ba3c-c9baec5c78e4.md:D  src/components/ItemRow.tsx
+  3452- 4433-ba3c-c9baec5c78e4.md:- lib/domExtractor.ts: ports the v2 scraper's card-parsing logic to
+  3452- 4433-ba3c-c9baec5c78e4.md:- entrypoints/content: mounts <BottomPanel> in a Shadow Root with
+
+entrypoints/content/ui/ListDetailView.tsx (5 match(es)):
+   import { ItemRow } from "./ItemRow";
+   interface ListDetailViewProps {
+   export function ListDetailView({
+   }: ListDetailViewProps) {
+             <ItemRow
+
+entrypoints/content/ui/PageItemsTab.tsx (3 match(es)):
+   import { ItemRow } from "./ItemRow";
+    * ListDetailView).
+           <ItemRow
+
+entrypoints/content/index.tsx (3 match(es)):
+   import { BottomPanel } from "./ui/BottomPanel";
+       // happens inside <BottomPanel>, which re-runs whenever the page's item
+           root.render(<BottomPanel />);
+
+entrypoints/content/ui/BottomPanel.tsx (7 match(es)):
+   import { extractItemsFromDocument } from "../../../lib/domExtractor";
+   import { ListDetailView } from "./ListDetailView";
+   export function BottomPanel() {
+                   onToggleGroup={appData.toggleItemGroup}
+                   <ListDetailView
+                     onMoveItemInGroup={appData.moveItemInGroup}
+                     onToggleItemGroup={appData.toggleItemGroup}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 29s</sub>
+
+### Reasoning
+
+***Inspecting files for data extraction**
+
+I need to take a closer look at the actual files. I’ll read through ItemRow and check the data types for product data and page extraction. It seems likely that I’ll need to implement a row action that involves scrolling into view, based on the data attribute on the item DOM. I also need to check if the item has an ID field and whether the DOM extractor sets the product URL.*
+
+---
+
+<sub>1538m 30s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx (lines 1-220)
+
+<details>
+<summary>151 lines</summary>
+
+```
+import { useState } from "react";
+import type { Group, Item } from "../../../types";
+
+export interface OrderControls {
+  canMoveUp: boolean;
+  canMoveDown: boolean;
+  onMoveUp: () => void;
+  onMoveDown: () => void;
+  onRemoveFromGroup: () => void;
+}
+
+export interface GroupChipControls {
+  groups: Group[];
+  activeGroupIds: string[];
+  onToggleGroup: (groupId: string) => void;
+}
+
+interface ItemRowProps {
+  item: Item;
+  sourceNames: string[];
+  orderControls?: OrderControls;
+  groupChips?: GroupChipControls;
+  onRemoveItemEntirely?: () => void;
+}
+
+/**
+ * Compact, mobile-first list row: small thumbnail on the right, title +
+ * publisher only. Tap the row to expand an inline accordion with full
+ * details (price/condition, stock #, product line, source) and actions.
+ */
+export function ItemRow({
+  item,
+  sourceNames,
+  orderControls,
+  groupChips,
+  onRemoveItemEntirely,
+}: ItemRowProps) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <li className="item-row">
+      <div className="item-row-main">
+        {orderControls && (
+          <div className="order-controls">
+            <button
+              className="move-btn"
+              aria-label={`Move ${item.title} up`}
+              disabled={!orderControls.canMoveUp}
+              onClick={(e) => {
+                e.stopPropagation();
+                orderControls.onMoveUp();
+              }}
+            >
+              ▲
+            </button>
+            <button
+              className="move-btn"
+              aria-label={`Move ${item.title} down`}
+              disabled={!orderControls.canMoveDown}
+              onClick={(e) => {
+                e.stopPropagation();
+                orderControls.onMoveDown();
+              }}
+            >
+              ▼
+            </button>
+          </div>
+        )}
+
+        <button
+          className="item-row-tap-target"
+          onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
+        >
+          <div className="item-row-text">
+            <span className="item-title">{item.title}</span>
+            {item.publisher && (
+              <span className="item-publisher">{item.publisher}</span>
+            )}
+          </div>
+        </button>
+
+        {item.imageUrl ? (
+          <img
+            className="item-thumb"
+            src={item.imageUrl}
+            alt=""
+            loading="lazy"
+          />
+        ) : (
+          <div className="item-thumb item-thumb-placeholder" aria-hidden="true" />
+        )}
+      </div>
+
+      {expanded && (
+        <div className="item-row-detail">
+          {item.productLine && <p className="muted">{item.productLine}</p>}
+          {item.stockNumber && (
+            <p className="muted">Stock #: {item.stockNumber}</p>
+          )}
+          {item.conditions.length > 0 && (
+            <ul className="conditions">
+              {item.conditions.map((c, idx) => (
+                <li key={idx}>
+                  {c.condition} — ${c.price.toFixed(2)}
+                  {c.note && ` (${c.note})`}
+                </li>
+              ))}
+            </ul>
+          )}
+          {sourceNames.length > 0 && (
+            <p className="muted small">From: {sourceNames.join(", ")}</p>
+          )}
+          <p className="muted small">
+            <a href={item.productUrl} target="_blank" rel="noreferrer">
+              View on Noble Knight
+            </a>
+          </p>
+
+          {groupChips && (
+            <div className="group-chips">
+              {groupChips.groups.map((g) => {
+                const active = groupChips.activeGroupIds.includes(g.id);
+                return (
+                  <button
+                    key={g.id}
+                    className={`chip ${active ? "chip-active" : ""}`}
+                    onClick={() => groupChips.onToggleGroup(g.id)}
+                  >
+                    {g.name}
+                  </button>
+                );
+              })}
+              {groupChips.groups.length === 0 && (
+                <span className="muted small">
+                  Create a group on the Groups tab to start organizing.
+                </span>
+              )}
+            </div>
+          )}
+
+          <div className="item-row-actions">
+            {orderControls && (
+              <button
+                className="danger small"
+                onClick={orderControls.onRemoveFromGroup}
+              >
+                Remove from this list
+              </button>
+            )}
+            {onRemoveItemEntirely && (
+              <button className="danger small" onClick={onRemoveItemEntirely}>
+                Delete item
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+    </li>
+  );
+}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 30s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/domExtractor.ts.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/domExtractor.ts (lines 1-220)
+
+<details>
+<summary>92 lines</summary>
+
+```
+import type { ConditionOption, Item } from "../types";
+
+/**
+ * Extracts items directly from the live NKG want-list DOM. No fetch/CORS
+ * proxy needed — the content script already has the real page in front of
+ * it. Pagination (if the want list spans multiple `?page=N` URLs) is
+ * handled naturally: the content script re-runs and calls this again each
+ * time the user navigates to another page of their own want list.
+ */
+export function extractItemsFromDocument(doc: Document = document): Item[] {
+  const now = new Date().toISOString();
+  const cards = Array.from(doc.querySelectorAll(".product-card-wrapper"));
+  const items: Item[] = [];
+
+  for (const card of cards) {
+    const link = card.querySelector<HTMLAnchorElement>("a.image-col[href]");
+    const href = link?.getAttribute("href") ?? "";
+    const idMatch = href.match(/\/P\/(\d+)\//);
+    if (!idMatch?.[1]) continue;
+    const id = idMatch[1];
+
+    const title =
+      card.querySelector(".product-details-wrapper .name")?.textContent?.trim() ??
+      "Untitled item";
+
+    const publisherRaw = card
+      .querySelector(".product-details-wrapper .publisher")
+      ?.textContent?.trim();
+    const publisher = publisherRaw?.replace(/^By:\s*/i, "").trim() || undefined;
+
+    const productLineRaw = card
+      .querySelector(".product-details-wrapper .product-line")
+      ?.textContent?.trim();
+    const productLine =
+      productLineRaw?.replace(/^Product Line:\s*/i, "").trim() || undefined;
+
+    let stockNumber: string | undefined;
+    for (const p of Array.from(
+      card.querySelectorAll(".product-details-wrapper p"),
+    )) {
+      const text = p.textContent?.trim() ?? "";
+      const stockMatch = text.match(/^Stock #:\s*(.+)$/i);
+      if (stockMatch?.[1]) {
+        stockNumber = stockMatch[1].trim();
+        break;
+      }
+    }
+
+    const bgEl = card.querySelector<HTMLElement>(".bg-img-container");
+    const imageUrl = extractBackgroundImageUrl(
+      bgEl?.style.backgroundImage ?? bgEl?.getAttribute("style") ?? "",
+    );
+
+    const productUrl = href
+      ? new URL(href, "https://www.nobleknight.com").toString()
+      : "";
+
+    const conditions: ConditionOption[] = [];
+    for (const conditionEl of Array.from(card.querySelectorAll(".condition"))) {
+      const conditionValue = conditionEl
+        .querySelector(".condition-value")
+        ?.textContent?.trim();
+      const priceText = conditionEl
+        .querySelector(".price")
+        ?.textContent?.trim();
+      const price = priceText
+        ? parseFloat(priceText.replace(/[^0-9.]/g, ""))
+        : NaN;
+      const note = conditionEl
+        .querySelector(".condition-note")
+        ?.textContent?.trim()
+        ?.replace(/^\((.*)\)$/, "$1");
+      if (conditionValue) {
+        conditions.push({
+          condition: conditionValue,
+          price: Number.isFinite(price) ? price : 0,
+          note: note || undefined,
+        });
+      }
+    }
+
+    items.push({
+      id,
+      title,
+      publisher,
+      productLine,
+      stockNumber,
+      imageUrl,
+      productUrl,
+      conditions,
+      sourceIds: [],
+      groupIds: [],
+      firstSeenAt: now,
+      lastSeenAt: now,
+    });
+  }
+
+  return items;
+}
+
+function extractBackgroundImageUrl(styleValue: string): string | undefined {
+  const match = styleValue.match(/url\((['"]?)(.*?)\1\)/);
+  return match ? match[2] : undefined;
+}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 30s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/types.ts.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/types.ts (lines 1-220)
+
+<details>
+<summary>59 lines</summary>
+
+```
+// Core data model for NKG Want List Plus.
+// Persisted as a single AppData JSON blob in chrome.storage.local
+// (see lib/storage.ts).
+
+export interface ConditionOption {
+  /** e.g. "MINT", "VG+", "NM" */
+  condition: string;
+  price: number;
+  note?: string;
+}
+
+export interface Source {
+  id: string;
+  /** User-facing label; defaults to the page title captured on first visit. */
+  name: string;
+  /** The Noble Knight Games MyWantList URL this source was auto-detected from. */
+  url: string;
+  firstSeenAt: string;
+  lastSyncedAt: string;
+  lastItemCount?: number;
+}
+
+export interface Item {
+  /** Derived from the NKG product id in the /P/{id}/{slug} URL */
+  id: string;
+  title: string;
+  publisher?: string;
+  productLine?: string;
+  stockNumber?: string;
+  imageUrl?: string;
+  productUrl: string;
+  conditions: ConditionOption[];
+  /** Which source(s) this item was last seen on */
+  sourceIds: string[];
+  /** Many-to-many with Group (tag-style grouping) */
+  groupIds: string[];
+  firstSeenAt: string;
+  lastSeenAt: string;
+}
+
+export interface Group {
+  id: string;
+  name: string;
+  color?: string;
+  createdAt: string;
+  /** Ordered list of Item ids belonging to this group; authoritative render order. */
+  itemOrder: string[];
+}
+
+export interface AppData {
+  version: number;
+  sources: Source[];
+  items: Item[];
+  groups: Group[];
+}
+
+export const CURRENT_DATA_VERSION = 3;
+
+export function createEmptyAppData(): AppData {
+  return {
+    version: CURRENT_DATA_VERSION,
+    sources: [],
+    items: [],
+    groups: [],
+  };
+}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 32s</sub>
+
+### Reasoning
+
+***Inspecting UI elements**
+
+I’m thinking I need to take a closer look at the BottomPanel since I might not have clicked the scroll yet. I also need to check the other related UI components. I’ll read through the ListDetailView and PageItemsTab to see if that gives me enough context. It feels like I’m on the right track to understand how everything connects!*
+
+---
+
+<sub>1538m 33s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ListDetailView.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ListDetailView.tsx (lines 1-220)
+
+<details>
+<summary>85 lines</summary>
+
+```
+import { useMemo } from "react";
+import type { AppData } from "../../../types";
+import { ItemRow } from "./ItemRow";
+
+interface ListDetailViewProps {
+  data: AppData;
+  groupId: string;
+  onBack: () => void;
+  onMoveItemInGroup: (
+    groupId: string,
+    itemId: string,
+    direction: "up" | "down",
+  ) => void;
+  onToggleItemGroup: (itemId: string, groupId: string) => void;
+  onRemoveItem: (itemId: string) => void;
+}
+
+/**
+ * The core "want list" screen: a single list's items in their
+ * manually-ranked order, with move up/down controls. Mirrors
+ * GroupDetailPage from the original standalone web app.
+ */
+export function ListDetailView({
+  data,
+  groupId,
+  onBack,
+  onMoveItemInGroup,
+  onToggleItemGroup,
+  onRemoveItem,
+}: ListDetailViewProps) {
+  const group = data.groups.find((g) => g.id === groupId);
+
+  const orderedItems = useMemo(() => {
+    if (!group) return [];
+    return group.itemOrder
+      .map((itemId) => data.items.find((i) => i.id === itemId))
+      .filter((item): item is NonNullable<typeof item> => Boolean(item));
+  }, [group, data.items]);
+
+  if (!group) {
+    return (
+      <div>
+        <p className="empty">This list no longer exists.</p>
+        <button onClick={onBack}>‹ All lists</button>
+      </div>
+    );
+  }
+
+  const sourceNamesFor = (sourceIds: string[]) =>
+    sourceIds
+      .map((id) => data.sources.find((s) => s.id === id)?.name)
+      .filter((n): n is string => Boolean(n));
+
+  return (
+    <div>
+      <p className="breadcrumb">
+        <button className="link-btn" onClick={onBack}>
+          ‹ All lists
+        </button>
+      </p>
+      <h2>{group.name}</h2>
+      <p className="hint">
+        {orderedItems.length} item{orderedItems.length === 1 ? "" : "s"} — use
+        the arrows to reorder. Tap an item for details.
+      </p>
+
+      <ul className="item-list">
+        {orderedItems.map((item, index) => (
+          <ItemRow
+            key={item.id}
+            item={item}
+            sourceNames={sourceNamesFor(item.sourceIds)}
+            orderControls={{
+              canMoveUp: index > 0,
+              canMoveDown: index < orderedItems.length - 1,
+              onMoveUp: () => onMoveItemInGroup(group.id, item.id, "up"),
+              onMoveDown: () => onMoveItemInGroup(group.id, item.id, "down"),
+              onRemoveFromGroup: () => onToggleItemGroup(item.id, group.id),
+            }}
+            onRemoveItemEntirely={() => onRemoveItem(item.id)}
+          />
+        ))}
+        {orderedItems.length === 0 && (
+          <li className="empty">
+            No items in this list yet. Go to "On this page" and tap a list
+            chip on an item to add it here.
+          </li>
+        )}
+      </ul>
+    </div>
+  );
+}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 33s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/PageItemsTab.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/PageItemsTab.tsx (lines 1-220)
+
+<details>
+<summary>43 lines</summary>
+
+```
+import type { Group, Item } from "../../../types";
+import { ItemRow } from "./ItemRow";
+
+interface PageItemsTabProps {
+  items: Item[];
+  groups: Group[];
+  onToggleGroup: (itemId: string, groupId: string) => void;
+}
+
+/**
+ * Shows the items detected on the current want-list page, with group-chip
+ * controls to quickly assign/unassign each one to a list. No ordering UI
+ * here — ordering only makes sense inside a specific list (see
+ * ListDetailView).
+ */
+export function PageItemsTab({
+  items,
+  groups,
+  onToggleGroup,
+}: PageItemsTabProps) {
+  if (items.length === 0) {
+    return (
+      <p className="empty">
+        No items detected on this page yet. Make sure your want list has
+        finished loading.
+      </p>
+    );
+  }
+
+  return (
+    <ul className="item-list">
+      {items.map((item) => (
+        <ItemRow
+          key={item.id}
+          item={item}
+          sourceNames={[]}
+          groupChips={{
+            groups,
+            activeGroupIds: item.groupIds,
+            onToggleGroup: (groupId) => onToggleGroup(item.id, groupId),
+          }}
+        />
+      ))}
+    </ul>
+  );
+}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 33s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx (lines 1-260)
+
+<details>
+<summary>108 lines</summary>
+
+```
+import { useEffect, useMemo, useState } from "react";
+import type { Item } from "../../../types";
+import { useAppData } from "../../../lib/useAppData";
+import { extractItemsFromDocument } from "../../../lib/domExtractor";
+import { PageItemsTab } from "./PageItemsTab";
+import { ListsTab } from "./ListsTab";
+import { ListDetailView } from "./ListDetailView";
+import "./panel.css";
+
+type Tab = "page" | "lists";
+
+export function BottomPanel() {
+  const appData = useAppData();
+  const [open, setOpen] = useState(false);
+  const [tab, setTab] = useState<Tab>("page");
+  const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
+  const [pageItems, setPageItems] = useState<Item[]>(() =>
+    extractItemsFromDocument(document),
+  );
+
+  const page = useMemo(
+    () => ({ url: location.href, title: document.title }),
+    [],
+  );
+
+  // Re-extract whenever the want-list DOM changes (e.g. NKG lazy-loads more
+  // items after the initial render) and keep storage in sync.
+  useEffect(() => {
+    const resync = () => {
+      const items = extractItemsFromDocument(document);
+      setPageItems(items);
+      appData.syncPageItems(page, items);
+    };
+
+    resync();
+
+    const listContainer =
+      document.querySelector(".product-card-wrapper")?.parentElement ??
+      document.body;
+    const observer = new MutationObserver(resync);
+    observer.observe(listContainer, { childList: true, subtree: true });
+    return () => observer.disconnect();
+    // Only re-run this setup once per mount; `appData.syncPageItems` is
+    // stable (see useAppData) and `page` is memoized.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const pageItemsWithGroups = pageItems.map((item) => {
+    const stored = appData.data.items.find((i) => i.id === item.id);
+    return stored ?? item;
+  });
+
+  const itemCountByGroup = (groupId: string) =>
+    appData.data.groups.find((g) => g.id === groupId)?.itemOrder.length ?? 0;
+
+  return (
+    <div className={`nkgwlp-panel ${open ? "nkgwlp-panel-open" : ""}`}>
+      <button
+        className="nkgwlp-handle"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+      >
+        <span className="nkgwlp-handle-title">NKG Want List Plus</span>
+        <span className="nkgwlp-handle-caret">{open ? "▾" : "▴"}</span>
+      </button>
+
+      {open && (
+        <div className="nkgwlp-body">
+          <div className="nkgwlp-tabs">
+            <button
+              className={tab === "page" ? "active" : ""}
+              onClick={() => {
+                setTab("page");
+                setSelectedGroupId(null);
+              }}
+            >
+              On this page
+            </button>
+            <button
+              className={tab === "lists" ? "active" : ""}
+              onClick={() => setTab("lists")}
+            >
+              My Lists
+            </button>
+          </div>
+
+          <div className="nkgwlp-content">
+            {tab === "page" && (
+              <PageItemsTab
+                items={pageItemsWithGroups}
+                groups={appData.data.groups}
+                onToggleGroup={appData.toggleItemGroup}
+              />
+            )}
+
+            {tab === "lists" &&
+              (selectedGroupId ? (
+                <ListDetailView
+                  data={appData.data}
+                  groupId={selectedGroupId}
+                  onBack={() => setSelectedGroupId(null)}
+                  onMoveItemInGroup={appData.moveItemInGroup}
+                  onToggleItemGroup={appData.toggleItemGroup}
+                  onRemoveItem={appData.removeItem}
+                />
+              ) : (
+                <ListsTab
+                  groups={appData.data.groups}
+                  itemCountByGroup={itemCountByGroup}
+                  onOpenGroup={setSelectedGroupId}
+                  onAddGroup={(name) => appData.addGroup(name)}
+                  onRemoveGroup={appData.removeGroup}
+                />
+              ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 36s</sub>
+
+### Reasoning
+
+***Implementing row click functionality**
+
+I need to implement a click action on rows to reveal an item on the page. I'll inspect the CSS for any classes related to image thumbnails, though it may not be necessary. The task specifies reducing the details shown, so I should remove the image but keep the action chips. It seems the requirement is to click a list item to scroll the page instead of expanding. I'll also check appData and ensure group chips are still functional.
+
+**Refining group chip functionality**
+
+I’m considering whether to keep group chips visible as small inline actions rather than through expansion. It might be simpler to display them directly within the item row, maintaining a clean layout. The requirement indicates that clicking an item should scroll it into view without needing product images, so I should focus on showing just the item name, publisher, and stock status. This means the ItemRow should have no expanded state or image, just the title, publisher, and stock condition if applicable.
+
+**Determining stock status**
+
+I need to decide whether an item is "In stock" or "Out of stock" by using item.conditions or stockNumber. If groupChips are present, I could render them below the row as a small group-chips row, keeping them as part of the UI. For order controls, I might include buttons on the left as before, while the row button click should trigger a scroll.
+
+I’ll explore if conditions can indicate availability, calculating `hasStock` using item.conditions length or stockNumber. It’s possible to label "In stock" based on at least one condition being present, even if the stock info isn't straightforward.
+
+**Implementing stock status logic**
+
+I can indicate "In stock" if stock conditions are not empty, otherwise "Out of stock" or "Unknown" could work too. Next, I need to implement a function to find the product card in the DOM. Maybe I should check for any existing helpers, specifically a way to locate the page’s card.
+
+I could add a helper function within domExtractor or ItemRow that scrolls to the product card matching the item's NKG product ID or URL. The plan could be to use `scrollIntoView` for smooth scrolling and possibly highlight it with a CSS box-shadow. I'll inspect the DOM for clues on implementing this effectively.
+
+**Matching rows to the DOM**
+
+To effectively match a row to the DOM, I can utilize product URLs, which may include slugs. I could search the document for links like `a[href*="/P/65326/"]` or `a[href*='P/${item.id}']`. 
+
+Using `const exact = doc.querySelector(\`a[href*="/P/${item.id}/"]\`);` to find that link, I should then get the closest product card with `.closest('.product-card-wrapper')` or similar selectors. After that, I’ll need to scroll within the list container, and I’ll have to review the CSS file to ensure that the panel looks good; inspecting panel.css seems like a good next step.*
+
+---
+
+<sub>1538m 45s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css (lines 1-260)
+
+<details>
+<summary>225 lines</summary>
+
+```
+/* NKG Want List Plus — bottom panel styles (light theme, NK blue accent).
+   Mounted inside a Shadow Root, which WXT resets with `all: initial`, so
+   these rules are self-contained and don't rely on the host page's CSS. */
+
+:host,
+.nkgwlp-panel {
+  --nk-blue: #005996;
+  --nk-blue-dark: #003f6b;
+  --nk-blue-light: #e7f1f9;
+  --bg: #ffffff;
+  --bg-subtle: #f4f6f8;
+  --border: #d7dde3;
+  --text: #1c2733;
+  --text-muted: #5b6b7a;
+  --danger: #c0392b;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+.nkgwlp-panel * {
+  box-sizing: border-box;
+}
+
+.nkgwlp-panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2147483000;
+  background: var(--bg);
+  border-top: 3px solid var(--nk-blue);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+}
+
+.nkgwlp-handle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: var(--nk-blue);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nkgwlp-handle-caret {
+  font-size: 0.9rem;
+}
+
+.nkgwlp-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.75rem 0.9rem calc(0.9rem + env(safe-area-inset-bottom, 0px));
+}
+
+.nkgwlp-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  flex-shrink: 0;
+}
+
+.nkgwlp-tabs button {
+  flex: 1;
+  min-height: 40px;
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.nkgwlp-tabs button.active {
+  background: var(--nk-blue);
+  border-color: var(--nk-blue);
+  color: #fff;
+}
+
+.nkgwlp-content {
+  overflow-y: auto;
+}
+
+/* --- Shared form/list bits --- */
+
+.nkgwlp-panel button {
+  font-family: inherit;
+}
+
+.add-group-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.add-group-form input {
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.add-group-form button {
+  min-height: 40px;
+  padding: 0 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--nk-blue);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.link-btn {
+  border: none;
+  background: transparent;
+  color: var(--nk-blue);
+  font-size: 0.85rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.breadcrumb {
+  margin: 0 0 0.4rem;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin: 0 0 0.6rem;
+}
+
+h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.empty {
+  color: var(--text-muted);
+  padding: 0.75rem 0;
+  font-size: 0.9rem;
+  list-style: none;
+}
+
+.meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.muted.small {
+  font-size: 0.75rem;
+}
+
+.conditions {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+}
+
+button.danger {
+  color: var(--danger);
+  background: transparent;
+  border: 1px solid var(--danger);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.small {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.55rem;
+}
+
+/* --- Lists (groups) tab --- */
+
+.group-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  background: var(--bg-subtle);
+}
+
+.group-link {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.group-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Compact item rows (shared by "On this page" and list detail) --- */
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-row {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.item-row-main {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.5rem;
+```
+
+</details>
+
+
+---
+
+<sub>1538m 47s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css (lines 261-420)
+
+<details>
+<summary>99 lines</summary>
+
+```
+}
+
+.order-controls {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.move-btn {
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  border-radius: 6px;
+  margin: 1px 0;
+  padding: 0.2rem 0.4rem;
+  min-width: 34px;
+  min-height: 30px;
+  font-size: 0.8rem;
+  color: var(--nk-blue);
+  cursor: pointer;
+}
+
+.move-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.item-row-tap-target {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  padding: 0.35rem 0.2rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.item-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-publisher {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--bg-subtle);
+  flex-shrink: 0;
+}
+
+.item-thumb-placeholder {
+  border: 1px dashed var(--border);
+}
+
+.item-row-detail {
+  padding: 0.5rem 0.7rem 0.7rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--bg-subtle);
+}
+
+.item-row-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.group-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.25rem 0;
+}
+
+.chip {
+  border: 1px solid var(--nk-blue);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  background: var(--bg);
+  color: var(--nk-blue);
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.chip-active {
+  background: var(--nk-blue);
+  color: #fff;
+}
+```
+
+</details>
+
+
+---
+
+<sub>1538m 52s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/index.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/index.tsx (lines 1-220)
+
+<details>
+<summary>34 lines</summary>
+
+```
+import { createRoot } from "react-dom/client";
+import { BottomPanel } from "./ui/BottomPanel";
+
+// NKG's own site links to this page inconsistently — we've observed both
+// "/MyWantList/<token>" (public shareable list) and "/Wantlist" /
+// "/WantList" (the logged-in user's own list) in the wild. Chrome/Edge
+// match patterns compare the path literally (case-sensitive), so rather
+// than trying to enumerate every casing variant, we match the whole
+// nobleknight.com origin and do a case-insensitive runtime check before
+// mounting anything.
+const WANT_LIST_PATH_RE = /want.?list/i;
+
+export default defineContentScript({
+  matches: ["*://www.nobleknight.com/*"],
+  cssInjectionMode: "ui",
+
+  async main(ctx) {
+    if (!WANT_LIST_PATH_RE.test(location.pathname)) return;
+
+    // No fetch/CORS proxy needed — the content script already has direct
+    // access to the live want-list DOM. Item extraction + storage syncing
+    // happens inside <BottomPanel>, which re-runs whenever the page's item
+    // list changes (e.g. lazy-loaded content).
+    const ui = await createShadowRootUi(ctx, {
+      name: "nkg-want-list-plus-panel",
+      position: "modal",
+      zIndex: 2147483000,
+      anchor: "body",
+      onMount: (uiContainer) => {
+        const root = createRoot(uiContainer);
+        root.render(<BottomPanel />);
+        return root;
+      },
+      onRemove: (root) => root?.unmount(),
+    });
+
+    ui.mount();
+  },
+});
+```
+
+</details>
+
+
+---
+
+<sub>1538m 56s</sub>
+
+### Reasoning
+
+***Implementing adjustments**
+
+I’m confirming we fixed the exact path issue, which is great! Now, I need to check if the current build passes. My goal is to implement a click-to-focus feature for the real page with a minimal row. I wonder if we actually need the product image and detail accordions. This will involve editing the ItemRow component and CSS. I might also remove the `useState` import since it doesn’t seem necessary anymore. Let’s just simplify it!
+
+**Crafting ItemRow rewrite**
+
+I’m working on rewriting the ItemRow component and starting with the stock state and click handler. I'm thinking we should avoid opening a new window if no card is found. Maybe I could just implement a no-op or a focus fallback. The user prefers that clicking the row scrolls the original page, so if there’s no match, perhaps we can use `window.location.href = item.productUrl` if the domains differ. Overall, I want to allow for visual highlights with a box shadow and proper scrolling when cards are matched!
+
+**Refining ItemRow behavior**
+
+I’m thinking we shouldn't open a new tab by default since that could lead to losing context on the site. It would be better to scroll if the card is found. If it's not found, maybe just scroll to the top or take no action, and I don’t think a `console.warn` is necessary. 
+
+I’ll use `findProductCardElement` to scroll smoothly and highlight the card. I should also consider if the card is exact due to product pages being inside iframes. I might need a helper function in `domExtractor.ts` to assist with this and create a `getStockStatus` function for UI simplicity.
+
+**Defining helper functions**
+
+I'm working on the `findProductCardElement` function. I realize I don't need to import `Item` since I can use `Pick<Item, "id"|"productUrl">`. It seems I should also set a constant for `hrefPath` using `new URL(item.productUrl).pathname`. 
+
+I’m considering adding a `getItemStockStatus` function in the same file or within `ItemRow`. This could return status like "In stock" if conditions are met, or provide the stock number. I think it would be useful to render a status pill next to the item text for clarity!
+
+**Updating ItemRow structure**
+
+I’m designing the `ItemRow` layout to meet the requirements of showing the item name, publisher, and stock status. I think I can create a clear structure with an item title and stock information, alongside a status pill indicating whether it’s in stock.
+
+Now, regarding the CSS, I might remove unused styles and add some new classes for better organization, like for an `.item-row-stack`. I’m also thinking about the need for a small "Delete item" button without needing an expanded view and keeping `onRemoveItemEntirely` in a footer area.
+
+I’ll make sure to inspect the related files and possibly update the subtitles in `ListDetailView` to reflect the new interaction prompts! Finally, I want to verify that everything compiles correctly. Let's check the package scripts in `package.json`.*
+
+---
+
+<sub>1539m 4s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/package.json.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/package.json (lines 1-200)
+
+<details>
+<summary>30 lines</summary>
+
+```
+{
+  "name": "nkg-want-list-plus",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "lint": "oxlint",
+    "compile": "tsc --noEmit",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "uuid": "^14.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/uuid": "^10.0.0",
+    "@wxt-dev/module-react": "^1.1.5",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "web-ext": "^10.5.0",
+    "wxt": "^0.21.4"
+  }
+}
+```
+
+</details>
+
+
+---
+
+<sub>1539m 14s</sub>
+
+### Reasoning
+
+***Preparing code updates**
+
+I need to run a build after making my edits, which is a solid step. I’ll focus on patching `domExtractor.ts`, `ItemRow.tsx`, `panel.css`, and maybe some text in `ListDetailView.tsx`. I think using a multi-edit feature for this would be efficient. I want to be careful with my replacements, so I should take some time to craft the exact changes that are needed.*
+
+---
+
+<sub>1539m 15s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/domExtractor.ts.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/domExtractor.ts
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/lib/domExtractor.ts updated with changes.
+```
+
+
+---
+
+<sub>1539m 23s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx updated with changes.
+```
+
+
+---
+
+<sub>1539m 27s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css updated with changes.
+```
+
+
+---
+
+<sub>1539m 29s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ListDetailView.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ListDetailView.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ListDetailView.tsx updated with changes.
+```
+
+
+---
+
+<sub>1539m 57s</sub>
+
+### Reasoning
+
+***Evaluating href issues**
+
+I’m considering if `href ? \`a[href="${href}"]\` : null` could be problematic when the href contains `?` or other special characters, although it seems okay for path strings. I also need to fetch the product card on row click instead of opening a page, which feels right. There might be stale TypeScript warnings from `querySelector` on ParentNode, but it’s formatted correctly. Lastly, I want to update the `BottomPanel` to address potential issues with footers based on source names.
+
+**Deciding on npm commands**
+
+I'm thinking about whether I need to use `npm install` again since it might already be done. I might need to run `npm run build` or just `npm run compile`, and maybe just the build is enough. It seems like running `npm run build -- --debug` isn’t necessary right now. So, I’ll focus on running `npm run build` directly in the repository to get things moving along!*
+
+---
+
+<sub>1540m 1s</sub>
+
+### `bash`
+
+**Build the extension to verify the UI changes compile cleanly**
+
+$ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run build
+
+<details>
+<summary>19 lines</summary>
+
+```
+> nkg-want-list-plus@0.0.0 build
+> wxt build
+
+
+WXT 0.21.4
+ℹ Building chrome-mv3 for production with Vite 8.3.0
+⠋ Preparing...⠋ [1/2] content⠙ [1/2] content⠙ [2/2] options⠹ [2/2] options✔ Built extension in 271 ms
+  ├─ .output/chrome-mv3/manifest.json                621 B    
+  ├─ .output/chrome-mv3/options.html                 416 B    
+  ├─ .output/chrome-mv3/chunks/options-Cz1heeTn.js   237.44 kB
+  ├─ .output/chrome-mv3/content-scripts/content.js   253.29 kB
+  ├─ .output/chrome-mv3/assets/options-B5LUYyOv.css  1.90 kB  
+  ├─ .output/chrome-mv3/content-scripts/content.css  4.93 kB  
+  ├─ .output/chrome-mv3/icon/128.png                 3.07 kB  
+  ├─ .output/chrome-mv3/icon/16.png                  559 B    
+  ├─ .output/chrome-mv3/icon/32.png                  916 B    
+  ├─ .output/chrome-mv3/icon/48.png                  1.33 kB  
+  └─ .output/chrome-mv3/icon/96.png                  2.37 kB  
+Σ Total size: 506.84 kB                            
+✔ Finished in 588 ms
+<shellId: 0 completed with exit code 0>
+```
+
+</details>
+
+
+---
+
+<sub>1540m 5s</sub>
+
+### Reasoning
+
+***Considering code validation**
+
+I’m thinking about whether I should run the linter since the instruction suggests using existing tests, and the build passes already. Running `npm run lint` could catch potential UI issues, but I wonder if the build with TypeScript is sufficient. It’s a quick process, but we might skip it for now. Also, I should check if the extension row still uses product images and confirm the changes. I'll look through the files to ensure everything is built correctly and consider cleaning up the output as needed.
+
+**Evaluating documentation updates**
+
+The current task asks for a part of the conversation history, likely for an overall project report, so we need to implement that. I’m considering updating the README or documentation to reflect the new UX, but the user didn't request it directly. Still, it seems related, and the code change instructions suggest updating documentation that’s closely tied in. I should check quickly if the README covers the installation and consider mentioning the click-to-scroll row behavior if it’s relevant. It might be a small but meaningful edit!*
+
+---
+
+<sub>1540m 11s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/README.md.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/README.md (lines 1-220)
+
+<details>
+<summary>53 lines</summary>
+
+````
+# NKG Want List Plus
+
+A mobile-first list manager for organizing your [Noble Knight Games](https://www.nobleknight.com/)
+"My Want List" pages into your own ranked lists (e.g. "My CWBBS Want List",
+"Grail List"). It's a static single-page app with no backend — it scrapes
+your public want-list URL(s) client-side and stores everything in your
+browser's `localStorage`.
+
+## Features
+
+- **Lists (home tab)** — create any number of named lists. A single item can
+  belong to many lists at once, and **each list keeps its own independent
+  order** (an item can be #1 in "Grail List" and #5 in "CWBBS Want List").
+  Reorder items with simple move up/down controls — no drag-and-drop needed.
+- **Items tab** — browse/search everything scraped from your sources and
+  assign items to any number of lists.
+- **Compact rows** — each row shows just the title, publisher, and a small
+  thumbnail; tap a row to expand full details (price/condition, stock #,
+  product line, source, link to the product page).
+- **Sources** — add one or more Noble Knight "My Want List" share URLs and
+  refresh them to (re)scrape items.
+- **Settings** — configure the CORS proxy used for scraping, export/import a
+  JSON backup, or paste a saved page's HTML as a fallback import method.
+
+## Why a CORS proxy / paste-HTML fallback?
+
+Browsers block cross-origin requests to `nobleknight.com` from a page hosted
+on GitHub Pages, so the app fetches want-list pages through a configurable
+CORS proxy (default: `https://api.allorigins.win/raw?url=`). Public proxies
+can be rate-limited or go down, so as a fallback you can manually save/copy a
+want-list page's HTML source and paste it into the Settings page to import
+items without a proxy at all.
+
+## Data & privacy
+
+All data (sources, items, lists, settings) is stored only in your browser's
+`localStorage` — nothing is sent to a server other than the scrape requests
+themselves. Use **Settings → Export JSON backup** regularly, or to move your
+data to another browser/device.
+
+## Development
+
+```bash
+npm install
+npm run dev       # start local dev server
+npm run build     # type-check + production build to dist/
+npm run lint      # oxlint
+npm run preview   # preview the production build locally
+```
+
+## Deployment (GitHub Pages)
+
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the app and
+publishes `dist/` to GitHub Pages on every push to `main`. In the repo
+settings, set **Settings → Pages → Source** to "GitHub Actions".
+
+`vite.config.ts` sets `base: '/nkg-want-list-plus/'` to match this repo name
+so built asset paths resolve correctly under
+`https://<user>.github.io/nkg-want-list-plus/`. If you rename/fork the repo,
+update `base` to match.
+
+The UI is mobile-first (bottom tab navigation, single-column lists,
+large tap targets) with responsive breakpoints that widen content on larger
+screens. Routing uses `HashRouter` so client-side routes (`#/groups/:id`,
+`#/sources`, etc.) work on GitHub Pages without needing server-side rewrite
+rules.
+````
+
+</details>
+
+
+---
+
+<sub>1540m 17s</sub>
+
+### Reasoning
+
+***Updating README for extension**
+
+I see that the README is still outdated for the extension project. It looks like I need to revise it to mention the installation flow and the row click behavior related to the extension. Since the user's request is for a browser extension, it makes sense to reflect that in the documentation. I’ll make sure to include specific instructions, such as "click item to jump to the real page," and simplify sections for clarity.*
+
+---
+
+<sub>1540m 20s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/README.md.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/README.md
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/README.md updated with changes.
+```
+
+
+---
+
+<sub>1540m 23s</sub>
+
+### Reasoning
+
+***Considering build and verification**
+
+I need to consider running the build again after the README change, even if it seems unnecessary. The build passed after the recent code patch, and since the README doesn’t require a build, that’s fine. I might add a quick verification run with `npm run lint` since the build has already been accepted. I wonder if the current repo has no .git status — maybe it would be good to use `git diff --stat` to inspect. Let’s run `git --no-pager diff --stat` for a quick review.*
+
+---
+
+<sub>1540m 24s</sub>
+
+### `bash`
+
+**Review the final patch scope to confirm the change stayed focused**
+
+$ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && git --no-pager diff --stat
+
+<details>
+<summary>7 lines</summary>
+
+```
+README.md                                 |  86 ++++++++++-------------
+ entrypoints/content/ui/ItemRow.tsx        | 109 +++++++++++++++++-------------
+ entrypoints/content/ui/ListDetailView.tsx |   2 +-
+ entrypoints/content/ui/panel.css          |  47 +++++++++----
+ lib/domExtractor.ts                       |  24 +++++++
+ 5 files changed, 156 insertions(+), 112 deletions(-)
+<shellId: 1 completed with exit code 0>
+```
+
+</details>
+
+
+---
+
+<sub>1540m 26s</sub>
+
+### Copilot
+
+Done — I tightened the extension UX to match the latest direction:
+
+- Item rows no longer expand an inline product detail panel
+- Product thumbnails are gone from the panel
+- Each row shows title, publisher, and stock badge
+- Clicking a row now scrolls the matching product card on the live Noble Knight page into view and briefly highlights it
+
+I also updated the README to reflect the extension workflow and install steps.
+
+Validation:
+- `npm run build` ✅
+
+Files changed:
+- `entrypoints/content/ui/ItemRow.tsx`
+- `entrypoints/content/ui/panel.css`
+- `entrypoints/content/ui/ListDetailView.tsx`
+- `lib/domExtractor.ts`
+- `README.md`
+
+If you want, next I can tighten the stock badge logic further or make the highlight/scroll behavior more aggressive for edge cases on the live NKG DOM.
+
+---
+
+<sub>1540m 32s</sub>
+
+### `task_complete`
+
+**Updated the extension UI to use compact list rows that fo...**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "summary": "Updated the extension UI to use compact list rows that focus the real Noble Knight product card instead of expanding inline details; confirmed the extension builds successfully with `npm run build`."
+}
+```
+
+</details>
+
+```
+Updated the extension UI to use compact list rows that focus the real Noble Knight product card instead of expanding inline details; confirmed the extension builds successfully with `npm run build`.
+```
+
+
+---
+
+<sub>1540m 32s</sub>
+
+### ✓ Task Complete
+
+Updated the extension UI to use compact list rows that focus the real Noble Knight product card instead of expanding inline details; confirmed the extension builds successfully with `npm run build`.
+
+---
+
+<sub>1548m 28s</sub>
+
+### User
+
+some page items showing on top of extension content, and can we do better with height of bottom panel, should it be dynamic, or fixed, and draggable to adjust, right now it jumps around a bit strangely, also scroll item when clicked to top of page rather than center, as center is often obscured by bottom panel, looking for easy short fixes here, and i will manually test
+
+---
+
+<sub>1548m 38s</sub>
+
+### Reasoning
+
+***Refining scroll behavior**
+
+I need to ensure that when an item is clicked, it scrolls to the top of the page rather than the center. In the `ItemRow`, I should adjust `scrollIntoView({ block: 'start' })` and consider an offset for the bottom panel height. It seems I want the top of the element to be visible above the panel. This means scrolling to `block: 'start'` would be better as it places the item near the top of the viewport, even if the bottom panel still obscures part of it.
+
+**Adding drag functionality**
+
+I think I need to implement some panel drag logic in `BottomPanel.tsx`. I can set up a state for `panelHeight` and handle mouse events for adjusting it dynamically. Maybe it's better to keep it simple and just use a drag handle for resizing. Since the user is looking for short fixes and plans to test it manually, I'll aim for a simple implementation. I want to minimize jumpiness by using a stable height state and applying `touch-action: none`. I’ll check `BottomPanel.tsx` for modifications and also look into querying the relevant todos.
+
+**Using SQL to manage tasks**
+
+I’m considering whether to use session SQL to update a task. It might not be necessary, but the reminder suggests using the SQL tool to query ready todos and update their status while I work. I think I should query the todos and mark any new ones as in progress. It looks like I could also update the status of "ext-manual-test" since it’s still in progress. The prompt emphasizes using the SQL tool for this, so I'll prioritize that during the task.
+
+**Updating task status and making code changes**
+
+I think I should go ahead and run a query to update the task, using `UPDATE todos SET status='in_progress' WHERE id='ext-manual-test';`. It seems necessary to ensure there are no open pending tasks. I'd like to implement code edits in the same response, perhaps making multiple changes to `BottomPanel`, `panel.css`, and `ItemRow`. Also, I need to check for any lint issues related to `window.setTimeout` in `ItemRow`. Additionally, I should address the overlay issue with items showing on top of extension content, likely due to the `BottomPanel`'s positioning.
+
+**Addressing overlay and dynamic height issues**
+
+I suspect the overlay issue is caused by the `z-index` on our panel and how it interacts with other page elements. It seems like the panel has a high z-index, but maybe not enough compared to some items on the page. I'll set the z-index to `2147483647` for the `.nkgwlp-panel` and add `position: fixed` to ensure proper layering. 
+
+For dynamic height, I need to modify `BottomPanel.tsx` to manage the panel's height with drag functionality. I'll use state for `panelHeight` and `dragging`, and adapt CSS properties, ensuring height dynamically adjusts based on the panel's state. 
+
+In `ItemRow.tsx`, I'll change the scrolling behavior to align the clicked item near the top of the viewport. Finally, I’ll run an SQL update to adjust todo statuses accordingly.*
+
+---
+
+<sub>1548m 48s</sub>
+
+### `sql`
+
+**Check current todo progress before adjusting the panel UX**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "description": "Check current todo progress before adjusting the panel UX",
+  "query": "SELECT id, title, status FROM todos WHERE status IN ('pending', 'in_progress') ORDER BY id;"
+}
+```
+
+</details>
+
+<details>
+<summary>5 lines</summary>
+
+```
+2 row(s) returned:
+
+| id | title | status |
+| --- | --- | --- |
+| ext-cleanup-spa | Removing retired SPA scaffolding | pending |
+| ext-manual-test | Manual test pass on real NKG want-list page | in_progress |
+```
+
+</details>
+
+
+---
+
+<sub>1548m 50s</sub>
+
+### `sql`
+
+**Keep the extension manual test task active while refining the panel interaction**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "description": "Keep the extension manual test task active while refining the panel interaction",
+  "query": "UPDATE todos SET status = 'in_progress' WHERE id = 'ext-manual-test';"
+}
+```
+
+</details>
+
+```
+1 row(s) updated.
+```
+
+
+---
+
+<sub>1548m 53s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/ItemRow.tsx updated with changes.
+```
+
+
+---
+
+<sub>1548m 59s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx updated with changes.
+```
+
+
+---
+
+<sub>1549m 1s</sub>
+
+### Reasoning
+
+***Resolving effect dependency**
+
+I’m facing some issues with effect dependency related to refs, but I think I can simplify things later. My next step is to inspect the modified file to ensure it compiles correctly. It seems that I can also use onPointerDown, which may not require any additional effects. I just need to see the exact file to confirm everything is in order before proceeding.*
+
+---
+
+<sub>1549m 2s</sub>
+
+### `view`
+
+**view the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx (lines 1-260)
+
+<details>
+<summary>152 lines</summary>
+
+```
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { Item } from "../../../types";
+import { useAppData } from "../../../lib/useAppData";
+import { extractItemsFromDocument } from "../../../lib/domExtractor";
+import { PageItemsTab } from "./PageItemsTab";
+import { ListsTab } from "./ListsTab";
+import { ListDetailView } from "./ListDetailView";
+import "./panel.css";
+
+type Tab = "page" | "lists";
+
+const MIN_PANEL_HEIGHT = 220;
+const MAX_PANEL_HEIGHT = 560;
+
+export function BottomPanel() {
+  const appData = useAppData();
+  const [open, setOpen] = useState(false);
+  const [tab, setTab] = useState<Tab>("page");
+  const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
+  const [panelHeight, setPanelHeight] = useState(320);
+  const dragStartY = useRef<number | null>(null);
+  const dragStartHeight = useRef<number | null>(null);
+  const [pageItems, setPageItems] = useState<Item[]>(() =>
+    extractItemsFromDocument(document),
+  );
+
+  const page = useMemo(
+    () => ({ url: location.href, title: document.title }),
+    [],
+  );
+
+  useEffect(() => {
+    const updatePanelHeight = () => {
+      const next = Math.min(
+        Math.max(window.innerHeight * 0.45, MIN_PANEL_HEIGHT),
+        MAX_PANEL_HEIGHT,
+      );
+      setPanelHeight((current) => {
+        if (current < MIN_PANEL_HEIGHT || current > MAX_PANEL_HEIGHT) {
+          return next;
+        }
+        return current;
+      });
+    };
+
+    updatePanelHeight();
+    window.addEventListener("resize", updatePanelHeight);
+    return () => window.removeEventListener("resize", updatePanelHeight);
+  }, []);
+
+  useEffect(() => {
+    if (!dragStartY.current || dragStartHeight.current === null) return;
+
+    const handleMove = (clientY: number) => {
+      const delta = dragStartY.current! - clientY;
+      const next = Math.min(
+        MAX_PANEL_HEIGHT,
+        Math.max(MIN_PANEL_HEIGHT, dragStartHeight.current! + delta),
+      );
+      setPanelHeight(next);
+    };
+
+    const onPointerMove = (event: PointerEvent) => handleMove(event.clientY);
+    const onPointerUp = () => {
+      dragStartY.current = null;
+      dragStartHeight.current = null;
+    };
+
+    window.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("pointerup", onPointerUp);
+
+    return () => {
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", onPointerUp);
+    };
+  }, [dragStartY.current, dragStartHeight.current]);
+
+  // Re-extract whenever the want-list DOM changes (e.g. NKG lazy-loads more
+  // items after the initial render) and keep storage in sync.
+  useEffect(() => {
+    const resync = () => {
+      const items = extractItemsFromDocument(document);
+      setPageItems(items);
+      appData.syncPageItems(page, items);
+    };
+
+    resync();
+
+    const listContainer =
+      document.querySelector(".product-card-wrapper")?.parentElement ??
+      document.body;
+    const observer = new MutationObserver(resync);
+    observer.observe(listContainer, { childList: true, subtree: true });
+    return () => observer.disconnect();
+    // Only re-run this setup once per mount; `appData.syncPageItems` is
+    // stable (see useAppData) and `page` is memoized.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const pageItemsWithGroups = pageItems.map((item) => {
+    const stored = appData.data.items.find((i) => i.id === item.id);
+    return stored ?? item;
+  });
+
+  const itemCountByGroup = (groupId: string) =>
+    appData.data.groups.find((g) => g.id === groupId)?.itemOrder.length ?? 0;
+
+  return (
+    <div className={`nkgwlp-panel ${open ? "nkgwlp-panel-open" : ""}`}>
+      <button
+        className="nkgwlp-handle"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+      >
+        <span className="nkgwlp-handle-title">NKG Want List Plus</span>
+        <span className="nkgwlp-handle-caret">{open ? "▾" : "▴"}</span>
+      </button>
+
+      {open && (
+        <div className="nkgwlp-body">
+          <div className="nkgwlp-tabs">
+            <button
+              className={tab === "page" ? "active" : ""}
+              onClick={() => {
+                setTab("page");
+                setSelectedGroupId(null);
+              }}
+            >
+              On this page
+            </button>
+            <button
+              className={tab === "lists" ? "active" : ""}
+              onClick={() => setTab("lists")}
+            >
+              My Lists
+            </button>
+          </div>
+
+          <div className="nkgwlp-content">
+            {tab === "page" && (
+              <PageItemsTab
+                items={pageItemsWithGroups}
+                groups={appData.data.groups}
+                onToggleGroup={appData.toggleItemGroup}
+              />
+            )}
+
+            {tab === "lists" &&
+              (selectedGroupId ? (
+                <ListDetailView
+                  data={appData.data}
+                  groupId={selectedGroupId}
+                  onBack={() => setSelectedGroupId(null)}
+                  onMoveItemInGroup={appData.moveItemInGroup}
+                  onToggleItemGroup={appData.toggleItemGroup}
+                  onRemoveItem={appData.removeItem}
+                />
+              ) : (
+                <ListsTab
+                  groups={appData.data.groups}
+                  itemCountByGroup={itemCountByGroup}
+                  onOpenGroup={setSelectedGroupId}
+                  onAddGroup={(name) => appData.addGroup(name)}
+                  onRemoveGroup={appData.removeGroup}
+                />
+              ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+</details>
+
+
+---
+
+<sub>1549m 7s</sub>
+
+### Reasoning
+
+***Evaluating drag effect issues**
+
+I’m looking into this effect dependency issue, and it’s a bit odd. It seems like we don’t need `useEffect` for `dragStart` variables; we can just set the listeners on `pointerdown` within the handler and use refs instead. I’m trying to avoid effect/dep bugs. There’s a way to implement a pointer drag handle that might work, but it seems the ref changes won't trigger rerendering or the effect to run properly. I think I need to fix this correctly.
+
+**Improving pointer event handling**
+
+I’m implementing a `useEffect` to better manage pointer events in my code. It looks like I can define `handleMove` and `handleUp` functions to deal with the pointer actions. I want to ensure that `dragStartY` and `dragStartHeight` are set before proceeding. It would also be simpler to attach `onPointerDown` to both buttons and divs. Plus, I need to update the CSS for height and the resize handle, so I'll make those edits in `panel.css` as well.*
+
+---
+
+<sub>1549m 10s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx updated with changes.
+```
+
+
+---
+
+<sub>1549m 13s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx updated with changes.
+```
+
+
+---
+
+<sub>1549m 16s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css updated with changes.
+```
+
+
+---
+
+<sub>1549m 19s</sub>
+
+### Reasoning
+
+***Reviewing build process**
+
+I need to review the file to ensure the order is handled correctly, especially if the handle button appears after resizing. I might need to look into the `nkgwlp-panel-open` style, but I'm not sure if that's necessary. Running a build might help verify if everything compiles correctly. I wonder if linting is also needed, or if compiling will be enough. So, let's start with `npm run build`.*
+
+---
+
+<sub>1549m 21s</sub>
+
+### `bash`
+
+**Verify the panel resize and scroll tweaks still compile cleanly**
+
+$ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run build
+
+<details>
+<summary>19 lines</summary>
+
+```
+> nkg-want-list-plus@0.0.0 build
+> wxt build
+
+
+WXT 0.21.4
+ℹ Building chrome-mv3 for production with Vite 8.3.0
+⠋ Preparing...⠋ [1/2] content⠙ [1/2] content⠙ [2/2] options⠹ [2/2] options✔ Built extension in 216 ms
+  ├─ .output/chrome-mv3/manifest.json                621 B    
+  ├─ .output/chrome-mv3/options.html                 416 B    
+  ├─ .output/chrome-mv3/chunks/options-Cz1heeTn.js   237.44 kB
+  ├─ .output/chrome-mv3/content-scripts/content.js   254.16 kB
+  ├─ .output/chrome-mv3/assets/options-B5LUYyOv.css  1.90 kB  
+  ├─ .output/chrome-mv3/content-scripts/content.css  5.27 kB  
+  ├─ .output/chrome-mv3/icon/128.png                 3.07 kB  
+  ├─ .output/chrome-mv3/icon/16.png                  559 B    
+  ├─ .output/chrome-mv3/icon/32.png                  916 B    
+  ├─ .output/chrome-mv3/icon/48.png                  1.33 kB  
+  └─ .output/chrome-mv3/icon/96.png                  2.37 kB  
+Σ Total size: 508.06 kB                            
+✔ Finished in 470 ms
+<shellId: 2 completed with exit code 0>
+```
+
+</details>
+
+
+---
+
+<sub>1549m 25s</sub>
+
+### Reasoning
+
+***Considering task completion logic**
+
+I’m looking at this user task, and it’s not just conversational; there’s a coding fix involved. I think I should call `task_complete` after verifying the code. It might be useful to include a tool summary in the final output. I need to determine whether to use SQL to mark the manual test as done. However, since the user mentioned they will manually test later, I’ll focus on the fixes we made and consider calling `task_complete`.*
+
+---
+
+<sub>1549m 27s</sub>
+
+### `task_complete`
+
+**Adjusted the panel behavior for the short fixes you asked...**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "summary": "Adjusted the panel behavior for the short fixes you asked for: added a draggable resize handle with a stable dynamic height, increased the stacking order so the panel stays above page content, and changed item click behavior to scroll the matching product near the top of the viewport instead of the center. Build verification passed with `npm run build`."
+}
+```
+
+</details>
+
+```
+Adjusted the panel behavior for the short fixes you asked for: added a draggable resize handle with a stable dynamic height, increased the stacking order so the panel stays above page content, and changed item click behavior to scroll the matching product near the top of the viewport instead of the center. Build verification passed with `npm run build`.
+```
+
+
+---
+
+<sub>1549m 27s</sub>
+
+### ✓ Task Complete
+
+Adjusted the panel behavior for the short fixes you asked for: added a draggable resize handle with a stable dynamic height, increased the stacking order so the panel stays above page content, and changed item click behavior to scroll the matching product near the top of the viewport instead of the center. Build verification passed with `npm run build`.
+
+---
+
+<sub>1552m 27s</sub>
+
+### User
+
+expand collapse panel broken, but i think i like sizeable, but fixed size, default to bar title plus a row, but save last size, also maybe just remove expand collapse and only allow draggable sizing for a try
+
+---
+
+<sub>1552m 33s</sub>
+
+### Reasoning
+
+***Considering UI adjustments**
+
+I need to fix the expand/collapse functionality due to potential conflicts with button order. The goal is to have a default state that’s collapsed to a single bar while allowing draggable resizing. It seems better to remove the expand/collapse toggle altogether. Instead, I'll set it so the panel is always open but appears as a small height when collapsed, like around 72px, and include a simple title and row in the default state.
+
+**Implementing UI changes**
+
+I’m considering that implementing a "save last size" feature is feasible with localStorage. However, I think a simpler fix might be to use user state for the panel without needing a separate toggle button. The handle itself can control the opening. They mentioned the expand/collapse feature being broken, which suggests I should focus on keeping the panel in a default open state, but also a minimal title row visible when collapsed, allowing users to drag to resize without confusion.
+
+**Designing a collapsible panel**
+
+I’m envisioning a panel that can collapse to a small bar while remaining accessible. I’ll set it up with `const [open, setOpen] = useState(true);` to start open. The height will be managed by `const [panelHeight, setPanelHeight] = useState(() => load saved size or 320)`, with a collapsed height of 64. I want the handle to allow dragging to resize, and clicking will toggle the open state. When closed, the body will be hidden, but I’ll show a title and a small summary row for clarity. I'll also explore using localStorage to save the last size.
+
+**Implementing localStorage and panel behavior**
+
+I’m considering whether the extension's content script can access localStorage on nobleknight.com, and it seems likely. To save the panel height, I’ll use `localStorage` with the key `nkgwlp-panel-height`. I can set `panelHeight` from localStorage on mount and update it whenever it changes, which makes things easy. I’m also thinking that instead of having a separate collapse toggle, we can just use drag sizing. The handle will be draggable, and clicking it toggles the open state without needing a separate button. Sounds like a solid plan!
+
+**Refining the panel implementation**
+
+They want the panel to default to a bar title plus a small row visible even when collapsed. I think I’ll display a summary line, like "NKG Want List Plus" with item counts, but without an actual expand button. The height logic seems overly complex, so let’s simplify. I’ll incorporate localStorage for saving panel height, ensuring that when the panel is closed, the title and item count remain visible. I aim to remove separate collapse functionality while keeping the drag-and-resize feature intact! This will streamline interactions without user confusion.*
+
+---
+
+<sub>1552m 44s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx updated with changes.
+```
+
+
+---
+
+<sub>1552m 47s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx updated with changes.
+```
+
+
+---
+
+<sub>1552m 54s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx updated with changes.
+```
+
+
+---
+
+<sub>1552m 58s</sub>
+
+### Reasoning
+
+***Clarifying button toggle logic**
+
+I need to check if a button's open/close action still happens when dragging and then pressing up after a click. The `dragMoved` state is set to false on pointer up, but clicking might still execute. If the pointer moves and then releases, the click event could fire unless we prevent it. I’m thinking we should keep track of whether it’s dragged until an actual click occurs. So, pointer actions could update a reference state effectively. I want to ensure the click doesn’t happen during dragging.
+
+**Refining drag and click behavior**
+
+If the pointer goes down but doesn’t move, I realize `dragMovedRef` should remain false, allowing the click to toggle the open state. I shouldn’t reset `dragMovedRef` on pointer up, but only clear the start of the drag. When clicking, I can check and reset the state to keep it intact. This means clicking after dragging won’t toggle if it’s been dragged. The user also mentioned defaulting to a bar title with an additional row, which seems reasonable, so I need to implement and test this patch.*
+
+---
+
+<sub>1553m 4s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/BottomPanel.tsx updated with changes.
+```
+
+
+---
+
+<sub>1553m 9s</sub>
+
+### `bash`
+
+**Verify the collapsed/resize toggling logic still compiles after the panel behavior adjustment**
+
+$ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run build
+
+<details>
+<summary>19 lines</summary>
+
+```
+> nkg-want-list-plus@0.0.0 build
+> wxt build
+
+
+WXT 0.21.4
+ℹ Building chrome-mv3 for production with Vite 8.3.0
+⠋ Preparing...⠋ [1/2] content⠙ [1/2] content⠙ [2/2] options⠹ [2/2] options✔ Built extension in 227 ms
+  ├─ .output/chrome-mv3/manifest.json                621 B    
+  ├─ .output/chrome-mv3/options.html                 416 B    
+  ├─ .output/chrome-mv3/chunks/options-Cz1heeTn.js   237.44 kB
+  ├─ .output/chrome-mv3/content-scripts/content.js   254.56 kB
+  ├─ .output/chrome-mv3/assets/options-B5LUYyOv.css  1.90 kB  
+  ├─ .output/chrome-mv3/content-scripts/content.css  5.27 kB  
+  ├─ .output/chrome-mv3/icon/128.png                 3.07 kB  
+  ├─ .output/chrome-mv3/icon/16.png                  559 B    
+  ├─ .output/chrome-mv3/icon/32.png                  916 B    
+  ├─ .output/chrome-mv3/icon/48.png                  1.33 kB  
+  └─ .output/chrome-mv3/icon/96.png                  2.37 kB  
+Σ Total size: 508.46 kB                            
+✔ Finished in 422 ms
+<shellId: 3 completed with exit code 0>
+```
+
+</details>
+
+
+---
+
+<sub>1553m 11s</sub>
+
+### Reasoning
+
+***Finalizing task completion**
+
+Alright, it seems like there might not be any more checks needed. I think I need to use the task_complete function to mark everything as final. It’s also a good idea to mention that a manual test on the user’s browser is recommended to ensure everything works smoothly. Don’t forget to include a note about fixing the resize issue as part of the summary. Let's wrap this up nicely!*
+
+---
+
+<sub>1553m 12s</sub>
+
+### `task_complete`
+
+**I simplified the panel behavior to a draggable-size workf...**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "summary": "I simplified the panel behavior to a draggable-size workflow with a compact default bar, kept the last size in localStorage, and prevented dragging from accidentally toggling the panel. The content script now scrolls the selected item near the top instead of the center, and the build still passes with `npm run build`."
+}
+```
+
+</details>
+
+```
+I simplified the panel behavior to a draggable-size workflow with a compact default bar, kept the last size in localStorage, and prevented dragging from accidentally toggling the panel. The content script now scrolls the selected item near the top instead of the center, and the build still passes with `npm run build`.
+```
+
+
+---
+
+<sub>1553m 12s</sub>
+
+### ✓ Task Complete
+
+I simplified the panel behavior to a draggable-size workflow with a compact default bar, kept the last size in localStorage, and prevented dragging from accidentally toggling the panel. The content script now scrolls the selected item near the top instead of the center, and the build still passes with `npm run build`.
+
+---
+
+<sub>1556m 31s</sub>
+
+### User
+
+some things on main page still draw on top of bottom panel, z order problem css fix, or another approach, buttons, and best seller badges, etc
+
+---
+
+<sub>1556m 35s</sub>
+
+### Reasoning
+
+***Fixing z-order issues**
+
+I need to tackle the z-order issue, likely with one final patch. I should inspect the relevant code, maybe looking into the panel CSS. The root z-index is set at 2147483647, but it seems some elements might still draw above it due to potential issues with the `#shadow-root`. I can't run a browser here, but I can reason it out. The shadow DOM might not be root-level, and there could be stacking context problems, especially with `position: sticky` elements on the page.
+
+**Adjusting overlay positioning**
+
+To ensure the overlay appears above other elements, I might need to set the root container’s `zIndex`, which is `2147483000`, in the createShadowRootUi configuration. Adding `position: fixed` with a `zIndex` in the CSS could help, but some elements still draw above because the root isn't topmost due to peculiar CSS in the shadow root, specifically `all: initial`. To improve this, I can try setting the actual panel container with `position: fixed` and `z-index: 2147483647`, and attach it to the `html` or `body` with `position: relative` and `will-change: transform`.
+
+**Addressing z-order issues**
+
+The user mentioned that some elements on the main page are still drawing on top of the bottom panel, indicating a z-order problem. This suggests that while the extension's shadow root might be functioning correctly, certain content elements are still on top due to a fixed panel and insufficient z-index. I’ll need to robustly set the `z-index` on both the host root and `.nkgwlp-panel` to `2147483647` and consider adding `position: relative;` and `transform: translateZ(0)`. If other elements also use that high z-index, it complicates things, especially since my shadow UI root isn’t a direct child of `body`.
+
+**Exploring overlay solutions**
+
+I might consider another approach by using `position: fixed` and creating a `div` outside the shadow root or using `document.body.appendChild` for a top-level `div`. Although WXT's createShadowRootUi likely sets the z-index on the root, not all internal elements are guaranteed that same treatment. To combat overlap from the host page, I can overlay a `div` with `z-index: 2147483647`. Additionally, I wonder if the issue stems from the `.nkgwlp-panel` not getting a proper z-index due to CSS resets from the shadow root. For robustness, I might set `pointer-events: auto;` alongside a high z-index.
+
+**Refining overlay approach**
+
+Considering how to resolve the overlay issue, I think a better method might be to create a `div` on a higher DOM layer outside the shadow root, using `document.body.appendChild` with `position: fixed; z-index: 2147483647`. However, content scripts can still manipulate the DOM directly. The problem may arise from elements in the host page that use `position: fixed` and have a higher z-index than our panel. 
+
+To tackle this, I could set `pointer-events: none` on the host and `pointer-events: auto` on the panel, allowing interactions without intercepts from the host. I'll make the necessary changes in the relevant files to implement and test this solution effectively.*
+
+---
+
+<sub>1556m 46s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/index.tsx.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/index.tsx
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/index.tsx updated with changes.
+```
+
+
+---
+
+<sub>1556m 49s</sub>
+
+### `edit`
+
+**edit the file at /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css.**
+
+/Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css
+
+```
+File /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus/entrypoints/content/ui/panel.css updated with changes.
+```
+
+
+---
+
+<sub>1556m 53s</sub>
+
+### Reasoning
+
+***Running build steps**
+
+I think this could help, but it might not completely solve the issue. I’m also considering styling `nkgwlp-panel * { pointer-events: auto; }`, though it’s not strictly necessary. I should run the build process next. I'm hoping there will be no compile errors this time, so I just need to do the build again and see what happens. Let's keep things moving forward!*
+
+---
+
+<sub>1556m 55s</sub>
+
+### `bash`
+
+**Build again after the z-index fix to ensure the content script still compiles cleanly**
+
+$ cd /Users/tsteele/Documents/GitHub/2026-fall/nkg-want-list-plus && npm run build
+
+<details>
+<summary>19 lines</summary>
+
+```
+> nkg-want-list-plus@0.0.0 build
+> wxt build
+
+
+WXT 0.21.4
+ℹ Building chrome-mv3 for production with Vite 8.3.0
+⠋ Preparing...⠋ [1/2] content⠙ [1/2] content⠙ [2/2] options⠹ [2/2] options✔ Built extension in 214 ms
+  ├─ .output/chrome-mv3/manifest.json                621 B    
+  ├─ .output/chrome-mv3/options.html                 416 B    
+  ├─ .output/chrome-mv3/chunks/options-Cz1heeTn.js   237.44 kB
+  ├─ .output/chrome-mv3/content-scripts/content.js   254.70 kB
+  ├─ .output/chrome-mv3/assets/options-B5LUYyOv.css  1.90 kB  
+  ├─ .output/chrome-mv3/content-scripts/content.css  5.29 kB  
+  ├─ .output/chrome-mv3/icon/128.png                 3.07 kB  
+  ├─ .output/chrome-mv3/icon/16.png                  559 B    
+  ├─ .output/chrome-mv3/icon/32.png                  916 B    
+  ├─ .output/chrome-mv3/icon/48.png                  1.33 kB  
+  └─ .output/chrome-mv3/icon/96.png                  2.37 kB  
+Σ Total size: 508.61 kB                            
+✔ Finished in 407 ms
+<shellId: 4 completed with exit code 0>
+```
+
+</details>
+
+
+---
+
+<sub>1556m 58s</sub>
+
+### Reasoning
+
+***Finalizing tasks**
+
+I believe this is the last fix we need. I should call task_complete now that everything is finished. It might be good to also summarize the z-index fix, just to ensure it's clearly documented. So, let's wrap this up and move on! I’m feeling confident about this completion. It’s always nice to know when a task is fully completed, right? Alright, let’s get it done!*
+
+---
+
+<sub>1556m 59s</sub>
+
+### `task_complete`
+
+**Raised the extension host’s stacking context and kept the...**
+
+<details>
+<summary>Arguments</summary>
+
+```json
+{
+  "summary": "Raised the extension host’s stacking context and kept the panel pointer-events enabled on the actual overlay element, which should prevent page elements from rendering over the bottom panel. Build verification still passes with `npm run build`."
+}
+```
+
+</details>
+
+```
+Raised the extension host’s stacking context and kept the panel pointer-events enabled on the actual overlay element, which should prevent page elements from rendering over the bottom panel. Build verification still passes with `npm run build`.
+```
+
+
+---
+
+<sub>1556m 59s</sub>
+
+### ✓ Task Complete
+
+Raised the extension host’s stacking context and kept the panel pointer-events enabled on the actual overlay element, which should prevent page elements from rendering over the bottom panel. Build verification still passes with `npm run build`.
 
 ---
 

@@ -1,5 +1,5 @@
-import { useState } from "react";
 import type { Group, Item } from "../../../types";
+import { findProductCardElement } from "../../../lib/domExtractor";
 
 export interface OrderControls {
   canMoveUp: boolean;
@@ -23,10 +23,24 @@ interface ItemRowProps {
   onRemoveItemEntirely?: () => void;
 }
 
+function getStockBadge(item: Item): { label: string; isInStock: boolean } {
+  if (item.conditions.length > 0) {
+    return { label: "In stock", isInStock: true };
+  }
+
+  if (item.stockNumber) {
+    return { label: "In stock", isInStock: true };
+    // return { label: `Stock # ${item.stockNumber}`, isInStock: true };
+  }
+
+  return { label: "Not in stock", isInStock: false };
+}
+
 /**
- * Compact, mobile-first list row: small thumbnail on the right, title +
- * publisher only. Tap the row to expand an inline accordion with full
- * details (price/condition, stock #, product line, source) and actions.
+ * Compact, mobile-first row: title, publisher, and a small stock badge.
+ * Clicking the row scrolls the matching item card into view on the actual
+ * Noble Knight page; the extension is a list manager, not a duplicate mini
+ * product viewer.
  */
 export function ItemRow({
   item,
@@ -35,7 +49,24 @@ export function ItemRow({
   groupChips,
   onRemoveItemEntirely,
 }: ItemRowProps) {
-  const [expanded, setExpanded] = useState(false);
+  const stock = getStockBadge(item);
+
+  const onActivate = () => {
+    const card = findProductCardElement(document, item);
+    if (!card) return;
+
+    const top = card.getBoundingClientRect().top + window.scrollY - 24;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+
+    const previousOutline = card.style.outline;
+    const previousOutlineOffset = card.style.outlineOffset;
+    card.style.outline = "2px solid #005996";
+    card.style.outlineOffset = "2px";
+    window.setTimeout(() => {
+      card.style.outline = previousOutline;
+      card.style.outlineOffset = previousOutlineOffset;
+    }, 1200);
+  };
 
   return (
     <li className="item-row">
@@ -69,53 +100,30 @@ export function ItemRow({
 
         <button
           className="item-row-tap-target"
-          onClick={() => setExpanded((v) => !v)}
-          aria-expanded={expanded}
+          onClick={onActivate}
+          aria-label={`Focus ${item.title} on the Noble Knight page`}
         >
           <div className="item-row-text">
             <span className="item-title">{item.title}</span>
-            {item.publisher && (
-              <span className="item-publisher">{item.publisher}</span>
-            )}
+            <span className="item-row-subline">
+              {item.publisher && (
+                <span className="item-publisher">{item.publisher}</span>
+              )}
+              <span
+                className={`stock-badge ${stock.isInStock ? "in-stock" : "out-of-stock"}`}
+              >
+                {stock.label}
+              </span>
+            </span>
           </div>
         </button>
-
-        {item.imageUrl ? (
-          <img
-            className="item-thumb"
-            src={item.imageUrl}
-            alt=""
-            loading="lazy"
-          />
-        ) : (
-          <div className="item-thumb item-thumb-placeholder" aria-hidden="true" />
-        )}
       </div>
 
-      {expanded && (
-        <div className="item-row-detail">
-          {item.productLine && <p className="muted">{item.productLine}</p>}
-          {item.stockNumber && (
-            <p className="muted">Stock #: {item.stockNumber}</p>
-          )}
-          {item.conditions.length > 0 && (
-            <ul className="conditions">
-              {item.conditions.map((c, idx) => (
-                <li key={idx}>
-                  {c.condition} — ${c.price.toFixed(2)}
-                  {c.note && ` (${c.note})`}
-                </li>
-              ))}
-            </ul>
-          )}
+      {(groupChips || sourceNames.length > 0 || onRemoveItemEntirely || orderControls) && (
+        <div className="item-row-footer">
           {sourceNames.length > 0 && (
-            <p className="muted small">From: {sourceNames.join(", ")}</p>
+            <span className="muted small">From: {sourceNames.join(", ")}</span>
           )}
-          <p className="muted small">
-            <a href={item.productUrl} target="_blank" rel="noreferrer">
-              View on Noble Knight
-            </a>
-          </p>
 
           {groupChips && (
             <div className="group-chips">
@@ -125,7 +133,10 @@ export function ItemRow({
                   <button
                     key={g.id}
                     className={`chip ${active ? "chip-active" : ""}`}
-                    onClick={() => groupChips.onToggleGroup(g.id)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      groupChips.onToggleGroup(g.id);
+                    }}
                   >
                     {g.name}
                   </button>
@@ -143,13 +154,22 @@ export function ItemRow({
             {orderControls && (
               <button
                 className="danger small"
-                onClick={orderControls.onRemoveFromGroup}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  orderControls.onRemoveFromGroup();
+                }}
               >
                 Remove from this list
               </button>
             )}
             {onRemoveItemEntirely && (
-              <button className="danger small" onClick={onRemoveItemEntirely}>
+              <button
+                className="danger small"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onRemoveItemEntirely();
+                }}
+              >
                 Delete item
               </button>
             )}

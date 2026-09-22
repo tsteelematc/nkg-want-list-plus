@@ -61,7 +61,7 @@ export function ListDetailView({
       <h2>{group.name}</h2>
       <p className="hint">
         {orderedItems.length} item{orderedItems.length === 1 ? "" : "s"} — use
-        the arrows to reorder. Tap an item for details.
+        the arrows to reorder. Tap an item to jump to it on the page.
       </p>
 
       <ul className="item-list">

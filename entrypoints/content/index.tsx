@@ -27,6 +27,13 @@ export default defineContentScript({
       zIndex: 2147483000,
       anchor: "body",
       onMount: (uiContainer) => {
+        uiContainer.style.position = "fixed";
+        uiContainer.style.left = "0";
+        uiContainer.style.right = "0";
+        uiContainer.style.bottom = "0";
+        uiContainer.style.zIndex = "2147483647";
+        uiContainer.style.pointerEvents = "none";
+
         const root = createRoot(uiContainer);
         root.render(<BottomPanel />);
         return root;

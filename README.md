@@ -1,66 +1,50 @@
 # NKG Want List Plus
 
-A mobile-first list manager for organizing your [Noble Knight Games](https://www.nobleknight.com/)
-"My Want List" pages into your own ranked lists (e.g. "My CWBBS Want List",
-"Grail List"). It's a static single-page app with no backend — it scrapes
-your public want-list URL(s) client-side and stores everything in your
-browser's `localStorage`.
+A mobile-first list manager for organizing items from [Noble Knight Games](https://www.nobleknight.com/)
+want-list pages into your own ranked lists (for example: "My CWBBS Want List",
+"Grail List"). This version runs as a browser extension and reads the live
+want-list DOM directly, so it avoids CORS and proxy issues entirely.
 
 ## Features
 
-- **Lists (home tab)** — create any number of named lists. A single item can
-  belong to many lists at once, and **each list keeps its own independent
-  order** (an item can be #1 in "Grail List" and #5 in "CWBBS Want List").
-  Reorder items with simple move up/down controls — no drag-and-drop needed.
-- **Items tab** — browse/search everything scraped from your sources and
-  assign items to any number of lists.
-- **Compact rows** — each row shows just the title, publisher, and a small
-  thumbnail; tap a row to expand full details (price/condition, stock #,
-  product line, source, link to the product page).
-- **Sources** — add one or more Noble Knight "My Want List" share URLs and
-  refresh them to (re)scrape items.
-- **Settings** — configure the CORS proxy used for scraping, export/import a
-  JSON backup, or paste a saved page's HTML as a fallback import method.
+- **Bottom-panel UI** — the extension injects a compact mobile-friendly panel
+  onto Noble Knight want-list pages.
+- **Lists** — create custom groups/lists. A single item can belong to many
+  lists at once, and each list keeps its own independent order.
+- **Compact rows** — each row shows only the title, publisher, and stock
+  status. Tapping a row scrolls the matching product card on the real Noble
+  Knight page into view instead of duplicating product details inside the panel.
+- **No scraping proxy** — because the extension uses a content script, it
+  reads the live DOM directly from the actual page you're already on.
+- **Settings** — export/import JSON backups and manage list data from the
+  options page.
 
-## Why a CORS proxy / paste-HTML fallback?
+## Install and test locally
 
-Browsers block cross-origin requests to `nobleknight.com` from a page hosted
-on GitHub Pages, so the app fetches want-list pages through a configurable
-CORS proxy (default: `https://api.allorigins.win/raw?url=`). Public proxies
-can be rate-limited or go down, so as a fallback you can manually save/copy a
-want-list page's HTML source and paste it into the Settings page to import
-items without a proxy at all.
+1. Run `npm install`.
+2. Run `npm run build` to generate the unpacked extension bundle.
+3. Open `chrome://extensions` (or `edge://extensions`) in Chromium-based
+   browsers.
+4. Enable **Developer mode**.
+5. Click **Load unpacked** and point it at the generated build folder:
+   `.output/chrome-mv3`.
+6. Visit a Noble Knight want-list page and reload the tab.
+7. The panel should appear at the bottom of the page; tap rows to jump to the
+   corresponding product card on the live page.
 
 ## Data & privacy
 
-All data (sources, items, lists, settings) is stored only in your browser's
-`localStorage` — nothing is sent to a server other than the scrape requests
-themselves. Use **Settings → Export JSON backup** regularly, or to move your
-data to another browser/device.
+All data is stored locally in the browser via `chrome.storage.local`.
+Nothing is uploaded to a server as part of the extension's normal list
+management flow. Use the options page to export and import JSON backups when
+moving data between machines.
 
 ## Development
 
 ```bash
 npm install
-npm run dev       # start local dev server
-npm run build     # type-check + production build to dist/
+npm run dev       # start WXT dev mode for extension development
+npm run build     # production build for Chrome/Edge
 npm run lint      # oxlint
-npm run preview   # preview the production build locally
+npm run compile    # TypeScript type-check
 ```
-
-## Deployment (GitHub Pages)
-
-A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the app and
-publishes `dist/` to GitHub Pages on every push to `main`. In the repo
-settings, set **Settings → Pages → Source** to "GitHub Actions".
-
-`vite.config.ts` sets `base: '/nkg-want-list-plus/'` to match this repo name
-so built asset paths resolve correctly under
-`https://<user>.github.io/nkg-want-list-plus/`. If you rename/fork the repo,
-update `base` to match.
-
-The UI is mobile-first (bottom tab navigation, single-column lists,
-large tap targets) with responsive breakpoints that widen content on larger
-screens. Routing uses `HashRouter` so client-side routes (`#/groups/:id`,
-`#/sources`, etc.) work on GitHub Pages without needing server-side rewrite
-rules.

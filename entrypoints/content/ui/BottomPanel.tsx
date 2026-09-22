@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Item } from "../../../types";
 import { useAppData } from "../../../lib/useAppData";
 import { extractItemsFromDocument } from "../../../lib/domExtractor";
@@ -9,11 +9,37 @@ import "./panel.css";
 
 type Tab = "page" | "lists";
 
+const MIN_PANEL_HEIGHT = 220;
+const MAX_PANEL_HEIGHT = 560;
+const COLLAPSED_PANEL_HEIGHT = 62;
+const PANEL_HEIGHT_STORAGE_KEY = "nkgwlp-panel-height";
+
+function readSavedPanelHeight(): number {
+  try {
+    const raw = window.localStorage.getItem(PANEL_HEIGHT_STORAGE_KEY);
+    const parsed = Number(raw);
+    if (Number.isFinite(parsed)) {
+      return Math.min(
+        MAX_PANEL_HEIGHT,
+        Math.max(MIN_PANEL_HEIGHT, parsed),
+      );
+    }
+  } catch {
+    // Ignore storage access issues and fall back to a sane default.
+  }
+
+  return 320;
+}
+
 export function BottomPanel() {
   const appData = useAppData();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [tab, setTab] = useState<Tab>("page");
   const [selectedGroupId, setSelectedGroupId] = useState<string | null>(null);
+  const [panelHeight, setPanelHeight] = useState(() => readSavedPanelHeight());
+  const dragStartY = useRef<number | null>(null);
+  const dragStartHeight = useRef<number | null>(null);
+  const dragMovedRef = useRef(false);
   const [pageItems, setPageItems] = useState<Item[]>(() =>
     extractItemsFromDocument(document),
   );
@@ -22,6 +48,62 @@ export function BottomPanel() {
     () => ({ url: location.href, title: document.title }),
     [],
   );
+
+  useEffect(() => {
+    const updatePanelHeight = () => {
+      const next = Math.min(
+        Math.max(window.innerHeight * 0.45, MIN_PANEL_HEIGHT),
+        MAX_PANEL_HEIGHT,
+      );
+      setPanelHeight((current) => {
+        if (current < MIN_PANEL_HEIGHT || current > MAX_PANEL_HEIGHT) {
+          return next;
+        }
+        return current;
+      });
+    };
+
+    updatePanelHeight();
+    window.addEventListener("resize", updatePanelHeight);
+    return () => window.removeEventListener("resize", updatePanelHeight);
+  }, []);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(PANEL_HEIGHT_STORAGE_KEY, String(panelHeight));
+    } catch {
+      // Storage can fail in private/incognito contexts; ignore silently.
+    }
+  }, [panelHeight]);
+
+  useEffect(() => {
+    const onPointerMove = (event: PointerEvent) => {
+      if (dragStartY.current === null || dragStartHeight.current === null) {
+        return;
+      }
+
+      const delta = dragStartY.current - event.clientY;
+      const next = Math.min(
+        MAX_PANEL_HEIGHT,
+        Math.max(MIN_PANEL_HEIGHT, dragStartHeight.current + delta),
+      );
+      dragMovedRef.current = Math.abs(dragStartY.current - event.clientY) > 4;
+      setPanelHeight(next);
+    };
+
+    const onPointerUp = () => {
+      dragStartY.current = null;
+      dragStartHeight.current = null;
+    };
+
+    window.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("pointerup", onPointerUp);
+
+    return () => {
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", onPointerUp);
+    };
+  }, []);
 
   // Re-extract whenever the want-list DOM changes (e.g. NKG lazy-loads more
   // items after the initial render) and keep storage in sync.
@@ -54,14 +136,36 @@ export function BottomPanel() {
     appData.data.groups.find((g) => g.id === groupId)?.itemOrder.length ?? 0;
 
   return (
-    <div className={`nkgwlp-panel ${open ? "nkgwlp-panel-open" : ""}`}>
+    <div
+      className={`nkgwlp-panel ${open ? "nkgwlp-panel-open" : ""}`}
+      style={{ height: `${open ? panelHeight : COLLAPSED_PANEL_HEIGHT}px` }}
+    >
+      <div
+        className="nkgwlp-resize-handle"
+        onPointerDown={(event) => {
+          dragStartY.current = event.clientY;
+          dragStartHeight.current = panelHeight;
+          dragMovedRef.current = false;
+          event.preventDefault();
+        }}
+        aria-hidden="true"
+      />
+
       <button
         className="nkgwlp-handle"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          if (dragMovedRef.current) {
+            dragMovedRef.current = false;
+            return;
+          }
+          setOpen((v) => !v);
+        }}
         aria-expanded={open}
       >
         <span className="nkgwlp-handle-title">NKG Want List Plus</span>
-        <span className="nkgwlp-handle-caret">{open ? "▾" : "▴"}</span>
+        <span className="nkgwlp-handle-meta">
+          {open ? `${pageItemsWithGroups.length} items` : "Open"}
+        </span>
       </button>
 
       {open && (
@@ -74,13 +178,13 @@ export function BottomPanel() {
                 setSelectedGroupId(null);
               }}
             >
-              On this page
+              All Want List Items
             </button>
             <button
               className={tab === "lists" ? "active" : ""}
               onClick={() => setTab("lists")}
             >
-              My Lists
+              Curated Want Lists
             </button>
           </div>
 

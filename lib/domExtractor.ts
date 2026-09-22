@@ -1,5 +1,29 @@
 import type { ConditionOption, Item } from "../types";
 
+export function findProductCardElement(
+  doc: ParentNode = document,
+  item: Pick<Item, "id" | "productUrl">,
+): HTMLElement | null {
+  const href = item.productUrl ? new URL(item.productUrl).pathname : "";
+  const candidateSelectors = [
+    `a[href*="/P/${item.id}/"]`,
+    `a[href*="/P/${item.id}"]`,
+    href ? `a[href="${href}"]` : null,
+    href ? `a[href="${href}/"]` : null,
+    href ? `a[href*="${href}"]` : null,
+  ].filter((selector): selector is string => Boolean(selector));
+
+  for (const selector of candidateSelectors) {
+    const link = doc.querySelector<HTMLAnchorElement>(selector);
+    const card = link?.closest(
+      ".product-card-wrapper, .product-card, article, [data-product-id]",
+    );
+    if (card instanceof HTMLElement) return card;
+  }
+
+  return null;
+}
+
 /**
  * Extracts items directly from the live NKG want-list DOM. No fetch/CORS
  * proxy needed — the content script already has the real page in front of

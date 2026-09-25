@@ -44,10 +44,16 @@ export function BottomPanel() {
     extractItemsFromDocument(document),
   );
 
-  const page = useMemo(
-    () => ({ url: location.href, title: document.title }),
-    [],
-  );
+  // Strip pagination query params so every page of the same paginated
+  // want list (e.g. "?page=2") resolves to the same Source instead of
+  // registering a separate source per page.
+  const page = useMemo(() => {
+    const url = new URL(location.href);
+    for (const key of ["page", "Page", "p", "PageNumber", "pagenumber"]) {
+      url.searchParams.delete(key);
+    }
+    return { url: url.toString(), title: document.title };
+  }, []);
 
   useEffect(() => {
     const updatePanelHeight = () => {

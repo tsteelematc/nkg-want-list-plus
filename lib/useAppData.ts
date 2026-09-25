@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { AppData, Group, Item } from "../types";
 import { createEmptyAppData } from "../types";
 import { loadAppData, saveAppData, watchAppData } from "./storage";
@@ -13,16 +13,35 @@ import * as ops from "./itemOps";
 export function useAppData() {
   const [data, setData] = useState<AppData>(() => createEmptyAppData());
   const [ready, setReady] = useState(false);
+  // Mirrors `ready` in a ref so `apply` (called from effects that may fire
+  // before the initial load resolves) can synchronously bail out instead of
+  // reading stale state. Without this guard, a sync that runs before
+  // `loadAppData()` resolves would persist the empty default AppData over
+  // whatever the user actually had saved, effectively wiping their data.
+  const readyRef = useRef(false);
+  // Buffers `apply` calls that arrive before the initial load resolves so
+  // they aren't silently dropped (e.g. the content script's very first
+  // `syncPageItems` call, which can fire before storage has loaded).
+  const pendingUpdatesRef = useRef<Array<(prev: AppData) => AppData>>([]);
 
   useEffect(() => {
     let cancelled = false;
     loadAppData().then((loaded) => {
-      if (!cancelled) {
-        setData(loaded);
-        setReady(true);
+      if (cancelled) return;
+      let next = loaded;
+      for (const updater of pendingUpdatesRef.current) {
+        next = updater(next);
+      }
+      pendingUpdatesRef.current = [];
+      setData(next);
+      readyRef.current = true;
+      setReady(true);
+      if (next !== loaded) {
+        void saveAppData(next);
       }
     });
     const unwatch = watchAppData((next) => {
+      if (!readyRef.current) return;
       setData(next);
     });
     return () => {
@@ -32,6 +51,12 @@ export function useAppData() {
   }, []);
 
   const apply = useCallback((updater: (prev: AppData) => AppData) => {
+    if (!readyRef.current) {
+      // Defer until the initial load resolves; queued updaters are applied
+      // in order on top of the freshly loaded data.
+      pendingUpdatesRef.current.push(updater);
+      return;
+    }
     setData((prev) => {
       const next = updater(prev);
       void saveAppData(next);

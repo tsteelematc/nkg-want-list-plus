@@ -64,7 +64,11 @@ export function App() {
           <button type="submit">Add list</button>
         </form>
         <ul className="row-list">
-          {data.groups.map((group) => (
+          {[...data.groups]
+            .sort((a, b) =>
+              a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+            )
+            .map((group) => (
             <li key={group.id} className="row">
               {renamingGroupId === group.id ? (
                 <form

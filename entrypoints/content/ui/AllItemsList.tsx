@@ -6,6 +6,7 @@ interface AllItemsListProps {
   items: Item[];
   groups: Group[];
   onToggleGroup: (itemId: string, groupId: string) => void;
+  onNewList: () => void;
 }
 
 /** Every item on the page, A–Z, with a badge showing how many lists it is on. */
@@ -13,8 +14,17 @@ export function AllItemsList({
   items,
   groups,
   onToggleGroup,
+  onNewList,
 }: AllItemsListProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  const sortedGroups = useMemo(
+    () =>
+      [...groups].sort((a, b) =>
+        a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+      ),
+    [groups],
+  );
 
   const sorted = useMemo(
     () =>
@@ -34,7 +44,12 @@ export function AllItemsList({
   }
 
   return (
-    <ul className="plain-list">
+    <>
+      <p className="hint">
+        Tap a title to jump to it on the page. Tap the + or number to add it
+        to your custom lists.
+      </p>
+      <ul className="plain-list">
       {sorted.map((item) => {
         const count = item.groupIds.filter((id) =>
           groups.some((g) => g.id === id),
@@ -55,17 +70,17 @@ export function AllItemsList({
                 aria-expanded={expanded}
                 onClick={() => setExpandedId(expanded ? null : item.id)}
               >
-                {count}
+                {count > 0 ? count : "+"}
               </button>
             </div>
             {expanded && (
               <div className="check-list">
                 {groups.length === 0 && (
                   <span className="muted small">
-                    No lists yet. Create one in the extension options.
+                    No lists yet. Create your first one below.
                   </span>
                 )}
-                {groups.map((g) => (
+                {sortedGroups.map((g) => (
                   <label key={g.id} className="check-row">
                     <input
                       type="checkbox"
@@ -75,11 +90,15 @@ export function AllItemsList({
                     <span>{g.name}</span>
                   </label>
                 ))}
+                <button className="link-btn" onClick={onNewList}>
+                  + New list…
+                </button>
               </div>
             )}
           </li>
         );
       })}
     </ul>
+    </>
   );
 }

@@ -34,8 +34,7 @@ export function CuratedList({
   if (ordered.length === 0) {
     return (
       <p className="empty">
-        Nothing here yet. Switch to "All items" and tap an item's number
-        badge to add it to this list.
+        Nothing here yet.         Switch to "Add Items to Custom Lists" and tap an item's badge to add it to this list.
       </p>
     );
   }

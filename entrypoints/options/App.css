@@ -154,3 +154,9 @@ input {
   color: var(--danger);
   font-size: 0.85rem;
 }
+
+.success {
+  color: #16733a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}

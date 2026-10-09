@@ -9,6 +9,9 @@ export function App() {
   const appData = useAppData();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [importError, setImportError] = useState<string | null>(null);
+  const [clearStatus, setClearStatus] = useState<string | null>(null);
+  // confirm() is silently blocked in Chrome's embedded options dialog.
+  const [confirmingClear, setConfirmingClear] = useState(false);
   const [renamingSourceId, setRenamingSourceId] = useState<string | null>(
     null,
   );
@@ -34,6 +37,7 @@ export function App() {
       );
     }
   };
+
 
   return (
     <div className="page">
@@ -133,20 +137,40 @@ export function App() {
 
       <section>
         <h2>Danger Zone</h2>
-        <button
-          className="danger"
-          onClick={() => {
-            if (
-              confirm(
-                "Delete all lists, sources, and items? This can't be undone unless you have a backup.",
-              )
-            ) {
-              appData.clearAllData();
-            }
-          }}
-        >
-          Clear all data
-        </button>
+        {confirmingClear ? (
+          <div className="row-actions">
+            <span className="hint">
+              Delete all lists, sources, and items? This can't be undone
+              unless you have a backup.
+            </span>
+            <button
+              className="danger"
+              onClick={() => {
+                setConfirmingClear(false);
+                appData.clearAllData();
+                setClearStatus("All extension data has been cleared.");
+              }}
+            >
+              Yes, delete everything
+            </button>
+            <button onClick={() => setConfirmingClear(false)}>Cancel</button>
+          </div>
+        ) : (
+          <button
+            className="danger"
+            onClick={() => {
+              setClearStatus(null);
+              setConfirmingClear(true);
+            }}
+          >
+            Clear all data
+          </button>
+        )}
+        {clearStatus && (
+          <p className="success" role="status" aria-live="polite">
+            {clearStatus}
+          </p>
+        )}
       </section>
     </div>
   );

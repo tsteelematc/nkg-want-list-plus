@@ -27,3 +27,7 @@ A running record of the prompts that drove the FAB + popup redesign. Updated as 
 12. > dont like "this page", how about Add Items to Custom Lists, maybe too long, but maybe okay, ill peek at it, i like the plus in the badges, the lists with checkboxes under the plus should be alpha too, and could there be a new list link at bottom that prompts the header thingy, and maybe after adding any new list even from drop down, should go to Add Items to Custom Lists, seems the next logical task, prob not all the right thoughts here, but try and sort out
 
 13. > hmm, red x to delete list be repurposed as three dots, then lead to a rename delete choice in header, choosing delete goes to delete confirmation, choosing rename leads to rename in header, with cancel ability, also cancel ability on first two choices, e.g. Rename Delete Cancel, b, b, blah, oh, then could get rid of list management in extension settings
+
+14. > so can remove item from list, red x, but what about an acquired option, maybe a box or package icon, meaning i got it, or maybe three dots there with header for remove, acquired, cancel, yeah kinda liking header for mini wizard behavior, yes, yes, if acquired, maybe have an item at the end of every curated list for the acquired items, not sure on this one, try something and ill peek
+
+15. > if acquired on one list, should be acquired on all lists

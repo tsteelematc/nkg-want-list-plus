@@ -118,6 +118,12 @@ export function useAppData() {
     [apply],
   );
 
+  const setItemAcquired = useCallback(
+    (itemId: string, acquired: boolean) =>
+      apply((prev) => ops.setItemAcquired(prev, itemId, acquired)),
+    [apply],
+  );
+
   const removeItem = useCallback(
     (itemId: string) => apply((prev) => ops.removeItem(prev, itemId)),
     [apply],
@@ -145,6 +151,7 @@ export function useAppData() {
       removeGroup,
       toggleItemGroup,
       moveItemInGroup,
+      setItemAcquired,
       removeItem,
       replaceAllData,
       clearAllData,
@@ -160,6 +167,7 @@ export function useAppData() {
       removeGroup,
       toggleItemGroup,
       moveItemInGroup,
+      setItemAcquired,
       removeItem,
       replaceAllData,
       clearAllData,

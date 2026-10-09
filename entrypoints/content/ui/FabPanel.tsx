@@ -11,7 +11,13 @@ const ALL = "__all__";
 const NEW = "__new__";
 
 // What the popup header is currently showing.
-type HeaderMode = "idle" | "creating" | "menu" | "renaming" | "deleting";
+type HeaderMode =
+  | "idle"
+  | "creating"
+  | "menu"
+  | "renaming"
+  | "deleting"
+  | "itemMenu";
 
 export function FabPanel() {
   const appData = useAppData();
@@ -20,6 +26,7 @@ export function FabPanel() {
   const [mode, setMode] = useState<HeaderMode>("idle");
   const [donating, setDonating] = useState(false);
   const [nameInput, setNameInput] = useState("");
+  const [menuItemId, setMenuItemId] = useState<string | null>(null);
   const [pageItems, setPageItems] = useState<Item[]>(() =>
     extractItemsFromDocument(document),
   );
@@ -72,8 +79,14 @@ export function FabPanel() {
 
   const closeMode = () => {
     setNameInput("");
+    setMenuItemId(null);
     setMode("idle");
   };
+
+  const menuItem = appData.data.items.find((i) => i.id === menuItemId);
+  const menuItemAcquired = Boolean(
+    activeGroup && menuItemId && activeGroup.acquiredIds?.includes(menuItemId),
+  );
 
   const startCreating = () => {
     setNameInput("");
@@ -149,6 +162,40 @@ export function FabPanel() {
                     onClick={() => setMode("deleting")}
                   >
                     Delete
+                  </button>
+                  <button
+                    type="button"
+                    className="nkgwlp-cancel"
+                    autoFocus
+                    onClick={closeMode}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              ) : mode === "itemMenu" && activeGroup && menuItem ? (
+                <div className="nkgwlp-new-form nkgwlp-confirm">
+                  <span className="nkgwlp-confirm-text">{menuItem.title}</span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      appData.setItemAcquired(
+                        menuItem.id,
+                        !menuItemAcquired,
+                      );
+                      closeMode();
+                    }}
+                  >
+                    {menuItemAcquired ? "Restore" : "Acquired"}
+                  </button>
+                  <button
+                    type="button"
+                    className="nkgwlp-danger"
+                    onClick={() => {
+                      appData.toggleItemGroup(menuItem.id, activeGroup.id);
+                      closeMode();
+                    }}
+                  >
+                    Remove
                   </button>
                   <button
                     type="button"
@@ -270,7 +317,10 @@ export function FabPanel() {
                   data={appData.data}
                   groupId={activeView}
                   onMoveItemInGroup={appData.moveItemInGroup}
-                  onToggleItemGroup={appData.toggleItemGroup}
+                  onItemMenu={(id) => {
+                    setMenuItemId(id);
+                    setMode("itemMenu");
+                  }}
                 />
               )}
             </div>

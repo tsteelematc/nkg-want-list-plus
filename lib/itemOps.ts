@@ -80,6 +80,9 @@ export function removeSource(data: AppData, sourceId: string): AppData {
     groups: data.groups.map((g) => ({
       ...g,
       itemOrder: g.itemOrder.filter((itemId) => remainingItemIds.has(itemId)),
+      acquiredIds: (g.acquiredIds ?? []).filter((itemId) =>
+        remainingItemIds.has(itemId),
+      ),
     })),
   };
 }
@@ -140,6 +143,10 @@ export function toggleItemGroup(
   const item = data.items.find((i) => i.id === itemId);
   if (!item) return data;
   const has = item.groupIds.includes(groupId);
+  // Adding an already-acquired item to another list keeps it acquired.
+  const acquiredElsewhere = data.groups.some((g) =>
+    (g.acquiredIds ?? []).includes(itemId),
+  );
   return {
     ...data,
     items: data.items.map((i) =>
@@ -156,9 +163,38 @@ export function toggleItemGroup(
       if (g.id !== groupId) return g;
       return {
         ...g,
-        itemOrder: has
-          ? g.itemOrder.filter((id) => id !== itemId)
-          : [...g.itemOrder, itemId],
+        itemOrder:
+          has || acquiredElsewhere
+            ? g.itemOrder.filter((id) => id !== itemId)
+            : [...g.itemOrder, itemId],
+        acquiredIds: [
+          ...(g.acquiredIds ?? []).filter((id) => id !== itemId),
+          ...(!has && acquiredElsewhere ? [itemId] : []),
+        ],
+      };
+    }),
+  };
+}
+
+/** Marks an item acquired (or not) in every list that contains it. */
+export function setItemAcquired(
+  data: AppData,
+  itemId: string,
+  acquired: boolean,
+): AppData {
+  return {
+    ...data,
+    groups: data.groups.map((g) => {
+      const member =
+        g.itemOrder.includes(itemId) || (g.acquiredIds ?? []).includes(itemId);
+      if (!member) return g;
+      const without = (ids: string[]) => ids.filter((id) => id !== itemId);
+      return {
+        ...g,
+        itemOrder: acquired ? without(g.itemOrder) : [...without(g.itemOrder), itemId],
+        acquiredIds: acquired
+          ? [...without(g.acquiredIds ?? []), itemId]
+          : without(g.acquiredIds ?? []),
       };
     }),
   };
@@ -196,6 +232,7 @@ export function removeItem(data: AppData, itemId: string): AppData {
     groups: data.groups.map((g) => ({
       ...g,
       itemOrder: g.itemOrder.filter((id) => id !== itemId),
+      acquiredIds: (g.acquiredIds ?? []).filter((id) => id !== itemId),
     })),
   };
 }

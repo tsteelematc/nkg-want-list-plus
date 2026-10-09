@@ -45,6 +45,8 @@ export interface Group {
   createdAt: string;
   /** Ordered list of Item ids belonging to this group; authoritative render order. */
   itemOrder: string[];
+  /** Items marked as acquired; still members of the group but out of itemOrder. */
+  acquiredIds?: string[];
 }
 
 export interface AppData {

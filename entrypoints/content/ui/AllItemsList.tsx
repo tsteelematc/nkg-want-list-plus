@@ -46,8 +46,8 @@ export function AllItemsList({
   return (
     <>
       <p className="hint">
-        Tap a title to jump to it on the page. Tap the + or number to add it
-        to your custom lists.
+        Tap a title to jump to it on the page. Tap the + or number badge to add/remove it
+        from your custom lists.
       </p>
       <ul className="plain-list">
       {sorted.map((item) => {

@@ -48,6 +48,21 @@ export function App() {
 
       <section>
         <h2>My Lists</h2>
+        <form
+          className="rename-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const input = e.currentTarget.elements.namedItem(
+              "name",
+            ) as HTMLInputElement;
+            const name = input.value.trim();
+            if (name) appData.addGroup(name);
+            input.value = "";
+          }}
+        >
+          <input name="name" placeholder="New list name" />
+          <button type="submit">Add list</button>
+        </form>
         <ul className="row-list">
           {data.groups.map((group) => (
             <li key={group.id} className="row">
@@ -88,8 +103,7 @@ export function App() {
           ))}
           {data.groups.length === 0 && (
             <li className="empty">
-              No lists yet. Create one from the bottom panel on a Noble
-              Knight want-list page.
+              No lists yet. Add one above.
             </li>
           )}
         </ul>

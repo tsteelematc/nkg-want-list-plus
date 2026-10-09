@@ -1,11 +1,9 @@
-/* NKG Want List Plus — bottom panel styles (light theme, NK blue accent).
-   Mounted inside a Shadow Root, which WXT resets with `all: initial`, so
-   these rules are self-contained and don't rely on the host page's CSS. */
+/* NKG Want List Plus — FAB + popup styles. Mounted inside a Shadow Root
+   (reset with `all: initial`), so rules are self-contained. */
 
 :host,
-.nkgwlp-panel {
+.nkgwlp-root {
   --nk-blue: #005996;
-  --nk-blue-dark: #003f6b;
   --nk-blue-light: #e7f1f9;
   --bg: #ffffff;
   --bg-subtle: #f4f6f8;
@@ -19,273 +17,179 @@
   box-sizing: border-box;
 }
 
-.nkgwlp-panel * {
+.nkgwlp-root * {
   box-sizing: border-box;
 }
 
-.nkgwlp-panel {
+.nkgwlp-root button {
+  font-family: inherit;
+}
+
+.nkgwlp-scrim {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2147483647;
-  background: var(--bg);
-  border-top: 3px solid var(--nk-blue);
-  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
-  color: var(--text);
-  display: flex;
-  flex-direction: column;
-  max-height: min(72vh, 560px);
-  height: 320px;
-  isolation: isolate;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
   pointer-events: auto;
 }
 
-.nkgwlp-resize-handle {
-  position: relative;
-  flex: 0 0 12px;
-  height: 12px;
-  background: linear-gradient(to bottom, rgba(0, 89, 150, 0.08), transparent);
-  cursor: ns-resize;
-  touch-action: none;
-}
-
-.nkgwlp-resize-handle::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 48px;
-  height: 4px;
-  transform: translate(-50%, -50%);
-  border-radius: 999px;
-  background: rgba(0, 89, 150, 0.35);
-}
-
-.nkgwlp-handle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  flex: 0 0 44px;
-  min-height: 44px;
-  padding: 0.6rem 1rem;
+.nkgwlp-fab {
+  position: fixed;
+  right: calc(1rem + env(safe-area-inset-right, 0px));
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  width: 56px;
+  height: 56px;
   border: none;
+  border-radius: 50%;
   background: var(--nk-blue);
   color: #fff;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  pointer-events: auto;
+  z-index: 2;
 }
 
-.nkgwlp-handle-caret {
-  font-size: 0.9rem;
-}
-
-.nkgwlp-body {
+.nkgwlp-popup {
+  position: fixed;
+  right: calc(1rem + env(safe-area-inset-right, 0px));
+  bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  width: min(380px, calc(100vw - 2rem));
+  max-height: min(70vh, 560px);
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: hidden;
-  padding: 0.75rem 0.9rem calc(0.9rem + env(safe-area-inset-bottom, 0px));
-}
-
-.nkgwlp-tabs {
-  display: flex;
-  gap: 0.4rem;
-  margin-bottom: 0.6rem;
-  flex-shrink: 0;
-}
-
-.nkgwlp-tabs button {
-  flex: 1;
-  min-height: 40px;
+  background: var(--bg);
+  color: var(--text);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--nk-blue);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.nkgwlp-popup-header {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.nkgwlp-switcher {
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   background: var(--bg-subtle);
   color: var(--text);
-  border-radius: 8px;
-  font-size: 0.85rem;
-  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-.nkgwlp-tabs button.active {
-  background: var(--nk-blue);
-  border-color: var(--nk-blue);
-  color: #fff;
+.nkgwlp-close {
+  width: 40px;
+  min-height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .nkgwlp-content {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-}
-
-/* --- Shared form/list bits --- */
-
-.nkgwlp-panel button {
-  font-family: inherit;
-}
-
-.add-group-form {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.add-group-form input {
-  flex: 1;
-  min-width: 0;
-  min-height: 40px;
-  padding: 0 0.6rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-
-.add-group-form button {
-  min-height: 40px;
-  padding: 0 0.75rem;
-  border: none;
-  border-radius: 8px;
-  background: var(--nk-blue);
-  color: #fff;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-.link-btn {
-  border: none;
-  background: transparent;
-  color: var(--nk-blue);
-  font-size: 0.85rem;
-  padding: 0;
-  cursor: pointer;
-}
-
-.breadcrumb {
-  margin: 0 0 0.4rem;
-}
-
-.hint {
-  color: var(--text-muted);
-  font-size: 0.82rem;
-  margin: 0 0 0.6rem;
-}
-
-h2 {
-  margin: 0 0 0.25rem;
-  font-size: 1.1rem;
+  padding: 0.25rem 0.6rem 0.6rem;
 }
 
 .empty {
   color: var(--text-muted);
   padding: 0.75rem 0;
   font-size: 0.9rem;
-  list-style: none;
-}
-
-.meta {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.muted {
-  color: var(--text-muted);
-  font-size: 0.85rem;
   margin: 0;
 }
 
 .muted.small {
-  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
 }
 
-.conditions {
-  margin: 0;
-  padding-left: 1.1rem;
-  font-size: 0.85rem;
-}
+/* --- Plain lists --- */
 
-button.danger {
-  color: var(--danger);
-  background: transparent;
-  border: 1px solid var(--danger);
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button.small {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.55rem;
-}
-
-/* --- Lists (groups) tab --- */
-
-.group-list {
+.plain-list {
   list-style: none;
-  padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  padding: 0;
 }
 
-.group-item {
+.plain-row {
+  border-bottom: 1px solid var(--border);
+}
+
+.plain-row:last-child {
+  border-bottom: none;
+}
+
+.plain-row-main {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.5rem 0.7rem;
-  background: var(--bg-subtle);
+  gap: 0.4rem;
 }
 
-.group-link {
+.plain-title {
   flex: 1;
   min-width: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.3rem 0;
   border: none;
   background: transparent;
   color: inherit;
   text-align: left;
-  min-height: 44px;
+  font-size: 0.9rem;
+  line-height: 1.25;
   cursor: pointer;
 }
 
-.group-name {
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.count-badge {
+  flex-shrink: 0;
+  min-width: 34px;
+  min-height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-/* --- Compact item rows (shared by "On this page" and list detail) --- */
+.count-badge.has-lists {
+  background: var(--nk-blue);
+  border-color: var(--nk-blue);
+  color: #fff;
+}
 
-.item-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.check-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  padding: 0 0 0.5rem 0.25rem;
 }
 
-.item-row {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--bg);
-}
-
-.item-row-main {
+.check-row {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.35rem 0.5rem;
+  gap: 0.6rem;
+  min-height: 40px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.check-row input {
+  width: 20px;
+  height: 20px;
 }
 
 .order-controls {
@@ -299,10 +203,9 @@ button.small {
   background: var(--bg-subtle);
   border-radius: 6px;
   margin: 1px 0;
-  padding: 0.2rem 0.4rem;
   min-width: 34px;
-  min-height: 30px;
-  font-size: 0.8rem;
+  min-height: 26px;
+  font-size: 0.75rem;
   color: var(--nk-blue);
   cursor: pointer;
 }
@@ -312,109 +215,13 @@ button.small {
   cursor: default;
 }
 
-.item-row-tap-target {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  align-items: center;
+.remove-btn {
+  flex-shrink: 0;
+  width: 36px;
+  min-height: 36px;
   border: none;
   background: transparent;
-  color: inherit;
-  text-align: left;
-  padding: 0.35rem 0.2rem;
-  min-height: 44px;
-  cursor: pointer;
-}
-
-.item-row-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.12rem;
-  min-width: 0;
-  width: 100%;
-}
-
-.item-title {
-  font-weight: 600;
-  font-size: 0.9rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.item-row-subline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  min-width: 0;
-}
-
-.item-publisher {
-  font-size: 0.76rem;
-  color: var(--text-muted);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 1;
-  min-width: 0;
-}
-
-.stock-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0.16rem 0.45rem;
-  font-size: 0.68rem;
-  font-weight: 700;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-.stock-badge.in-stock {
-  background: rgba(26, 140, 72, 0.12);
-  color: #1a8c48;
-}
-
-.stock-badge.out-of-stock {
-  background: rgba(192, 57, 43, 0.08);
   color: var(--danger);
-}
-
-.item-row-footer {
-  padding: 0.45rem 0.6rem 0.6rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-  background: var(--bg-subtle);
-}
-
-.item-row-actions {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.group-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.chip {
-  border: 1px solid var(--nk-blue);
-  border-radius: 999px;
-  padding: 0.25rem 0.65rem;
-  font-size: 0.75rem;
-  background: var(--bg);
-  color: var(--nk-blue);
+  font-size: 1.3rem;
   cursor: pointer;
-  min-height: 32px;
-}
-
-.chip-active {
-  background: var(--nk-blue);
-  color: #fff;
 }

@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { BottomPanel } from "./ui/BottomPanel";
+import { FabPanel } from "./ui/FabPanel";
 
 // NKG's own site links to this page inconsistently — we've observed both
 // "/MyWantList/<token>" (public shareable list) and "/Wantlist" /
@@ -19,7 +19,7 @@ export default defineContentScript({
 
     // No fetch/CORS proxy needed — the content script already has direct
     // access to the live want-list DOM. Item extraction + storage syncing
-    // happens inside <BottomPanel>, which re-runs whenever the page's item
+    // happens inside <FabPanel>, which re-runs whenever the page's item
     // list changes (e.g. lazy-loaded content).
     const ui = await createShadowRootUi(ctx, {
       name: "nkg-want-list-plus-panel",
@@ -28,14 +28,12 @@ export default defineContentScript({
       anchor: "body",
       onMount: (uiContainer) => {
         uiContainer.style.position = "fixed";
-        uiContainer.style.left = "0";
-        uiContainer.style.right = "0";
-        uiContainer.style.bottom = "0";
+        uiContainer.style.inset = "0";
         uiContainer.style.zIndex = "2147483647";
         uiContainer.style.pointerEvents = "none";
 
         const root = createRoot(uiContainer);
-        root.render(<BottomPanel />);
+        root.render(<FabPanel />);
         return root;
       },
       onRemove: (root) => root?.unmount(),

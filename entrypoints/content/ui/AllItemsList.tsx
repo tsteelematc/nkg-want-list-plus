@@ -6,7 +6,6 @@ interface AllItemsListProps {
   items: Item[];
   groups: Group[];
   onToggleGroup: (itemId: string, groupId: string) => void;
-  onNavigate: () => void;
 }
 
 /** Every item on the page, A–Z, with a badge showing how many lists it is on. */
@@ -14,7 +13,6 @@ export function AllItemsList({
   items,
   groups,
   onToggleGroup,
-  onNavigate,
 }: AllItemsListProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
@@ -47,10 +45,7 @@ export function AllItemsList({
             <div className="plain-row-main">
               <button
                 className="plain-title"
-                onClick={() => {
-                  focusItemOnPage(item);
-                  onNavigate();
-                }}
+                onClick={() => focusItemOnPage(item)}
               >
                 {item.title}
               </button>

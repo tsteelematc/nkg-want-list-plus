@@ -11,7 +11,6 @@ interface CuratedListProps {
     direction: "up" | "down",
   ) => void;
   onToggleItemGroup: (itemId: string, groupId: string) => void;
-  onNavigate: () => void;
 }
 
 /** A curated list in its manually ranked order, titles only. */
@@ -20,7 +19,6 @@ export function CuratedList({
   groupId,
   onMoveItemInGroup,
   onToggleItemGroup,
-  onNavigate,
 }: CuratedListProps) {
   const group = data.groups.find((g) => g.id === groupId);
 
@@ -67,10 +65,7 @@ export function CuratedList({
             </div>
             <button
               className="plain-title"
-              onClick={() => {
-                focusItemOnPage(item);
-                onNavigate();
-              }}
+              onClick={() => focusItemOnPage(item)}
             >
               {item.title}
             </button>

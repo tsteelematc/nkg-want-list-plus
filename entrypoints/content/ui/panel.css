@@ -25,13 +25,6 @@
   font-family: inherit;
 }
 
-.nkgwlp-scrim {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  pointer-events: auto;
-}
-
 .nkgwlp-fab {
   position: fixed;
   right: calc(1rem + env(safe-area-inset-right, 0px));
@@ -199,13 +192,13 @@
 }
 
 .move-btn {
-  border: 1px solid var(--border);
-  background: var(--bg-subtle);
+  border: none;
+  background: transparent;
   border-radius: 6px;
-  margin: 1px 0;
-  min-width: 34px;
-  min-height: 26px;
-  font-size: 0.75rem;
+  margin: 0;
+  min-width: 32px;
+  min-height: 24px;
+  font-size: 0.7rem;
   color: var(--nk-blue);
   cursor: pointer;
 }

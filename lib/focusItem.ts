@@ -6,8 +6,7 @@ export function focusItemOnPage(item: Item): void {
   const card = findProductCardElement(document, item);
   if (!card) return;
 
-  const top = card.getBoundingClientRect().top + window.scrollY - 24;
-  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  card.scrollIntoView({ behavior: "smooth", block: "center" });
 
   const previousOutline = card.style.outline;
   const previousOutlineOffset = card.style.outlineOffset;

@@ -68,7 +68,6 @@ export function FabPanel() {
     <div className="nkgwlp-root">
       {open && (
         <>
-          <div className="nkgwlp-scrim" onClick={() => setOpen(false)} />
           <div className="nkgwlp-popup" role="dialog" aria-label="Want list">
             <div className="nkgwlp-popup-header">
               <select
@@ -100,7 +99,6 @@ export function FabPanel() {
                   items={pageItemsWithGroups}
                   groups={groups}
                   onToggleGroup={appData.toggleItemGroup}
-                  onNavigate={() => setOpen(false)}
                 />
               ) : (
                 <CuratedList
@@ -108,7 +106,6 @@ export function FabPanel() {
                   groupId={activeView}
                   onMoveItemInGroup={appData.moveItemInGroup}
                   onToggleItemGroup={appData.toggleItemGroup}
-                  onNavigate={() => setOpen(false)}
                 />
               )}
             </div>

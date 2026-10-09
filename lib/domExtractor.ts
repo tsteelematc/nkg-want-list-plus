@@ -4,7 +4,14 @@ export function findProductCardElement(
   doc: ParentNode = document,
   item: Pick<Item, "id" | "productUrl">,
 ): HTMLElement | null {
-  const href = item.productUrl ? new URL(item.productUrl).pathname : "";
+  const href = (() => {
+    if (!item.productUrl) return "";
+    try {
+      return new URL(item.productUrl, location.href).pathname;
+    } catch {
+      return "";
+    }
+  })();
   const candidateSelectors = [
     `a[href*="/P/${item.id}/"]`,
     `a[href*="/P/${item.id}"]`,

@@ -10,14 +10,16 @@ import "./panel.css";
 const ALL = "__all__";
 const NEW = "__new__";
 
+// What the popup header is currently showing.
+type HeaderMode = "idle" | "creating" | "menu" | "renaming" | "deleting";
+
 export function FabPanel() {
   const appData = useAppData();
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<string>(ALL);
-  const [creating, setCreating] = useState(false);
-  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [mode, setMode] = useState<HeaderMode>("idle");
   const [donating, setDonating] = useState(false);
-  const [newName, setNewName] = useState("");
+  const [nameInput, setNameInput] = useState("");
   const [pageItems, setPageItems] = useState<Item[]>(() =>
     extractItemsFromDocument(document),
   );
@@ -68,6 +70,16 @@ export function FabPanel() {
 
   const activeGroup = groups.find((g) => g.id === activeView);
 
+  const closeMode = () => {
+    setNameInput("");
+    setMode("idle");
+  };
+
+  const startCreating = () => {
+    setNameInput("");
+    setMode("creating");
+  };
+
   const pageItemsWithGroups = pageItems.map(
     (item) => appData.data.items.find((i) => i.id === item.id) ?? item,
   );
@@ -78,40 +90,76 @@ export function FabPanel() {
         <>
           <div className="nkgwlp-popup" role="dialog" aria-label="Want list">
             <div className="nkgwlp-popup-header">
-              {creating ? (
+              {mode === "creating" || mode === "renaming" ? (
                 <form
                   className="nkgwlp-new-form"
                   onSubmit={(e) => {
                     e.preventDefault();
-                    const name = newName.trim();
+                    const name = nameInput.trim();
                     if (name) {
-                      appData.addGroup(name);
-                      setView(ALL);
+                      if (mode === "renaming" && activeGroup) {
+                        appData.renameGroup(activeGroup.id, name);
+                      } else {
+                        appData.addGroup(name);
+                        setView(ALL);
+                      }
                     }
-                    setNewName("");
-                    setCreating(false);
+                    closeMode();
                   }}
                 >
                   <input
                     autoFocus
-                    value={newName}
-                    onChange={(e) => setNewName(e.target.value)}
-                    placeholder="New list name"
-                    aria-label="New list name"
+                    value={nameInput}
+                    onChange={(e) => setNameInput(e.target.value)}
+                    placeholder={
+                      mode === "renaming" ? "List name" : "New list name"
+                    }
+                    aria-label={
+                      mode === "renaming" ? "List name" : "New list name"
+                    }
                   />
-                  <button type="submit">Add</button>
+                  <button type="submit">
+                    {mode === "renaming" ? "Save" : "Add"}
+                  </button>
                   <button
                     type="button"
                     className="nkgwlp-cancel"
-                    onClick={() => {
-                      setNewName("");
-                      setCreating(false);
-                    }}
+                    onClick={closeMode}
                   >
                     Cancel
                   </button>
                 </form>
-              ) : confirmingDelete && activeGroup ? (
+              ) : mode === "menu" && activeGroup ? (
+                <div className="nkgwlp-new-form nkgwlp-confirm">
+                  <span className="nkgwlp-confirm-text">
+                    {activeGroup.name}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setNameInput(activeGroup.name);
+                      setMode("renaming");
+                    }}
+                  >
+                    Rename
+                  </button>
+                  <button
+                    type="button"
+                    className="nkgwlp-danger"
+                    onClick={() => setMode("deleting")}
+                  >
+                    Delete
+                  </button>
+                  <button
+                    type="button"
+                    className="nkgwlp-cancel"
+                    autoFocus
+                    onClick={closeMode}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              ) : mode === "deleting" && activeGroup ? (
                 <div className="nkgwlp-new-form nkgwlp-confirm">
                   <span className="nkgwlp-confirm-text">
                     Delete "{activeGroup.name}"?
@@ -122,7 +170,7 @@ export function FabPanel() {
                     onClick={() => {
                       appData.removeGroup(activeGroup.id);
                       setView(ALL);
-                      setConfirmingDelete(false);
+                      closeMode();
                     }}
                   >
                     Delete
@@ -131,7 +179,7 @@ export function FabPanel() {
                     type="button"
                     className="nkgwlp-cancel"
                     autoFocus
-                    onClick={() => setConfirmingDelete(false)}
+                    onClick={closeMode}
                   >
                     Cancel
                   </button>
@@ -143,7 +191,7 @@ export function FabPanel() {
                     value={activeView}
                     onChange={(e) => {
                       if (e.target.value === NEW) {
-                        setCreating(true);
+                        startCreating();
                       } else {
                         setView(e.target.value);
                       }
@@ -168,11 +216,21 @@ export function FabPanel() {
                   </select>
                   {activeGroup && (
                     <button
-                      className="nkgwlp-delete"
-                      aria-label={`Delete list ${activeGroup.name}`}
-                      onClick={() => setConfirmingDelete(true)}
+                      className="nkgwlp-menu-btn"
+                      aria-label={`Manage list ${activeGroup.name}`}
+                      onClick={() => setMode("menu")}
                     >
-                      ×
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="5" r="2" />
+                        <circle cx="12" cy="12" r="2" />
+                        <circle cx="12" cy="19" r="2" />
+                      </svg>
                     </button>
                   )}
                 </>
@@ -205,10 +263,7 @@ export function FabPanel() {
                   items={pageItemsWithGroups}
                   groups={groups}
                   onToggleGroup={appData.toggleItemGroup}
-                  onNewList={() => {
-                    setConfirmingDelete(false);
-                    setCreating(true);
-                  }}
+                  onNewList={startCreating}
                 />
               ) : (
                 <CuratedList

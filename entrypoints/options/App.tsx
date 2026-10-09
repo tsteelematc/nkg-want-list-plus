@@ -9,7 +9,6 @@ export function App() {
   const appData = useAppData();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [importError, setImportError] = useState<string | null>(null);
-  const [renamingGroupId, setRenamingGroupId] = useState<string | null>(null);
   const [renamingSourceId, setRenamingSourceId] = useState<string | null>(
     null,
   );
@@ -41,77 +40,10 @@ export function App() {
       <header>
         <h1>NKG Want List Plus — Settings</h1>
         <p className="hint">
-          Manage your lists and Noble Knight want-list sources, or back up
-          your data.
+          Manage your Noble Knight want-list sources, or back up your data.
+          Lists are managed from the button on the want-list page.
         </p>
       </header>
-
-      <section>
-        <h2>My Lists</h2>
-        <form
-          className="rename-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const input = e.currentTarget.elements.namedItem(
-              "name",
-            ) as HTMLInputElement;
-            const name = input.value.trim();
-            if (name) appData.addGroup(name);
-            input.value = "";
-          }}
-        >
-          <input name="name" placeholder="New list name" />
-          <button type="submit">Add list</button>
-        </form>
-        <ul className="row-list">
-          {[...data.groups]
-            .sort((a, b) =>
-              a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
-            )
-            .map((group) => (
-            <li key={group.id} className="row">
-              {renamingGroupId === group.id ? (
-                <form
-                  className="rename-form"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const input = e.currentTarget.elements.namedItem(
-                      "name",
-                    ) as HTMLInputElement;
-                    const name = input.value.trim();
-                    if (name) appData.renameGroup(group.id, name);
-                    setRenamingGroupId(null);
-                  }}
-                >
-                  <input name="name" defaultValue={group.name} autoFocus />
-                  <button type="submit">Save</button>
-                </form>
-              ) : (
-                <>
-                  <span className="row-title">{group.name}</span>
-                  <span className="meta">{group.itemOrder.length} items</span>
-                  <div className="row-actions">
-                    <button onClick={() => setRenamingGroupId(group.id)}>
-                      Rename
-                    </button>
-                    <button
-                      className="danger"
-                      onClick={() => appData.removeGroup(group.id)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </>
-              )}
-            </li>
-          ))}
-          {data.groups.length === 0 && (
-            <li className="empty">
-              No lists yet. Add one above.
-            </li>
-          )}
-        </ul>
-      </section>
 
       <section>
         <h2>Want-List Sources</h2>

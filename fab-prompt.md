@@ -25,3 +25,5 @@ A running record of the prompts that drove the FAB + popup redesign. Updated as 
 11. > order of lists in settings shoud be alpha too, also, All Items (x), hmm, how do we make it obvious this is Page Items to add to curated lists, i like the behavior and such, but i built it, ahem with you, not sure new user would figure out, but maybe
 
 12. > dont like "this page", how about Add Items to Custom Lists, maybe too long, but maybe okay, ill peek at it, i like the plus in the badges, the lists with checkboxes under the plus should be alpha too, and could there be a new list link at bottom that prompts the header thingy, and maybe after adding any new list even from drop down, should go to Add Items to Custom Lists, seems the next logical task, prob not all the right thoughts here, but try and sort out
+
+13. > hmm, red x to delete list be repurposed as three dots, then lead to a rename delete choice in header, choosing delete goes to delete confirmation, choosing rename leads to rename in header, with cancel ability, also cancel ability on first two choices, e.g. Rename Delete Cancel, b, b, blah, oh, then could get rid of list management in extension settings

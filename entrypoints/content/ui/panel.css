@@ -162,13 +162,15 @@
   font-weight: 600;
 }
 
-.nkgwlp-delete {
+.nkgwlp-menu-btn {
   width: 40px;
   min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: transparent;
-  color: var(--danger);
-  font-size: 1.5rem;
+  color: var(--text-muted);
   cursor: pointer;
 }
 
